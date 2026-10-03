@@ -44,6 +44,7 @@ jobs:
           mv proj.ios/HelloCpp.xcodeproj proj.ios/NinjaWorld.xcodeproj
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/HelloCpp/NinjaWorld/g' {} +
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/org.cocos2dx.hellocpp/com.ninja.world/g' {} +
+          find . -type f -name "*.pbxproj" -exec sed -i '' 's/AppDelegate.cpp/AppDelegate.mm/g' {} +
           
           # Copy our Classes, proj.ios (Portrait mode), and genuine Resources into the project
           cp -R "$GITHUB_WORKSPACE/Classes/"* Classes/
@@ -67,8 +68,9 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            GCC_PRECOMPILE_PREFIX_HEADER=NO \
             OTHER_CFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
-            OTHER_CPLUSPLUSFLAGS="-x objective-c++ -Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
+            OTHER_CPLUSPLUSFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
             OTHER_LDFLAGS="-Wl,-ld_classic -framework Security -framework SystemConfiguration -framework CFNetwork -framework Foundation -framework UIKit -lz -lxml2" \
             build 2>&1 | tee /tmp/xcodebuild.log
 
