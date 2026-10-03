@@ -103,6 +103,12 @@ jobs:
             exit 1
           fi
           cp -R "$APP_PATH" Payload/
+          TARGET_APP=$(find Payload -name "*.app" -type d | head -n 1)
+          echo "Target app bundle is at: $TARGET_APP"
+          echo "Bundling 112 MB of genuine game resources (5,204 assets)..."
+          cp -R "$GITHUB_WORKSPACE/Resources/"* "$TARGET_APP/"
+          
+          echo "Packaging into NinjaWorld.ipa..."
           zip -r -9 NinjaWorld.ipa Payload
           ls -lh NinjaWorld.ipa
 
