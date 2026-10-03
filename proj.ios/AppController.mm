@@ -97,3 +97,82 @@ static AppDelegate s_sharedAppDelegate;
 }
 
 @end
+
+// ==========================================
+// Native iOS OBB Downloader Bridge
+// ==========================================
+#include "CDNDownloaderBridge.h"
+
+static CDNProgressCallback s_progressCb = nullptr;
+static CDNSuccessCallback s_successCb = nullptr;
+static CDNErrorCallback s_errorCb = nullptr;
+
+@interface CDNNativeSessionDelegate : NSObject <NSURLSessionDownloadDelegate>
+@property (nonatomic, copy) NSString *destPath;
+@end
+
+@implementation CDNNativeSessionDelegate
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
+      didWriteData:(int64_t)bytesWritten
+ totalBytesWritten:(int64_t)totalBytesWritten
+totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
+    float percent = (totalBytesExpectedToWrite > 0) ? (float)totalBytesWritten / (float)totalBytesExpectedToWrite : 0.0f;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (s_progressCb) {
+            s_progressCb(percent, totalBytesWritten, totalBytesExpectedToWrite);
+        }
+    });
+}
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
+didFinishDownloadingToURL:(NSURL *)location {
+    NSFileManager *fm = [NSFileManager defaultManager];
+    [fm removeItemAtPath:self.destPath error:nil];
+    NSError *err = nil;
+    [fm moveItemAtURL:location toURL:[NSURL fileURLWithPath:self.destPath] error:&err];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (err) {
+            if (s_errorCb) s_errorCb([[err localizedDescription] UTF8String]);
+        } else {
+            if (s_successCb) s_successCb();
+        }
+    });
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    if (error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (s_errorCb) s_errorCb([[error localizedDescription] UTF8String]);
+        });
+    }
+}
+
+@end
+
+static CDNNativeSessionDelegate *s_sessionDelegate = nil;
+static NSURLSession *s_urlSession = nil;
+
+extern "C" void startNativeDownload(const char* url, const char* destinationPath,
+                                    CDNProgressCallback onProgress,
+                                    CDNSuccessCallback onSuccess,
+                                    CDNErrorCallback onError) {
+    s_progressCb = onProgress;
+    s_successCb = onSuccess;
+    s_errorCb = onError;
+
+    NSString *nsUrl = [NSString stringWithUTF8String:url];
+    NSString *nsDest = [NSString stringWithUTF8String:destinationPath];
+
+    s_sessionDelegate = [[CDNNativeSessionDelegate alloc] init];
+    s_sessionDelegate.destPath = nsDest;
+
+    NSURLSessionConfiguration *cfg = [NSURLSessionConfiguration defaultSessionConfiguration];
+    cfg.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    cfg.timeoutIntervalForRequest = 60.0;
+
+    s_urlSession = [NSURLSession sessionWithConfiguration:cfg delegate:s_sessionDelegate delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDownloadTask *task = [s_urlSession downloadTaskWithURL:[NSURL URLWithString:nsUrl]];
+    [task resume];
+}
+

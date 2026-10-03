@@ -52,4 +52,5 @@ void AppDelegate::applicationWillEnterForeground() {
 
 // Unity compilation for CCBManager and UpdateScene
 #include "CCBManager.cpp"
-#include "UpdateScene.mm"
+#include "UpdateScene.cpp"
+

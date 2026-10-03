@@ -44,7 +44,6 @@ jobs:
           mv proj.ios/HelloCpp.xcodeproj proj.ios/NinjaWorld.xcodeproj
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/HelloCpp/NinjaWorld/g' {} +
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/org.cocos2dx.hellocpp/com.ninja.world/g' {} +
-          find . -type f -name "*.pbxproj" -exec sed -i '' 's/AppDelegate.cpp/AppDelegate.mm/g' {} +
           
           # Copy our Classes, proj.ios (Portrait mode), and genuine Resources into the project
           cp -R "$GITHUB_WORKSPACE/Classes/"* Classes/

@@ -12,7 +12,7 @@ public:
 
     // Callbacks from Downloader
     void onDownloadProgress(float percent, long long downloadedBytes, long long totalBytes);
-    void onDownloadFinished(const std::string& filePath);
+    void onDownloadFinished();
     void onDownloadFailed(const std::string& error);
     void onUnzipFinished();
 
@@ -20,6 +20,8 @@ public:
     void startDownload();
     void enterGame();
     void retryClicked(cocos2d::CCObject* pSender);
+
+    static UpdateScene* s_instance;
 
 private:
     cocos2d::CCLabelTTF* m_pStatusLabel;
