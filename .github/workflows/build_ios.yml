@@ -45,8 +45,9 @@ jobs:
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/HelloCpp/NinjaWorld/g' {} +
           find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/org.cocos2dx.hellocpp/com.ninja.world/g' {} +
           
-          # Copy our Classes and genuine Resources into the project
+          # Copy our Classes, proj.ios (Portrait mode), and genuine Resources into the project
           cp -R "$GITHUB_WORKSPACE/Classes/"* Classes/
+          cp -R "$GITHUB_WORKSPACE/proj.ios/"* proj.ios/
           cp -R "$GITHUB_WORKSPACE/Resources/"* Resources/
 
       - name: 3. Build NinjaWorld with xcodebuild

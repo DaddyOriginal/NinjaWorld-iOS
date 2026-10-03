@@ -23,7 +23,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     ZipUtils::ccSetPvrEncryptionKey(0xf013c6ef, 0x5ca560ce, 0x01471215, 0xca9bada1);
 
     // Set Design Resolution 768x960 (Chuẩn tỷ lệ gốc của Ninja World)
-    pEGLView->setDesignResolutionSize(768, 960, kResolutionShowAll);
+    pEGLView->setDesignResolutionSize(768, 960, kResolutionExactFit);
 
     // Turn on display FPS
     pDirector->setDisplayStats(false);
