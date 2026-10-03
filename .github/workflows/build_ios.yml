@@ -68,8 +68,8 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
             OTHER_CFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
-            OTHER_CPLUSPLUSFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
-            OTHER_LDFLAGS="-Wl,-ld_classic -framework Security -framework SystemConfiguration -framework CFNetwork -lz -lxml2" \
+            OTHER_CPLUSPLUSFLAGS="-x objective-c++ -Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
+            OTHER_LDFLAGS="-Wl,-ld_classic -framework Security -framework SystemConfiguration -framework CFNetwork -framework Foundation -framework UIKit -lz -lxml2" \
             build 2>&1 | tee /tmp/xcodebuild.log
 
       - name: Inspect Build Log on Failure

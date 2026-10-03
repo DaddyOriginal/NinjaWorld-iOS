@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "CCBManager.h"
+#include "UpdateScene.h"
 #include "SimpleAudioEngine.h"
 #include "support/zip_support/ZipUtils.h"
 
@@ -31,30 +32,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-    // Add search paths for all asset subdirectories
-    std::vector<std::string> searchPaths;
-    searchPaths.push_back("");
-    searchPaths.push_back("ccbResources");
-    searchPaths.push_back("sub_ui");
-    searchPaths.push_back("upgrade");
-    searchPaths.push_back("dlg_ui");
-    searchPaths.push_back("characters");
-    searchPaths.push_back("level_bg");
-    searchPaths.push_back("home");
-    searchPaths.push_back("icon");
-    searchPaths.push_back("com_res");
-    searchPaths.push_back("script");
-    CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
-
-    // Load LoginView.ccbi as the start scene
-    CCScene *pScene = CCScene::create();
-    CCNode *loginNode = CCBManager::sharedManager()->loadNodeFromCCBI("LoginView.ccbi");
-    if (loginNode) {
-        pScene->addChild(loginNode);
-    } else {
-        CCLog("[ERROR] Failed to load LoginView.ccbi");
-    }
-
+    // Khởi chạy UpdateScene: Bản Chuyên Nghiệp (Mini Client + CDN OBB Downloader)
+    // Tự động kiểm tra OBB, hiển thị thanh chạy % và tải main.1.com.ninja.world.obb từ máy chủ
+    CCScene *pScene = UpdateScene::scene();
     pDirector->runWithScene(pScene);
 
     return true;
@@ -70,5 +50,6 @@ void AppDelegate::applicationWillEnterForeground() {
     SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
 }
 
-// Unity compilation for CCBManager
+// Unity compilation for CCBManager and UpdateScene
 #include "CCBManager.cpp"
+#include "UpdateScene.mm"
