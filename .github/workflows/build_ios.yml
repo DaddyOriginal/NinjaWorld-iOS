@@ -108,6 +108,7 @@ jobs:
           echo "Target app bundle is at: $TARGET_APP"
           echo "Bundling 112 MB of genuine game resources (5,204 assets)..."
           cp -R "$GITHUB_WORKSPACE/Resources/"* "$TARGET_APP/"
+          cp "$GITHUB_WORKSPACE/proj.ios/Default"* "$TARGET_APP/" || true
           
           echo "Packaging into NinjaWorld.ipa..."
           zip -r -9 NinjaWorld.ipa Payload
