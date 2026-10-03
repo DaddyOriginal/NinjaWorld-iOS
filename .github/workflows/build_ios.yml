@@ -12,25 +12,30 @@ jobs:
       - name: 1. Checkout repository
         uses: actions/checkout@v4
 
-      - name: 2. Download Cocos2d-x 2.2.6 Engine
+      - name: 2. Download and Setup Cocos2d-x 2.2.6 Engine
         run: |
-          echo "Cloning Cocos2d-x 2.2.6 engine..."
-          git clone https://github.com/cocos2d/cocos2d-x.git --branch cocos2d-x-2.2.6 --depth 1 ../cocos2d-x-2.2.6
+          echo "Downloading official Cocos2d-x 2.2.6 release..."
+          curl -L -s https://github.com/cocos2d/cocos2d-x/archive/refs/tags/cocos2d-x-2.2.6.tar.gz | tar -xz
+          mv cocos2d-x-cocos2d-x-2.2.6 cocos2d-x
           
-          # Lien ket thu vien cocos2dx vao dung vi tri tuong doi ../../cocos2dx
-          ln -s ../cocos2d-x-2.2.6/cocos2dx ../cocos2dx
-          ln -s ../cocos2d-x-2.2.6/CocosDenshion ../CocosDenshion
-          ln -s ../cocos2d-x-2.2.6/extensions ../extensions
-          ln -s ../cocos2d-x-2.2.6/external ../external
+          echo "Setting up NinjaWorld from official multi-platform-cpp template..."
+          mkdir -p cocos2d-x/projects/NinjaWorld
+          cp -R cocos2d-x/template/multi-platform-cpp/* cocos2d-x/projects/NinjaWorld/
+          
+          # Rename template to NinjaWorld
+          cd cocos2d-x/projects/NinjaWorld
+          mv proj.ios/HelloCpp.xcodeproj proj.ios/NinjaWorld.xcodeproj
+          find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/HelloCpp/NinjaWorld/g' {} +
+          find . -type f \( -name "*.pbxproj" -o -name "*.plist" -o -name "*.pch" \) -exec sed -i '' 's/org.cocos2dx.hellocpp/com.ninja.world/g' {} +
+          
+          # Copy our Classes and genuine Resources into the project
+          cp -R "$GITHUB_WORKSPACE/Classes/"* Classes/
+          cp -R "$GITHUB_WORKSPACE/Resources/"* Resources/
 
       - name: 3. Build NinjaWorld with xcodebuild
         run: |
-          cd proj.ios_mac
+          cd cocos2d-x/projects/NinjaWorld/proj.ios
           
-          # Hien thi danh sach SDKs va cong cu Xcode
-          xcodebuild -showsdks
-          
-          # Bien dich cho thiet bi iOS thuc te (khong can chung chi nha phat trien)
           xcodebuild -project NinjaWorld.xcodeproj \
             -scheme NinjaWorld \
             -configuration Release \
@@ -39,14 +44,15 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            OTHER_CFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
+            OTHER_CPLUSPLUSFLAGS="-Wno-error -Wno-c++11-narrowing -Wno-deprecated-declarations" \
             build
 
       - name: 4. Package into .ipa for Sideloadly
         run: |
           mkdir -p Payload
-          APP_PATH=$(find proj.ios_mac/build -name "*.app" -type d | head -n 1)
+          APP_PATH=$(find cocos2d-x/projects/NinjaWorld/proj.ios/build -name "*.app" -type d | head -n 1)
           if [ -z "$APP_PATH" ]; then
-            # Tim trong thu muc DerivedData neu build o do
             APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "NinjaWorld.app" -type d | head -n 1)
           fi
           echo "Found compiled app at: $APP_PATH"

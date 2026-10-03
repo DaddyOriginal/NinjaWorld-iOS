@@ -69,3 +69,6 @@ void AppDelegate::applicationWillEnterForeground() {
     CCDirector::sharedDirector()->startAnimation();
     SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
 }
+
+// Unity compilation for CCBManager
+#include "CCBManager.cpp"
