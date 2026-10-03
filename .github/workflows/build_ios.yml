@@ -18,6 +18,16 @@ jobs:
           curl -L -s https://github.com/cocos2d/cocos2d-x/archive/refs/tags/cocos2d-x-2.2.6.tar.gz | tar -xz
           mv cocos2d-x-cocos2d-x-2.2.6 cocos2d-x
           
+          # Fix loi thieu decode.h do cocos2dx cu khong bundle webp (Ninja World chi dung PVR.ccz va PNG)
+          cat << 'EOF' > cocos2d-x/cocos2dx/platform/CCImageCommonWebp.cpp
+          #include "platform/CCImage.h"
+          NS_CC_BEGIN
+          bool CCImage::_initWithWebpData(void *pData, int nDataLen) {
+              return false;
+          }
+          NS_CC_END
+          EOF
+          
           echo "Setting up NinjaWorld from official multi-platform-cpp template..."
           mkdir -p cocos2d-x/projects/NinjaWorld
           cp -R cocos2d-x/template/multi-platform-cpp/* cocos2d-x/projects/NinjaWorld/
@@ -41,6 +51,7 @@ jobs:
             -configuration Release \
             -sdk iphoneos \
             -destination "generic/platform=iOS" \
+            IPHONEOS_DEPLOYMENT_TARGET=12.0 \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
