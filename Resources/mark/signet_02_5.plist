@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>signet_02_5</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{242,256}}</string>
+                <key>offset</key>
+                <string>{3,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{10,0},{242,256}}</string>
+                <key>sourceSize</key>
+                <string>{256,256}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>signet_02_5.pvr.ccz</string>
+            <key>size</key>
+            <string>{256,256}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:d6131d14b00fd3257f7aa80c74d52df2:49ee4db338350e575cfcd0ae7e300d34:a2ecc57ab3b9e5837654cad952392d25$</string>
+            <key>textureFileName</key>
+            <string>signet_02_5.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,9 @@
+innews_info_data = {}
+innews_info_data[1] = {innews_id=1,history_id="忍魂之仙人鸣人",innews_inside="万里挑一招募就有可能获得仙之鸣人的忍魂，40个仙之鸣人忍魂就能够兑换一张仙之鸣人攻击卡！快来招募吧！！",innewsskip_page="GetMainMenu():ChangeToSub(E_STOREITEMSVIEW);",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[2] = {innews_id=2,history_id="刮刮乐活动开始喽！",innews_inside="20元宝一张的刮刮乐卡有惊喜！无数元宝天上掉喽！参加这个活动吧！",innewsskip_page="GetMainMenu():ChangeToActivity(\"ScratchCardActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[3] = {innews_id=3,history_id="传说三忍兑换波风水门！",innews_inside="集齐传说三忍——自来也、大蛇丸、千手纲手就能够换取五星紫卡“波风水门”！赶紧行动起来吧！",innewsskip_page="GetMainMenu():ChangeToActivity(\"collectCardActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[4] = {innews_id=4,history_id="集齐“阿凯班”得阿凯老师！",innews_inside="集齐阿凯班的三个忍者——天天、日向宁次、李洛克就能够获得四星蓝卡“阿凯老师”和10颗转生丹哦！",innewsskip_page="GetMainMenu():ChangeToActivity(\"collectCardActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[5] = {innews_id=5,history_id="超值月卡等你来",innews_inside="百分百10倍返还，最有实用价值的充值，就在活动中心里的超值月卡，赶紧去参加吧。",innewsskip_page="GetMainMenu():ChangeToActivity(\"monthCardActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[6] = {innews_id=6,history_id="财神奖励转不停",innews_inside="进入游戏，点击首页活动，可以参加财神活动，大量元宝大酬宾，来就赚。",innewsskip_page="GetMainMenu():ChangeToActivity(\"lotteryActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[7] = {innews_id=7,history_id="登录就送五星鸣人",innews_inside="亲爱的玩家，你只要登录7天，便可以在活动的登录礼包里领取到五星鸣人，还等什么呢？赶快登录吧！",innewsskip_page="GetMainMenu():ChangeToActivity(\"loginPackActivity\");",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}
+innews_info_data[8] = {innews_id=8,history_id="首冲有奖",innews_inside="玩家充值任意金额，便可以领取四代雷影、最强之矛以及潜影蛇手。",innewsskip_page="GetMainMenu():ShowPurchasList();",innews_way="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15"}

@@ -1,0 +1,258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D3623260D0F684500981E51 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.cpp */; };
+		A00100012C41D10000000001 /* CCBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00100022C41D10000000001 /* CCBManager.cpp */; };
+		A00100032C41D10000000002 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A00100042C41D10000000002 /* AppController.mm */; };
+		A00100052C41D10000000003 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A00100062C41D10000000003 /* RootViewController.mm */; };
+		A00100072C41D10000000004 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A00100082C41D10000000004 /* Resources */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D60589F0D05DD56006BFB54 /* NinjaWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ios/main.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
+		A00100092C41D10000000005 /* CCBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBManager.h; path = ../Classes/CCBManager.h; sourceTree = "<group>"; };
+		A00100022C41D10000000001 /* CCBManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCBManager.cpp; path = ../Classes/CCBManager.cpp; sourceTree = "<group>"; };
+		A001000A2C41D10000000006 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = "<group>"; };
+		A00100042C41D10000000002 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
+		A001000B2C41D10000000007 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = "<group>"; };
+		A00100062C41D10000000003 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = "<group>"; };
+		A001000C2C41D10000000008 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ios/Info.plist; sourceTree = "<group>"; };
+		A001000D2C41D10000000009 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Prefix.pch; sourceTree = "<group>"; };
+		A00100082C41D10000000004 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = ../Resources; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD56006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29B97314FDCFA39411CA2CEA /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				A001000E2C41D1000000000A /* Classes */,
+				A001000F2C41D1000000000B /* ios */,
+				A00100082C41D10000000004 /* Resources */,
+				A001000D2C41D10000000009 /* Prefix.pch */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = MainGroup;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D60589F0D05DD56006BFB54 /* NinjaWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A001000E2C41D1000000000A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.cpp */,
+				A00100092C41D10000000005 /* CCBManager.h */,
+				A00100022C41D10000000001 /* CCBManager.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A001000F2C41D1000000000B /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				A001000A2C41D10000000006 /* AppController.h */,
+				A00100042C41D10000000002 /* AppController.mm */,
+				A001000B2C41D10000000007 /* RootViewController.h */,
+				A00100062C41D10000000003 /* RootViewController.mm */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				A001000C2C41D10000000008 /* Info.plist */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD56006BFB54 /* NinjaWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD56006BFB54 /* Build configuration list for PBXNativeTarget "NinjaWorld" */;
+			buildPhases = (
+				1D60588D0D05DD56006BFB54 /* Resources */,
+				1D60588E0D05DD56006BFB54 /* Sources */,
+				1D60588F0D05DD56006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinjaWorld;
+			productName = NinjaWorld;
+			productReference = 1D60589F0D05DD56006BFB54 /* NinjaWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					1D6058900D05DD56006BFB54 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08D954540054E3DE /* Build configuration list for PBXProject "NinjaWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MainGroup */;
+			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD56006BFB54 /* NinjaWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD56006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00100072C41D10000000004 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD56006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.cpp in Sources */,
+				A00100012C41D10000000001 /* CCBManager.cpp in Sources */,
+				A00100032C41D10000000002 /* AppController.mm in Sources */,
+				A00100052C41D10000000003 /* RootViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4F08D954540054E3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = NinjaWorld;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008D954540054E3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = NinjaWorld;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D6058940D05DD56006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"../Classes/**",
+					"../../cocos2dx/**",
+					"../../CocosDenshion/include/**",
+					"../../extensions/**",
+				);
+				INFOPLIST_FILE = ios/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ninja.world;
+				PRODUCT_NAME = NinjaWorld;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD56006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"../Classes/**",
+					"../../cocos2dx/**",
+					"../../CocosDenshion/include/**",
+					"../../extensions/**",
+				);
+				INFOPLIST_FILE = ios/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ninja.world;
+				PRODUCT_NAME = NinjaWorld;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4E08D954540054E3DE /* Build configuration list for PBXProject "NinjaWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08D954540054E3DE /* Debug */,
+				C01FCF5008D954540054E3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6058960D05DD56006BFB54 /* Build configuration list for PBXNativeTarget "NinjaWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD56006BFB54 /* Debug */,
+				1D6058950D05DD56006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

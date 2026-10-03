@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>hallmark_8</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{396,386}}</string>
+                <key>offset</key>
+                <string>{0,2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{396,386}}</string>
+                <key>sourceSize</key>
+                <string>{396,390}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>hallmark_8.pvr.ccz</string>
+            <key>size</key>
+            <string>{512,512}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:9e4c8b12368f0282991d5a95ad162b9c:556d81714d01ef27cdf5f4b3cdcfc5da:6c6e9caf84f798561f2ea462f88bd531$</string>
+            <key>textureFileName</key>
+            <string>hallmark_8.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

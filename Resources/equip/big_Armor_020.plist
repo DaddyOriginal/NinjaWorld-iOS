@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>big_Armor_020</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{228,278}}</string>
+                <key>offset</key>
+                <string>{9,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{35,0},{228,278}}</string>
+                <key>sourceSize</key>
+                <string>{280,280}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>big_Armor_020.pvr.ccz</string>
+            <key>size</key>
+            <string>{256,512}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e7e588c6236bcc1ab49da4e272046f3d:e496f13a5848518d20b2e3fb8110d82e:cf1a757f82c6f34d0666bef7b19cb21e$</string>
+            <key>textureFileName</key>
+            <string>big_Armor_020.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

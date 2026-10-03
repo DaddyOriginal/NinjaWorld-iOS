@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>npc40_2</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{352,390}}</string>
+                <key>offset</key>
+                <string>{12,3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{36,2},{352,390}}</string>
+                <key>sourceSize</key>
+                <string>{400,400}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>npc40_2.pvr.ccz</string>
+            <key>size</key>
+            <string>{512,512}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:88a4721e58a742f5b33fdf793646c4a3:7728154b036a51901352daf012f766f4:0f7bfa32d01f5ae217805478f949ec7d$</string>
+            <key>textureFileName</key>
+            <string>npc40_2.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

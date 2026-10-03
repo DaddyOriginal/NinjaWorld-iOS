@@ -1,0 +1,25 @@
+require("RLRequest")
+require("util/protocol")
+require("util/tools")
+require("util/common")
+require("util/localizable")
+require("global/cfg")
+require("ui_common/node_base_t")
+require("ui_common/layer_base_t")
+require("LuaXml")
+require("CommonDialogView")
+require("config/activity_config")
+require("config/firstpurchase_config")
+require("ui_layer/ui_purchaseTableCell")
+require("ui_layer/ui_purchaseLayer")
+
+
+require("ui_layer/ui_superNinjaChallengeLayer")
+function initSuperNinjaChallenge(args)
+	local activityView = GetActivityView()
+	local contentNode = activityView:GetNodeContent()
+	local layer = createObj(ui_superNinjaChallengeLayer)
+	contentNode:addChild(layer.node_)
+end
+
+xpcall(initSuperNinjaChallenge, __G__TRACKBACK__)

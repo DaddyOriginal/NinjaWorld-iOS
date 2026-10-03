@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>big_weapon_009</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{138,250}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{70,15},{138,250}}</string>
+                <key>sourceSize</key>
+                <string>{280,280}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>big_weapon_009.pvr.ccz</string>
+            <key>size</key>
+            <string>{256,256}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:326c65a6d7935ffa021dc0d0f7b9d971:d3e17e52170f3c7750084c65a25c75e7:2a8f28c6a0113b6695444494ba21e683$</string>
+            <key>textureFileName</key>
+            <string>big_weapon_009.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

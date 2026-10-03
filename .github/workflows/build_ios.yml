@@ -1,0 +1,61 @@
+name: Build Ninja World iOS IPA
+
+on:
+  workflow_dispatch: # Cho phep bam nut chay thu cong tren web GitHub
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-ipa:
+    runs-on: macos-13
+    steps:
+      - name: 1. Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 3. Download Cocos2d-x 2.2.6 Engine
+        run: |
+          echo "Cloning Cocos2d-x 2.2.6..."
+          git clone https://github.com/cocos2d/cocos2d-x.git --branch cocos2d-x-2.2.6 --depth 1 cocos2d-x-2.2.6
+          
+          echo "Creating NinjaWorld project template..."
+          python cocos2d-x-2.2.6/tools/project-creator/create-project.py -project NinjaWorld -package com.ninja.world -language cpp
+          
+          echo "Syncing Classes and Resources..."
+          cp -R Classes/* cocos2d-x-2.2.6/projects/NinjaWorld/Classes/
+          cp -R Resources/* cocos2d-x-2.2.6/projects/NinjaWorld/Resources/
+
+      - name: 4. Build NinjaWorld with xcodebuild
+        run: |
+          cd cocos2d-x-2.2.6/projects/NinjaWorld/proj.ios_mac
+          
+          # Build Release cho thiet bi iOS thuc te (khong yeu cau Apple Developer Certificate de danh cho Sideloadly)
+          xcodebuild -project NinjaWorld.xcodeproj \
+            -scheme NinjaWorld \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination "generic/platform=iOS" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: 5. Package into .ipa for Sideloadly
+        run: |
+          mkdir -p Payload
+          APP_PATH=$(find cocos2d-x-2.2.6/projects/NinjaWorld/proj.ios_mac/build -name "*.app" -type d | head -n 1)
+          echo "Found compiled app at: $APP_PATH"
+          cp -R "$APP_PATH" Payload/
+          zip -r -9 NinjaWorld.ipa Payload
+          ls -lh NinjaWorld.ipa
+
+      - name: 6. Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NinjaWorld-iOS-IPA
+          path: NinjaWorld.ipa
+          retention-days: 14
