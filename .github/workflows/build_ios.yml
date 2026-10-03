@@ -1,39 +1,36 @@
 name: Build Ninja World iOS IPA
 
 on:
-  workflow_dispatch: # Cho phep bam nut chay thu cong tren web GitHub
+  workflow_dispatch:
   push:
     branches: [ main, master ]
 
 jobs:
   build-ipa:
-    runs-on: macos-13
+    runs-on: macos-14
     steps:
       - name: 1. Checkout repository
         uses: actions/checkout@v4
 
-      - name: 2. Setup Python environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: 3. Download Cocos2d-x 2.2.6 Engine
+      - name: 2. Download Cocos2d-x 2.2.6 Engine
         run: |
-          echo "Cloning Cocos2d-x 2.2.6..."
-          git clone https://github.com/cocos2d/cocos2d-x.git --branch cocos2d-x-2.2.6 --depth 1 cocos2d-x-2.2.6
+          echo "Cloning Cocos2d-x 2.2.6 engine..."
+          git clone https://github.com/cocos2d/cocos2d-x.git --branch cocos2d-x-2.2.6 --depth 1 ../cocos2d-x-2.2.6
           
-          echo "Creating NinjaWorld project template..."
-          python cocos2d-x-2.2.6/tools/project-creator/create-project.py -project NinjaWorld -package com.ninja.world -language cpp
-          
-          echo "Syncing Classes and Resources..."
-          cp -R Classes/* cocos2d-x-2.2.6/projects/NinjaWorld/Classes/
-          cp -R Resources/* cocos2d-x-2.2.6/projects/NinjaWorld/Resources/
+          # Lien ket thu vien cocos2dx vao dung vi tri tuong doi ../../cocos2dx
+          ln -s ../cocos2d-x-2.2.6/cocos2dx ../cocos2dx
+          ln -s ../cocos2d-x-2.2.6/CocosDenshion ../CocosDenshion
+          ln -s ../cocos2d-x-2.2.6/extensions ../extensions
+          ln -s ../cocos2d-x-2.2.6/external ../external
 
-      - name: 4. Build NinjaWorld with xcodebuild
+      - name: 3. Build NinjaWorld with xcodebuild
         run: |
-          cd cocos2d-x-2.2.6/projects/NinjaWorld/proj.ios_mac
+          cd proj.ios_mac
           
-          # Build Release cho thiet bi iOS thuc te (khong yeu cau Apple Developer Certificate de danh cho Sideloadly)
+          # Hien thi danh sach SDKs va cong cu Xcode
+          xcodebuild -showsdks
+          
+          # Bien dich cho thiet bi iOS thuc te (khong can chung chi nha phat trien)
           xcodebuild -project NinjaWorld.xcodeproj \
             -scheme NinjaWorld \
             -configuration Release \
@@ -44,16 +41,20 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             build
 
-      - name: 5. Package into .ipa for Sideloadly
+      - name: 4. Package into .ipa for Sideloadly
         run: |
           mkdir -p Payload
-          APP_PATH=$(find cocos2d-x-2.2.6/projects/NinjaWorld/proj.ios_mac/build -name "*.app" -type d | head -n 1)
+          APP_PATH=$(find proj.ios_mac/build -name "*.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            # Tim trong thu muc DerivedData neu build o do
+            APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "NinjaWorld.app" -type d | head -n 1)
+          fi
           echo "Found compiled app at: $APP_PATH"
           cp -R "$APP_PATH" Payload/
           zip -r -9 NinjaWorld.ipa Payload
           ls -lh NinjaWorld.ipa
 
-      - name: 6. Upload IPA Artifact
+      - name: 5. Upload IPA Artifact
         uses: actions/upload-artifact@v4
         with:
           name: NinjaWorld-iOS-IPA
