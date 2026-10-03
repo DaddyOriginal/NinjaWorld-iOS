@@ -19,9 +19,11 @@ jobs:
           mv cocos2d-x-cocos2d-x-2.2.6 cocos2d-x
 
           echo "Downloading Cocos2d-x prebuilt third-party dependencies (v2-deps-4)..."
-          curl -L -s https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin/archive/refs/tags/v2-deps-4.tar.gz | tar -xz
-          cp -R cocos2d-x-3rd-party-libs-bin-v2-deps-4/* cocos2d-x/
-          rm -rf cocos2d-x-3rd-party-libs-bin-v2-deps-4
+          curl -L -s https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin/archive/refs/tags/v2-deps-4.tar.gz | tar -xz -C cocos2d-x --strip-components=1
+          
+          echo "Verifying downloaded dependencies..."
+          ls -lh cocos2d-x/cocos2dx/platform/third_party/ios/libraries/libcurl.a || true
+          ls -lh cocos2d-x/external/libwebsockets/ios/lib/libwebsockets.a || true
           
           # Fix loi thieu decode.h / webp stub
           cat << 'EOF' > cocos2d-x/cocos2dx/platform/CCImageCommonWebp.cpp
