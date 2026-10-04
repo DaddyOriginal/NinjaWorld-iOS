@@ -146,6 +146,8 @@ public:
 
     int firefly_GetCountryType() const { return m_countryType; }
     void firefly_SetCountryType(int c) { m_countryType = c; }
+    int getCountryType() const { return firefly_GetCountryType(); }
+    void setCountryType(int c) { firefly_SetCountryType(c); }
 
     int getAvatarId() const { return m_avatarId; }
     void setAvatarId(int id) { m_avatarId = id; }
