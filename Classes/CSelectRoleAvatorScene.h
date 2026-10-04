@@ -21,7 +21,7 @@ class CSelectRoleAvatorScene : public CCLayer
     , public CCBSelectorResolver
     , public CCBMemberVariableAssigner
     , public CCEditBoxDelegate
-    , public CRLRequestDelegate
+    , public CRLNetDelegate
 {
 private:
     int m_country;              // Quốc gia đã chọn (1 - 5)
