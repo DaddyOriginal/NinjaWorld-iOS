@@ -24,6 +24,7 @@ private:
     CLoginScene* m_pLoginScene;
 
     // CCB Variable Binders từ BindAccountView.ccbi
+    CCNode* m_pFixNode;
     CCNode* m_pSpriteName;
     CCNode* m_pSpritePwd;
     CCControlButton* m_pBtnLogin;

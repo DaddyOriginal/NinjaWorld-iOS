@@ -24,6 +24,7 @@ private:
     CLoginScene* m_pLoginScene;
 
     // CCB Variable Binders từ RegisterView.ccbi
+    CCNode* m_pFixNode;
     CCNode* m_pSpriteName;
     CCNode* m_pSpritePwd;
     CCNode* m_pSpritePwd1;

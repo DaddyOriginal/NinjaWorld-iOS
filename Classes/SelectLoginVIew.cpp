@@ -6,6 +6,7 @@
 
 SelectLoginVIew::SelectLoginVIew()
     : m_pLoginDelegate(NULL)
+    , m_pFixNode(NULL)
     , m_pBtnLoginAccount(NULL)
     , m_pBtnLoginGuest(NULL)
     , m_pBtnLoginFB(NULL)
@@ -14,6 +15,7 @@ SelectLoginVIew::SelectLoginVIew()
 }
 
 SelectLoginVIew::~SelectLoginVIew() {
+    CC_SAFE_RELEASE_NULL(m_pFixNode);
     CC_SAFE_RELEASE_NULL(m_pBtnLoginAccount);
     CC_SAFE_RELEASE_NULL(m_pBtnLoginGuest);
     CC_SAFE_RELEASE_NULL(m_pBtnLoginFB);
@@ -50,9 +52,15 @@ bool SelectLoginVIew::init(CLoginScene* pDelegate) {
     }
 
     if (pNode) {
-        pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        pNode->setPosition(CCPointZero);
         this->addChild(pNode, 1);
-        CCLog("[SelectLoginVIew] Nạp SelectLoginView.ccbi thành công!");
+        if (!m_pFixNode && pNode->getChildren() && pNode->getChildren()->count() > 0) {
+            m_pFixNode = (CCNode*)pNode->getChildren()->objectAtIndex(0);
+        }
+        if (m_pFixNode) {
+            m_pFixNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        }
+        CCLog("[SelectLoginVIew] Nạp SelectLoginView.ccbi thành công và căn giữa màn hình!");
     } else {
         // Fallback UI nếu CCBI có vấn đề: Hiển thị hộp thoại chọn đăng nhập chuẩn
         CCLog("[SelectLoginVIew] Tạo giao diện Fallback Modal chọn đăng nhập");
@@ -134,6 +142,7 @@ SEL_CCControlHandler SelectLoginVIew::onResolveCCBCCControlSelector(CCObject* pT
 }
 
 bool SelectLoginVIew::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode) {
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fix_node", CCNode*, this->m_pFixNode);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnLoginAccount", CCControlButton*, this->m_pBtnLoginAccount);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnLoginGuest", CCControlButton*, this->m_pBtnLoginGuest);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnLoginFB", CCControlButton*, this->m_pBtnLoginFB);

@@ -17,6 +17,7 @@ class SelectLoginVIew
 {
 private:
     CLoginScene* m_pLoginDelegate;
+    CCNode* m_pFixNode;
     CCControlButton* m_pBtnLoginAccount;
     CCControlButton* m_pBtnLoginGuest;
     CCControlButton* m_pBtnLoginFB;

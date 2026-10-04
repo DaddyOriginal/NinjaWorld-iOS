@@ -5,6 +5,7 @@
 
 CRegisterView::CRegisterView()
     : m_pLoginScene(NULL)
+    , m_pFixNode(NULL)
     , m_pSpriteName(NULL)
     , m_pSpritePwd(NULL)
     , m_pSpritePwd1(NULL)
@@ -19,6 +20,7 @@ CRegisterView::CRegisterView()
 }
 
 CRegisterView::~CRegisterView() {
+    CC_SAFE_RELEASE_NULL(m_pFixNode);
     CC_SAFE_RELEASE_NULL(m_pSpriteName);
     CC_SAFE_RELEASE_NULL(m_pSpritePwd);
     CC_SAFE_RELEASE_NULL(m_pSpritePwd1);
@@ -60,9 +62,15 @@ bool CRegisterView::init(CLoginScene* pScene) {
     }
 
     if (pNode) {
-        pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        pNode->setPosition(CCPointZero);
         this->addChild(pNode, 1);
-        CCLog("[CRegisterView] Nạp RegisterView.ccbi thành công!");
+        if (!m_pFixNode && pNode->getChildren() && pNode->getChildren()->count() > 0) {
+            m_pFixNode = (CCNode*)pNode->getChildren()->objectAtIndex(0);
+        }
+        if (m_pFixNode) {
+            m_pFixNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        }
+        CCLog("[CRegisterView] Nạp RegisterView.ccbi thành công và căn giữa màn hình!");
     }
 
     // Nhãn báo lỗi / trạng thái
@@ -182,6 +190,7 @@ SEL_CCControlHandler CRegisterView::onResolveCCBCCControlSelector(CCObject* pTar
 }
 
 bool CRegisterView::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode) {
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fix_node", CCNode*, this->m_pFixNode);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_name", CCNode*, this->m_pSpriteName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_pwd", CCNode*, this->m_pSpritePwd);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_pwd1", CCNode*, this->m_pSpritePwd1);

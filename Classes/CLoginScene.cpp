@@ -88,7 +88,7 @@ void CLoginScene::onEnter() {
     // 1. Nạp tài khoản đã lưu
     std::string savedAcc = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "");
     std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "");
-    if (!savedAcc.empty()) {
+    if (!savedAcc.empty() && savedAcc != "admin") {
         m_username = savedAcc;
         m_password = savedPwd;
     } else {
@@ -135,15 +135,6 @@ void CLoginScene::onEnter() {
 
 void CLoginScene::onEnterTransitionDidFinish() {
     CCLayer::onEnterTransitionDidFinish();
-
-    // 5. Nếu chưa có tài khoản nào được lưu (Client mới mở lần đầu), tự động mở hộp thoại đăng nhập chuẩn gốc
-    if (m_username.empty()) {
-        CCLog("[CLoginScene] Chưa có tài khoản đăng nhập -> Tự động bật SelectLoginVIew!");
-        SelectLoginVIew* pSelect = SelectLoginVIew::create(this);
-        if (pSelect) {
-            this->addChild(pSelect, 999);
-        }
-    }
 }
 
 void CLoginScene::onExit() {
@@ -209,10 +200,7 @@ void CLoginScene::onBtnLoginMenu(CCObject* pSender) {
 
 void CLoginScene::onBtnRegist(CCObject* pSender, CCControlEvent pCCControlEvent) {
     CCLog("[CLoginScene] Nút ĐỔI TÀI KHOẢN / ĐĂNG KÝ được nhấn!");
-    SelectLoginVIew* pSelect = SelectLoginVIew::create(this);
-    if (pSelect) {
-        this->addChild(pSelect, 999);
-    }
+    showAccountDialog();
 }
 
 void CLoginScene::onBtnRegistMenu(CCObject* pSender) {

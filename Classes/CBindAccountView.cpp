@@ -5,6 +5,7 @@
 
 CBindAccountView::CBindAccountView()
     : m_pLoginScene(NULL)
+    , m_pFixNode(NULL)
     , m_pSpriteName(NULL)
     , m_pSpritePwd(NULL)
     , m_pBtnLogin(NULL)
@@ -18,6 +19,7 @@ CBindAccountView::CBindAccountView()
 }
 
 CBindAccountView::~CBindAccountView() {
+    CC_SAFE_RELEASE_NULL(m_pFixNode);
     CC_SAFE_RELEASE_NULL(m_pSpriteName);
     CC_SAFE_RELEASE_NULL(m_pSpritePwd);
     CC_SAFE_RELEASE_NULL(m_pBtnLogin);
@@ -59,13 +61,20 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     }
 
     if (pNode) {
-        pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        pNode->setPosition(CCPointZero);
         this->addChild(pNode, 1);
-        CCLog("[CBindAccountView] Nạp BindAccountView.ccbi thành công!");
+        if (!m_pFixNode && pNode->getChildren() && pNode->getChildren()->count() > 0) {
+            m_pFixNode = (CCNode*)pNode->getChildren()->objectAtIndex(0);
+        }
+        if (m_pFixNode) {
+            m_pFixNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        }
+        CCLog("[CBindAccountView] Nạp BindAccountView.ccbi thành công và căn giữa màn hình!");
     }
 
     // Thiết lập CCEditBox cho Ô Tên tài khoản
     std::string savedUser = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "");
+    if (savedUser == "admin") savedUser = "";
     if (m_pSpriteName) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
         CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
@@ -93,6 +102,7 @@ bool CBindAccountView::init(CLoginScene* pScene) {
 
     // Thiết lập CCEditBox cho Ô Mật khẩu
     std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "");
+    if (savedUser.empty() && savedPwd == "123456") savedPwd = "";
     if (m_pSpritePwd) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
         CCSpriteFrame* pFramePwd = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
@@ -159,6 +169,7 @@ SEL_CCControlHandler CBindAccountView::onResolveCCBCCControlSelector(CCObject* p
 }
 
 bool CBindAccountView::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode) {
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fix_node", CCNode*, this->m_pFixNode);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_name", CCNode*, this->m_pSpriteName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_pwd", CCNode*, this->m_pSpritePwd);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnLogin", CCControlButton*, this->m_pBtnLogin);
