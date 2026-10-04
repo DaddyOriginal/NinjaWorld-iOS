@@ -35,6 +35,8 @@ public:
     CDailyRewardView();
     virtual ~CDailyRewardView();
 
+    static CDailyRewardView* create();
+    virtual bool init();
     static CDailyRewardView* createWithBox(const DailyTaskAwardBox& box);
     bool initWithBox(const DailyTaskAwardBox& box);
 

@@ -31,6 +31,28 @@ CDailyRewardView::~CDailyRewardView() {
     }
 }
 
+CDailyRewardView* CDailyRewardView::create() {
+    DailyTaskAwardBox dummyBox;
+    dummyBox.boxIndex = 1;
+    dummyBox.pointReq = 20;
+    dummyBox.silver = 10000;
+    dummyBox.gold = 50;
+    dummyBox.isClaimed = false;
+    dummyBox.isClaimable = true;
+    return CDailyRewardView::createWithBox(dummyBox);
+}
+
+bool CDailyRewardView::init() {
+    DailyTaskAwardBox dummyBox;
+    dummyBox.boxIndex = 1;
+    dummyBox.pointReq = 20;
+    dummyBox.silver = 10000;
+    dummyBox.gold = 50;
+    dummyBox.isClaimed = false;
+    dummyBox.isClaimable = true;
+    return initWithBox(dummyBox);
+}
+
 CDailyRewardView* CDailyRewardView::createWithBox(const DailyTaskAwardBox& box) {
     CDailyRewardView* pView = new CDailyRewardView();
     if (pView && pView->initWithBox(box)) {
