@@ -44,6 +44,13 @@ private:
     CCNode* m_pCurrentView;
     CDefaultMainMenu* m_pDefaultHomeView;
 
+    // Village Building Containers
+    CCNode* m_pLayerBuildingContent;
+    CCNode* m_pNodeCountryBk;
+    CCNode* m_pNodeSlgContent;
+    CCSprite* m_pMountainBg;
+    CCNode* m_pVillageNode;
+
     // Top HUD Labels từ NormalTopBar.ccbi
     CCNode* m_pLabelNickname;
     CCNode* m_pLabelLevel;
@@ -87,6 +94,15 @@ public:
     void onBtnMessage(CCObject* pSender);
     void onBtnExp(CCObject* pSender);
     void onBtnDefault(CCObject* pSender);
+
+    // Sự kiện Hoạt động & Bánh xe Làng
+    void onBtnDailyTask(CCObject* pSender);
+    void onClickAwardCenter(CCObject* pSender);
+    void onBtnSaveTime(CCObject* pSender);
+    void onBtnBuyFund(CCObject* pSender);
+    void onBtnRoulette(CCObject* pSender);
+    void onBtnArena(CCObject* pSender);
+    void onClickNaruto(CCObject* pSender);
 
     CCNode* getNodeContent() { return m_pNodeContent; }
 };

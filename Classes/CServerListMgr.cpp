@@ -156,8 +156,17 @@ bool CServerListMgr::parseServerListXml(const std::string& xmlData) {
         std::string recStr = extractSubTag(block, "recommend");
         if (!recStr.empty()) info.recommend = atoi(recStr.c_str());
 
-        m_serverList.push_back(info);
-        CCLog("[CServerListMgr] Da nap Server [%d]: %s (%s)", info.id, info.name.c_str(), info.domain.c_str());
+        bool exists = false;
+        for (size_t s = 0; s < m_serverList.size(); ++s) {
+            if (m_serverList[s].id == info.id) {
+                exists = true;
+                break;
+            }
+        }
+        if (!exists) {
+            m_serverList.push_back(info);
+            CCLog("[CServerListMgr] Da nap Server [%d]: %s (%s)", info.id, info.name.c_str(), info.domain.c_str());
+        }
     }
 
     // Nếu server đã lưu trong cache không còn trong danh sách -> Chọn server đề cử

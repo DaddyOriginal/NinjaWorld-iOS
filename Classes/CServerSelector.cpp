@@ -118,7 +118,45 @@ void CServerSelector::refreshUI() {
     }
     if (m_serverList.size() >= 2) {
         if (m_pLabelServerName2) {
+            m_pLabelServerName2->setVisible(true);
             m_pLabelServerName2->setString(m_serverList[1].name.c_str());
+        }
+        if (m_pBtnServer2) {
+            m_pBtnServer2->setVisible(true);
+        }
+        if (m_pSpriteServerState2) {
+            m_pSpriteServerState2->setVisible(true);
+        }
+    } else {
+        if (m_pBtnServer2) {
+            m_pBtnServer2->setVisible(false);
+        }
+        if (m_pLabelServerName2) {
+            m_pLabelServerName2->setVisible(false);
+        }
+        if (m_pSpriteServerState2) {
+            m_pSpriteServerState2->setVisible(false);
+        }
+    }
+
+    // Nạp danh sách máy chủ vào cuộn giấy dưới (node_listcontent)
+    if (m_pNodeListContent) {
+        m_pNodeListContent->removeAllChildren();
+        CCMenu* pListMenu = CCMenu::create();
+        pListMenu->setPosition(CCPointZero);
+        pListMenu->setHandlerPriority(-131);
+        m_pNodeListContent->addChild(pListMenu);
+
+        for (size_t i = 0; i < m_serverList.size(); ++i) {
+            const ServerItemInfo& info = m_serverList[i];
+            CCMenuItemFont* pItem = CCMenuItemFont::create(info.name.c_str(), this, menu_selector(CServerSelector::onSelectServerFromList));
+            if (pItem) {
+                pItem->setTag(info.id);
+                pItem->setFontSize(24.0f);
+                pItem->setColor(ccc3(180, 50, 10)); // Màu chữ phong cách ninja cổ
+                pItem->setPosition(ccp(0, -((float)i * 60.0f) + 40.0f));
+                pListMenu->addChild(pItem);
+            }
         }
     }
 }
@@ -181,4 +219,19 @@ void CServerSelector::onBtnServer1Menu(CCObject* pSender) {
 
 void CServerSelector::onBtnServer2Menu(CCObject* pSender) {
     onBtnServer2(pSender, CCControlEventTouchUpInside);
+}
+
+void CServerSelector::onSelectServerFromList(CCObject* pSender) {
+    CCNode* pNode = dynamic_cast<CCNode*>(pSender);
+    if (!pNode || !m_pDelegate) return;
+    int selectedId = pNode->getTag();
+    for (size_t i = 0; i < m_serverList.size(); ++i) {
+        if (m_serverList[i].id == selectedId) {
+            std::stringstream ss;
+            ss << "http://" << m_serverList[i].ip << ":" << m_serverList[i].port;
+            m_pDelegate->onServerSelected(m_serverList[i].id, m_serverList[i].name, ss.str());
+            break;
+        }
+    }
+    this->removeFromParentAndCleanup(true);
 }

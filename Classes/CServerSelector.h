@@ -66,6 +66,7 @@ public:
     void onBtnCloseMenu(CCObject* pSender);
     void onBtnServer1Menu(CCObject* pSender);
     void onBtnServer2Menu(CCObject* pSender);
+    void onSelectServerFromList(CCObject* pSender);
 };
 
 #endif // _CSERVER_SELECTOR_H_
