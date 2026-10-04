@@ -27,8 +27,8 @@ CLoginScene::CLoginScene()
     , m_pBtnLogin(NULL)
     , m_pBtnReg(NULL)
     , m_pBtnSelectServer(NULL)
-    , m_username("admin")
-    , m_password("123456")
+    , m_username("")
+    , m_password("")
 {
 }
 
@@ -86,22 +86,31 @@ void CLoginScene::onEnter() {
     CCLayer::onEnter();
 
     // 1. Nạp tài khoản đã lưu
-    std::string savedAcc = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "admin");
+    std::string savedAcc = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "");
+    std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "");
     if (!savedAcc.empty()) {
         m_username = savedAcc;
+        m_password = savedPwd;
+    } else {
+        m_username = "";
+        m_password = "";
     }
 
     // 2. Lấy Server đang được chọn từ CServerListMgr
     ServerInfoData curServer = CServerListMgr::sharedManager()->getSelectConfig();
 
     if (m_pLabelVersionInfo) {
-        m_pLabelVersionInfo->setString("Phiên bản: 1.0.4");
+        m_pLabelVersionInfo->setString("Phiên bản: 1.0.8");
     }
     if (m_pLabelServerName) {
         m_pLabelServerName->setString(curServer.name.c_str());
     }
     if (m_pLabelIdName) {
-        m_pLabelIdName->setString(m_username.c_str());
+        if (!m_username.empty()) {
+            m_pLabelIdName->setString(m_username.c_str());
+        } else {
+            m_pLabelIdName->setString("Đăng nhập");
+        }
     }
 
     // 3. Đảm bảo toàn bộ CCControlButton nhận được sự kiện chạm (Bảo vệ đa tầng)
@@ -121,6 +130,19 @@ void CLoginScene::onEnter() {
     // 4. Tự động gọi API lấy danh sách server động từ Gateway nếu danh sách chưa có
     if (CServerListMgr::sharedManager()->getServerList().empty()) {
         requestServerList();
+    }
+}
+
+void CLoginScene::onEnterTransitionDidFinish() {
+    CCLayer::onEnterTransitionDidFinish();
+
+    // 5. Nếu chưa có tài khoản nào được lưu (Client mới mở lần đầu), tự động mở hộp thoại đăng nhập chuẩn gốc
+    if (m_username.empty()) {
+        CCLog("[CLoginScene] Chưa có tài khoản đăng nhập -> Tự động bật SelectLoginVIew!");
+        SelectLoginVIew* pSelect = SelectLoginVIew::create(this);
+        if (pSelect) {
+            this->addChild(pSelect, 999);
+        }
     }
 }
 
@@ -173,6 +195,11 @@ bool CLoginScene::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemb
 // -------------------------------------------------------------
 void CLoginScene::onBtnLogin(CCObject* pSender, CCControlEvent pCCControlEvent) {
     CCLog("[CLoginScene] Nút ĐĂNG NHẬP / BẮT ĐẦU được nhấn!");
+    if (m_username.empty()) {
+        CCLog("[CLoginScene] Chưa có tài khoản đăng nhập -> Bắt buộc mở bảng đăng nhập!");
+        onBtnRegist(pSender, pCCControlEvent);
+        return;
+    }
     doLogin(m_username, m_password);
 }
 

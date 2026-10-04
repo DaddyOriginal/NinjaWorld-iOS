@@ -63,7 +63,7 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     }
 
     // Thiết lập CCEditBox cho Ô Tên tài khoản
-    std::string savedUser = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "admin");
+    std::string savedUser = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "");
     if (m_pSpriteName) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
         CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
@@ -77,7 +77,9 @@ bool CBindAccountView::init(CLoginScene* pScene) {
             m_pEditUser->setFontColor(ccWHITE);
             m_pEditUser->setPlaceholderFontColor(ccc3(180, 180, 180));
             m_pEditUser->setPlaceHolder("Nhập tài khoản...");
-            m_pEditUser->setText(savedUser.c_str());
+            if (!savedUser.empty()) {
+                m_pEditUser->setText(savedUser.c_str());
+            }
             m_pEditUser->setMaxLength(24);
             m_pEditUser->setInputMode(kEditBoxInputModeSingleLine);
             m_pEditUser->setReturnType(kKeyboardReturnTypeDone);
@@ -88,7 +90,7 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     }
 
     // Thiết lập CCEditBox cho Ô Mật khẩu
-    std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "123456");
+    std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "");
     if (m_pSpritePwd) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
         CCSpriteFrame* pFramePwd = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
@@ -102,7 +104,9 @@ bool CBindAccountView::init(CLoginScene* pScene) {
             m_pEditPwd->setFontColor(ccWHITE);
             m_pEditPwd->setPlaceholderFontColor(ccc3(180, 180, 180));
             m_pEditPwd->setPlaceHolder("Nhập mật khẩu...");
-            m_pEditPwd->setText(savedPwd.c_str());
+            if (!savedPwd.empty()) {
+                m_pEditPwd->setText(savedPwd.c_str());
+            }
             m_pEditPwd->setMaxLength(24);
             m_pEditPwd->setInputFlag(kEditBoxInputFlagPassword);
             m_pEditPwd->setInputMode(kEditBoxInputModeSingleLine);
@@ -171,10 +175,13 @@ void CBindAccountView::onBtnLogin(CCObject* pSender, CCControlEvent pEvent) {
 
     if (user.empty()) {
         CCLog("[CBindAccountView] Tài khoản không được để trống!");
+        if (m_pLabelTip) m_pLabelTip->setString("Vui lòng nhập tên tài khoản!");
         return;
     }
     if (pwd.empty()) {
-        pwd = "123456";
+        CCLog("[CBindAccountView] Mật khẩu không được để trống!");
+        if (m_pLabelTip) m_pLabelTip->setString("Vui lòng nhập mật khẩu!");
+        return;
     }
 
     CCUserDefault::sharedUserDefault()->setStringForKey("last_account", user);

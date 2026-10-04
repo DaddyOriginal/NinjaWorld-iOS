@@ -40,6 +40,7 @@ public:
 
     virtual bool init();
     virtual void onEnter();
+    virtual void onEnterTransitionDidFinish();
     virtual void onExit();
 
     // CCBSelectorResolver Callbacks (Nút bấm CCBI)
