@@ -9,9 +9,6 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
-/**
- * Các phân hệ màn hình con (Sub Menu) trong Làng Lá
- */
 enum SUBMENUTYPE {
     SUBMENU_HOME = 0,      // Trang chủ Làng Lá (CDefaultMainMenu)
     SUBMENU_NINJA = 1,     // Đội hình & Danh sách Nhẫn Giả
@@ -30,10 +27,6 @@ enum SUBMENUTYPE {
 
 class CDefaultMainMenu;
 
-/**
- * CMainMenu: Khung xương Scene Sảnh Chính điều phối toàn bộ các View và tầng Lua (Firefly MMO)
- * Gắn kết với MainMenu.ccbi
- */
 class CMainMenu 
     : public CCLayer
     , public CCBSelectorResolver
@@ -43,22 +36,21 @@ private:
     static CMainMenu* s_instance;
 
     // Các container node từ MainMenu.ccbi
-    CCNode* m_pNodeContent;   // Container chứa các SubView (Trang chủ, Túi đồ, Tướng)
-    CCNode* m_pNodeForLua;    // Container dành riêng cho các popup và kịch bản Lua
+    CCNode* m_pNodeContent;   // Container chứa các SubView
+    CCNode* m_pNodeForLua;    // Container kịch bản Lua
 
     // Quản lý View con hiện tại
     SUBMENUTYPE m_currentSubMenu;
     CCNode* m_pCurrentView;
     CDefaultMainMenu* m_pDefaultHomeView;
 
-    // Top HUD Labels (Cập nhật từ CPlayerDataMgr)
-    CCLabelTTF* m_pLabelNickname;
-    CCLabelTTF* m_pLabelLevel;
-    CCLabelTTF* m_pLabelGold;
-    CCLabelTTF* m_pLabelSilver;
-    CCLabelTTF* m_pLabelBody;
-    CCLabelTTF* m_pLabelServer;
-    CCLabelTTF* m_pLabelCombatPower;
+    // Top HUD Labels từ NormalTopBar.ccbi
+    CCNode* m_pLabelNickname;
+    CCNode* m_pLabelLevel;
+    CCNode* m_pLabelGold;
+    CCNode* m_pLabelSilver;
+    CCNode* m_pLabelBody;
+    CCNode* m_pLabelCombatPower;
 
 public:
     CMainMenu();
@@ -73,28 +65,30 @@ public:
     virtual void onEnter();
     virtual void onExit();
 
-    // CCB Binders
+    void refreshTopHUD();
+
+    // CCB Resolvers
     virtual SEL_MenuHandler onResolveCCBCCMenuItemSelector(CCObject* pTarget, const char* pSelectorName);
     virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject* pTarget, const char* pSelectorName);
     virtual bool onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode);
 
-    // Chuyển đổi giữa các phân hệ màn hình (Home, Túi đồ, Tướng, Phụ bản)
+    // Chuyển phân hệ
     void changeToSub(SUBMENUTYPE subType);
-    SUBMENUTYPE getCurrentSubMenuType() const { return m_currentSubMenu; }
+    void changeSubMenu(SUBMENUTYPE subType) { changeToSub(subType); }
 
-    // Cập nhật chỉ số trên Top HUD từ CPlayerDataMgr
-    void refreshTopHUD();
+    // Sự kiện MenuSubBar
+    void onBtnHome(CCObject* pSender);
+    void onBtnMyTeam(CCObject* pSender);
+    void onBtnBackpack(CCObject* pSender);
+    void onBtnFight(CCObject* pSender);
+    void onBtnTower(CCObject* pSender);
+    void onBtnStore(CCObject* pSender);
+    void onBtnFriends(CCObject* pSender);
+    void onBtnMessage(CCObject* pSender);
+    void onBtnExp(CCObject* pSender);
+    void onBtnDefault(CCObject* pSender);
 
-    // Node dành cho tầng Lua
-    CCNode* getNodeForLua() const { return m_pNodeForLua; }
-
-    // Sự kiện điều hướng Bottom Bar
-    void onBtnHome(CCObject* pSender, CCControlEvent pEvent);
-    void onBtnNinja(CCObject* pSender, CCControlEvent pEvent);
-    void onBtnBackpack(CCObject* pSender, CCControlEvent pEvent);
-    void onBtnDungeon(CCObject* pSender, CCControlEvent pEvent);
-    void onBtnActivity(CCObject* pSender, CCControlEvent pEvent);
-    void onBtnLogout(CCObject* pSender, CCControlEvent pEvent);
+    CCNode* getNodeContent() { return m_pNodeContent; }
 };
 
 #endif // _CMAIN_MENU_H_

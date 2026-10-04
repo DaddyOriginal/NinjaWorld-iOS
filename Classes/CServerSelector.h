@@ -22,11 +22,23 @@ public:
     virtual void onServerSelected(int serverId, const std::string& serverName, const std::string& hostUrl) = 0;
 };
 
-class CServerSelector : public CCLayerColor {
+class CServerSelector 
+    : public CCLayerColor
+    , public CCBSelectorResolver
+    , public CCBMemberVariableAssigner
+{
 private:
     std::vector<ServerItemInfo> m_serverList;
     ServerSelectDelegate* m_pDelegate;
-    CCMenu* m_pServerMenu;
+
+    CCLabelTTF* m_pLabelServerName1;
+    CCLabelTTF* m_pLabelServerName2;
+    CCSprite* m_pSpriteServerState1;
+    CCSprite* m_pSpriteServerState2;
+    CCNode* m_pNodeListContent;
+    CCControlButton* m_pBtnClose;
+    CCControlButton* m_pBtnServer1;
+    CCControlButton* m_pBtnServer2;
 
 public:
     CServerSelector();
@@ -35,11 +47,25 @@ public:
     static CServerSelector* create(ServerSelectDelegate* pDelegate);
     virtual bool init(ServerSelectDelegate* pDelegate);
 
+    virtual void registerWithTouchDispatcher();
+    virtual bool ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent);
+
     void setServerList(const std::vector<ServerItemInfo>& list);
     void refreshUI();
 
-    void onBtnSelectServer(CCObject* pSender);
-    void onBtnClose(CCObject* pSender);
+    // CCB Resolvers
+    virtual SEL_MenuHandler onResolveCCBCCMenuItemSelector(CCObject* pTarget, const char* pSelectorName);
+    virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject* pTarget, const char* pSelectorName);
+    virtual bool onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode);
+
+    // Callbacks
+    void onBtnClose(CCObject* pSender, CCControlEvent pEvent);
+    void onBtnServer1(CCObject* pSender, CCControlEvent pEvent);
+    void onBtnServer2(CCObject* pSender, CCControlEvent pEvent);
+
+    void onBtnCloseMenu(CCObject* pSender);
+    void onBtnServer1Menu(CCObject* pSender);
+    void onBtnServer2Menu(CCObject* pSender);
 };
 
 #endif // _CSERVER_SELECTOR_H_

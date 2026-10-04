@@ -2,6 +2,7 @@
 #include "CCBManager.h"
 #include "CPlayerDataMgr.h"
 #include "CMainMenu.h"
+#include "SelectLoginVIew.h"
 #include <sstream>
 #include <ctime>
 
@@ -167,7 +168,10 @@ void CLoginScene::onBtnLoginMenu(CCObject* pSender) {
 
 void CLoginScene::onBtnRegist(CCObject* pSender, CCControlEvent pCCControlEvent) {
     CCLog("[CLoginScene] Nút ĐỔI TÀI KHOẢN / ĐĂNG KÝ được nhấn!");
-    showAccountDialog();
+    SelectLoginVIew* pSelect = SelectLoginVIew::create(this);
+    if (pSelect) {
+        this->addChild(pSelect, 999);
+    }
 }
 
 void CLoginScene::onBtnRegistMenu(CCObject* pSender) {
@@ -236,9 +240,18 @@ public:
         const float dx = (winSize.width - dw) * 0.5f;
         const float dy = (winSize.height - dh) * 0.5f;
 
-        CCLayerColor* pBox = CCLayerColor::create(ccc4(15, 23, 42, 250), dw, dh);
-        pBox->setPosition(ccp(dx, dy));
-        this->addChild(pBox, 1);
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_bk_frame_19.png");
+        if (!pFrame) pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_bk_frame_19");
+        if (pFrame) {
+            CCScale9Sprite* pBg = CCScale9Sprite::createWithSpriteFrame(pFrame);
+            pBg->setContentSize(CCSizeMake(dw, dh));
+            pBg->setPosition(ccp(dx + dw * 0.5f, dy + dh * 0.5f));
+            this->addChild(pBg, 1);
+        } else {
+            CCLayerColor* pBox = CCLayerColor::create(ccc4(15, 23, 42, 250), dw, dh);
+            pBox->setPosition(ccp(dx, dy));
+            this->addChild(pBox, 1);
+        }
 
         CCLabelTTF* pTitle = CCLabelTTF::create("CHỌN / ĐỔI TÀI KHOẢN", "Helvetica-Bold", 26.0f);
         pTitle->setPosition(ccp(dx + dw * 0.5f, dy + dh - 45.0f));

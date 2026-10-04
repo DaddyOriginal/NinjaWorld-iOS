@@ -1,93 +1,106 @@
 #include "CServerSelector.h"
+#include "CCBManager.h"
 #include <sstream>
 
 CServerSelector::CServerSelector()
     : m_pDelegate(NULL)
-    , m_pServerMenu(NULL)
+    , m_pLabelServerName1(NULL)
+    , m_pLabelServerName2(NULL)
+    , m_pSpriteServerState1(NULL)
+    , m_pSpriteServerState2(NULL)
+    , m_pNodeListContent(NULL)
+    , m_pBtnClose(NULL)
+    , m_pBtnServer1(NULL)
+    , m_pBtnServer2(NULL)
 {
 }
 
 CServerSelector::~CServerSelector() {
+    CC_SAFE_RELEASE_NULL(m_pLabelServerName1);
+    CC_SAFE_RELEASE_NULL(m_pLabelServerName2);
+    CC_SAFE_RELEASE_NULL(m_pSpriteServerState1);
+    CC_SAFE_RELEASE_NULL(m_pSpriteServerState2);
+    CC_SAFE_RELEASE_NULL(m_pNodeListContent);
+    CC_SAFE_RELEASE_NULL(m_pBtnClose);
+    CC_SAFE_RELEASE_NULL(m_pBtnServer1);
+    CC_SAFE_RELEASE_NULL(m_pBtnServer2);
 }
 
 CServerSelector* CServerSelector::create(ServerSelectDelegate* pDelegate) {
-    CServerSelector* pLayer = new CServerSelector();
-    if (pLayer && pLayer->init(pDelegate)) {
-        pLayer->autorelease();
-        return pLayer;
+    CServerSelector* p = new CServerSelector();
+    if (p && p->init(pDelegate)) {
+        p->autorelease();
+        return p;
     }
-    CC_SAFE_DELETE(pLayer);
+    CC_SAFE_DELETE(p);
     return NULL;
 }
 
 bool CServerSelector::init(ServerSelectDelegate* pDelegate) {
-    // Nền tối mờ 80% che lớp dưới
-    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 200))) {
+    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 180))) {
         return false;
     }
 
     m_pDelegate = pDelegate;
+    this->setTouchEnabled(true);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
-    // Khung popup trung tâm (Background Dialog)
-    const float dialogWidth = 560.0f;
-    const float dialogHeight = 680.0f;
-    const float dialogX = (winSize.width - dialogWidth) * 0.5f;
-    const float dialogY = (winSize.height - dialogHeight) * 0.5f;
+    // 1. Nạp giao diện ServerSelector.ccbi nguyên bản
+    CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("ServerSelector.ccbi", this);
+    if (!pNode) {
+        pNode = CCBManager::sharedManager()->loadNodeFromCCBI("serverinfo/ServerSelector.ccbi", this);
+    }
 
-    CCLayerColor* pDialogBg = CCLayerColor::create(ccc4(24, 32, 47, 245), dialogWidth, dialogHeight);
-    pDialogBg->setPosition(ccp(dialogX, dialogY));
-    this->addChild(pDialogBg, 1);
+    if (pNode) {
+        pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
+        this->addChild(pNode, 1);
+        CCLog("[CServerSelector] Nạp ServerSelector.ccbi thành công!");
+    }
 
-    // Tiêu đề Dialog
-    CCLabelTTF* pTitle = CCLabelTTF::create("CHỌN CỤM MÁY CHỦ", "Helvetica-Bold", 28.0f);
-    pTitle->setPosition(ccp(dialogX + dialogWidth * 0.5f, dialogY + dialogHeight - 50.0f));
-    pTitle->setColor(ccc3(245, 158, 11)); // Vàng cam
-    this->addChild(pTitle, 2);
+    // 2. Bảo vệ gắn trực tiếp sự kiện chạm
+    if (m_pBtnClose) {
+        m_pBtnClose->setTouchPriority(-130);
+        m_pBtnClose->addTargetWithActionForControlEvents(this, cccontrol_selector(CServerSelector::onBtnClose), CCControlEventTouchUpInside);
+    }
+    if (m_pBtnServer1) {
+        m_pBtnServer1->setTouchPriority(-130);
+        m_pBtnServer1->addTargetWithActionForControlEvents(this, cccontrol_selector(CServerSelector::onBtnServer1), CCControlEventTouchUpInside);
+    }
+    if (m_pBtnServer2) {
+        m_pBtnServer2->setTouchPriority(-130);
+        m_pBtnServer2->addTargetWithActionForControlEvents(this, cccontrol_selector(CServerSelector::onBtnServer2), CCControlEventTouchUpInside);
+    }
 
-    // Nút Đóng / Quay lại
-    CCMenuItemFont* pBtnClose = CCMenuItemFont::create("ĐÓNG", this, menu_selector(CServerSelector::onBtnClose));
-    pBtnClose->setFontSize(22.0f);
-    pBtnClose->setColor(ccc3(239, 68, 68)); // Đỏ
-    pBtnClose->setPosition(ccp(dialogX + dialogWidth * 0.5f, dialogY + 50.0f));
+    // 3. Khởi tạo danh sách mặc định nếu chưa có
+    if (m_serverList.empty()) {
+        ServerItemInfo s1;
+        s1.id = 1;
+        s1.name = "S1. Làng Lá";
+        s1.ip = "160.22.123.62";
+        s1.port = 8088;
+        s1.state = 1;
 
-    CCMenu* pCloseMenu = CCMenu::create(pBtnClose, NULL);
-    pCloseMenu->setPosition(CCPointZero);
-    this->addChild(pCloseMenu, 3);
+        ServerItemInfo s2;
+        s2.id = 2;
+        s2.name = "S2. Làng Cát";
+        s2.ip = "160.22.123.62";
+        s2.port = 8088;
+        s2.state = 1;
 
-    // Menu danh sách Server bên trong Dialog
-    m_pServerMenu = CCMenu::create();
-    m_pServerMenu->setPosition(CCPointZero);
-    this->addChild(m_pServerMenu, 2);
-
-    // Khởi tạo danh sách mặc định nếu chưa có
-    ServerItemInfo s1;
-    s1.id = 1;
-    s1.name = "S1. Làng Lá (Đề Cử)";
-    s1.ip = "160.22.123.62";
-    s1.port = 8088;
-    s1.state = 1;
-
-    ServerItemInfo s2;
-    s2.id = 2;
-    s2.name = "S2. Làng Cát (Mới)";
-    s2.ip = "160.22.123.62";
-    s2.port = 8088;
-    s2.state = 1;
-
-    ServerItemInfo s3;
-    s3.id = 3;
-    s3.name = "S3. Làng Mây (Mới)";
-    s3.ip = "160.22.123.62";
-    s3.port = 8088;
-    s3.state = 1;
-
-    m_serverList.push_back(s1);
-    m_serverList.push_back(s2);
-    m_serverList.push_back(s3);
+        m_serverList.push_back(s1);
+        m_serverList.push_back(s2);
+    }
 
     refreshUI();
     return true;
+}
+
+void CServerSelector::registerWithTouchDispatcher() {
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, -128, true);
+}
+
+bool CServerSelector::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent) {
+    return true; // Nuốt touch nền
 }
 
 void CServerSelector::setServerList(const std::vector<ServerItemInfo>& list) {
@@ -98,47 +111,74 @@ void CServerSelector::setServerList(const std::vector<ServerItemInfo>& list) {
 }
 
 void CServerSelector::refreshUI() {
-    if (!m_pServerMenu) return;
-    m_pServerMenu->removeAllChildren();
-
-    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    float startY = (winSize.height + 680.0f) * 0.5f - 140.0f;
-    float centerX = winSize.width * 0.5f;
-
-    for (size_t i = 0; i < m_serverList.size(); ++i) {
-        const ServerItemInfo& info = m_serverList[i];
-
-        CCMenuItemFont* pItem = CCMenuItemFont::create(info.name.c_str(), this, menu_selector(CServerSelector::onBtnSelectServer));
-        pItem->setFontSize(24.0f);
-        pItem->setTag(info.id);
-        pItem->setPosition(ccp(centerX, startY - i * 75.0f));
-        pItem->setColor(ccc3(255, 255, 255));
-
-        m_pServerMenu->addChild(pItem);
-    }
-}
-
-void CServerSelector::onBtnSelectServer(CCObject* pSender) {
-    CCNode* pNode = dynamic_cast<CCNode*>(pSender);
-    if (!pNode) return;
-
-    int selectedId = pNode->getTag();
-    for (size_t i = 0; i < m_serverList.size(); ++i) {
-        if (m_serverList[i].id == selectedId) {
-            std::stringstream ss;
-            ss << "http://" << m_serverList[i].ip << ":" << m_serverList[i].port;
-            CCLog("[CServerSelector] Da chon Server: %s (%s)", m_serverList[i].name.c_str(), ss.str().c_str());
-
-            if (m_pDelegate) {
-                m_pDelegate->onServerSelected(m_serverList[i].id, m_serverList[i].name, ss.str());
-            }
-            break;
+    if (!m_serverList.empty()) {
+        if (m_pLabelServerName1) {
+            m_pLabelServerName1->setString(m_serverList[0].name.c_str());
         }
     }
+    if (m_serverList.size() >= 2) {
+        if (m_pLabelServerName2) {
+            m_pLabelServerName2->setString(m_serverList[1].name.c_str());
+        }
+    }
+}
 
+SEL_MenuHandler CServerSelector::onResolveCCBCCMenuItemSelector(CCObject* pTarget, const char* pSelectorName) {
+    if (strcmp(pSelectorName, "BtnClose") == 0) return menu_selector(CServerSelector::onBtnCloseMenu);
+    if (strcmp(pSelectorName, "BtnServer1") == 0) return menu_selector(CServerSelector::onBtnServer1Menu);
+    if (strcmp(pSelectorName, "BtnServer2") == 0) return menu_selector(CServerSelector::onBtnServer2Menu);
+    return NULL;
+}
+
+SEL_CCControlHandler CServerSelector::onResolveCCBCCControlSelector(CCObject* pTarget, const char* pSelectorName) {
+    if (strcmp(pSelectorName, "BtnClose") == 0) return cccontrol_selector(CServerSelector::onBtnClose);
+    if (strcmp(pSelectorName, "BtnServer1") == 0) return cccontrol_selector(CServerSelector::onBtnServer1);
+    if (strcmp(pSelectorName, "BtnServer2") == 0) return cccontrol_selector(CServerSelector::onBtnServer2);
+    return NULL;
+}
+
+bool CServerSelector::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode) {
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnClose", CCControlButton*, this->m_pBtnClose);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnServer1", CCControlButton*, this->m_pBtnServer1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnServer2", CCControlButton*, this->m_pBtnServer2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_servername1", CCLabelTTF*, this->m_pLabelServerName1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_servername2", CCLabelTTF*, this->m_pLabelServerName2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_serverstate1", CCSprite*, this->m_pSpriteServerState1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_serverstate2", CCSprite*, this->m_pSpriteServerState2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "node_listcontent", CCNode*, this->m_pNodeListContent);
+    return false;
+}
+
+void CServerSelector::onBtnClose(CCObject* pSender, CCControlEvent pEvent) {
     this->removeFromParentAndCleanup(true);
 }
 
-void CServerSelector::onBtnClose(CCObject* pSender) {
+void CServerSelector::onBtnServer1(CCObject* pSender, CCControlEvent pEvent) {
+    if (!m_serverList.empty() && m_pDelegate) {
+        std::stringstream ss;
+        ss << "http://" << m_serverList[0].ip << ":" << m_serverList[0].port;
+        m_pDelegate->onServerSelected(m_serverList[0].id, m_serverList[0].name, ss.str());
+    }
     this->removeFromParentAndCleanup(true);
+}
+
+void CServerSelector::onBtnServer2(CCObject* pSender, CCControlEvent pEvent) {
+    if (m_serverList.size() >= 2 && m_pDelegate) {
+        std::stringstream ss;
+        ss << "http://" << m_serverList[1].ip << ":" << m_serverList[1].port;
+        m_pDelegate->onServerSelected(m_serverList[1].id, m_serverList[1].name, ss.str());
+    }
+    this->removeFromParentAndCleanup(true);
+}
+
+void CServerSelector::onBtnCloseMenu(CCObject* pSender) {
+    onBtnClose(pSender, CCControlEventTouchUpInside);
+}
+
+void CServerSelector::onBtnServer1Menu(CCObject* pSender) {
+    onBtnServer1(pSender, CCControlEventTouchUpInside);
+}
+
+void CServerSelector::onBtnServer2Menu(CCObject* pSender) {
+    onBtnServer2(pSender, CCControlEventTouchUpInside);
 }

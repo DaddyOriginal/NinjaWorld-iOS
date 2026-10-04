@@ -17,6 +17,15 @@
 
 CMainMenu* CMainMenu::s_instance = NULL;
 
+static void updateLabelValue(CCNode* pNode, const char* str) {
+    if (!pNode || !str) return;
+    if (CCLabelBMFont* bm = dynamic_cast<CCLabelBMFont*>(pNode)) {
+        bm->setString(str);
+    } else if (CCLabelTTF* ttf = dynamic_cast<CCLabelTTF*>(pNode)) {
+        ttf->setString(str);
+    }
+}
+
 CMainMenu::CMainMenu()
     : m_pNodeContent(NULL)
     , m_pNodeForLua(NULL)
@@ -28,7 +37,6 @@ CMainMenu::CMainMenu()
     , m_pLabelGold(NULL)
     , m_pLabelSilver(NULL)
     , m_pLabelBody(NULL)
-    , m_pLabelServer(NULL)
     , m_pLabelCombatPower(NULL)
 {
     s_instance = this;
@@ -40,6 +48,12 @@ CMainMenu::~CMainMenu() {
     }
     CC_SAFE_RELEASE_NULL(m_pNodeContent);
     CC_SAFE_RELEASE_NULL(m_pNodeForLua);
+    CC_SAFE_RELEASE_NULL(m_pLabelNickname);
+    CC_SAFE_RELEASE_NULL(m_pLabelLevel);
+    CC_SAFE_RELEASE_NULL(m_pLabelGold);
+    CC_SAFE_RELEASE_NULL(m_pLabelSilver);
+    CC_SAFE_RELEASE_NULL(m_pLabelBody);
+    CC_SAFE_RELEASE_NULL(m_pLabelCombatPower);
 }
 
 CMainMenu* CMainMenu::sharedMainMenu() {
@@ -68,60 +82,33 @@ bool CMainMenu::init() {
     if (pMainNode) {
         pMainNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
         this->addChild(pMainNode, 0);
-        CCLog("[CMainMenu] Nap MainMenu.ccbi thanh cong!");
+        CCLog("[CMainMenu] Nạp MainMenu.ccbi thành công!");
     } else {
-        CCLog("[CMainMenu] Fallback root container");
         m_pNodeContent = CCNode::create();
         this->addChild(m_pNodeContent, 1);
-
         m_pNodeForLua = CCNode::create();
         this->addChild(m_pNodeForLua, 10);
     }
 
-    // 2. Nạp View mặc định ban đầu: CDefaultMainMenu (Trang chủ Làng Lá)
-    m_pDefaultHomeView = CDefaultMainMenu::create();
-    if (m_pDefaultHomeView) {
-        if (m_pNodeContent) {
-            m_pNodeContent->addChild(m_pDefaultHomeView);
-        } else {
-            this->addChild(m_pDefaultHomeView, 1);
-        }
-        m_pCurrentView = m_pDefaultHomeView;
+    // 2. Nạp thanh thông số đỉnh màn hình nguyên bản (NormalTopBar.ccbi)
+    CCNode* pTopBar = CCBManager::sharedManager()->loadNodeFromCCBI("NormalTopBar.ccbi", this);
+    if (!pTopBar) {
+        pTopBar = CCBManager::sharedManager()->loadNodeFromCCBI("sub_ui/NormalTopBar.ccbi", this);
+    }
+    if (pTopBar) {
+        pTopBar->setPosition(ccp(winSize.width * 0.5f, winSize.height - 40.0f));
+        this->addChild(pTopBar, 10);
+        CCLog("[CMainMenu] Nạp NormalTopBar.ccbi thành công!");
     }
 
-    // 3. Khởi tạo Top HUD (Thanh thông số đỉnh màn hình)
-    CCLayerColor* pTopBar = CCLayerColor::create(ccc4(10, 15, 26, 230), winSize.width, 90.0f);
-    pTopBar->setPosition(ccp(0, winSize.height - 90.0f));
-    this->addChild(pTopBar, 20);
-
-    // Tên nhân vật & Cấp độ
-    m_pLabelNickname = CCLabelTTF::create("Ninja", "Helvetica-Bold", 22.0f);
-    m_pLabelNickname->setPosition(ccp(110.0f, winSize.height - 30.0f));
-    m_pLabelNickname->setColor(ccc3(255, 255, 255));
-    this->addChild(m_pLabelNickname, 21);
-
-    m_pLabelLevel = CCLabelTTF::create("Lv.1", "Helvetica-Bold", 18.0f);
-    m_pLabelLevel->setPosition(ccp(110.0f, winSize.height - 60.0f));
-    m_pLabelLevel->setColor(ccc3(245, 158, 11)); // Vàng cam
-    this->addChild(m_pLabelLevel, 21);
-
-    // Vàng
-    m_pLabelGold = CCLabelTTF::create("Vàng: 0", "Helvetica-Bold", 18.0f);
-    m_pLabelGold->setPosition(ccp(260.0f, winSize.height - 45.0f));
-    m_pLabelGold->setColor(ccc3(251, 191, 36));
-    this->addChild(m_pLabelGold, 21);
-
-    // Bạc
-    m_pLabelSilver = CCLabelTTF::create("Bạc: 0", "Helvetica-Bold", 18.0f);
-    m_pLabelSilver->setPosition(ccp(400.0f, winSize.height - 45.0f));
-    m_pLabelSilver->setColor(ccc3(226, 232, 240));
-    this->addChild(m_pLabelSilver, 21);
-
-    // Thể lực
-    m_pLabelBody = CCLabelTTF::create("Thể lực: 120/120", "Helvetica-Bold", 18.0f);
-    m_pLabelBody->setPosition(ccp(540.0f, winSize.height - 45.0f));
-    m_pLabelBody->setColor(ccc3(52, 211, 153)); // Xanh lục
-    this->addChild(m_pLabelBody, 21);
+    // 3. Nếu node_content chưa có View, thêm CDefaultMainMenu ban đầu
+    if (m_pNodeContent && m_pNodeContent->getChildrenCount() == 0) {
+        m_pDefaultHomeView = CDefaultMainMenu::create();
+        if (m_pDefaultHomeView) {
+            m_pNodeContent->addChild(m_pDefaultHomeView);
+            m_pCurrentView = m_pDefaultHomeView;
+        }
+    }
 
     return true;
 }
@@ -139,65 +126,61 @@ void CMainMenu::refreshTopHUD() {
     CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
     if (!pData) return;
 
-    if (m_pLabelNickname) {
-        m_pLabelNickname->setString(pData->getNickname().c_str());
-    }
+    updateLabelValue(m_pLabelNickname, pData->getNickname().c_str());
 
-    if (m_pLabelLevel) {
-        std::stringstream ss;
-        ss << "Lv." << pData->getLevel();
-        m_pLabelLevel->setString(ss.str().c_str());
-    }
+    char buf[64];
+    snprintf(buf, sizeof(buf), "%d", pData->getLevel());
+    updateLabelValue(m_pLabelLevel, buf);
 
-    if (m_pLabelGold) {
-        std::stringstream ss;
-        ss << "Vàng: " << pData->firefly_GetGold();
-        m_pLabelGold->setString(ss.str().c_str());
-    }
+    snprintf(buf, sizeof(buf), "%d", pData->firefly_GetGold());
+    updateLabelValue(m_pLabelGold, buf);
 
-    if (m_pLabelSilver) {
-        std::stringstream ss;
-        ss << "Bạc: " << pData->firefly_GetSilver();
-        m_pLabelSilver->setString(ss.str().c_str());
-    }
+    snprintf(buf, sizeof(buf), "%d", pData->firefly_GetSilver());
+    updateLabelValue(m_pLabelSilver, buf);
 
-    if (m_pLabelBody) {
-        std::stringstream ss;
-        ss << "Thể lực: " << pData->firefly_GetBodyValue() << "/120";
-        m_pLabelBody->setString(ss.str().c_str());
-    }
+    snprintf(buf, sizeof(buf), "%d/120", pData->firefly_GetBodyValue());
+    updateLabelValue(m_pLabelBody, buf);
 
-    CCLog("[CMainMenu] Da cap nhat Top HUD cho nhan vat: %s (Lv.%d)", 
-          pData->getNickname().c_str(), pData->getLevel());
+    snprintf(buf, sizeof(buf), "%d", pData->getCombatPower());
+    updateLabelValue(m_pLabelCombatPower, buf);
 }
 
-// -------------------------------------------------------------
-// CCB RESOLVERS CHO MainMenu.ccbi
-// -------------------------------------------------------------
 SEL_MenuHandler CMainMenu::onResolveCCBCCMenuItemSelector(CCObject* pTarget, const char* pSelectorName) {
     return NULL;
 }
 
 SEL_CCControlHandler CMainMenu::onResolveCCBCCControlSelector(CCObject* pTarget, const char* pSelectorName) {
+    if (strcmp(pSelectorName, "onBtnHome") == 0) return cccontrol_selector(CMainMenu::onBtnHome);
+    if (strcmp(pSelectorName, "onBtnMyTeam") == 0) return cccontrol_selector(CMainMenu::onBtnMyTeam);
+    if (strcmp(pSelectorName, "onBtnBackpack") == 0) return cccontrol_selector(CMainMenu::onBtnBackpack);
+    if (strcmp(pSelectorName, "onBtnFight") == 0) return cccontrol_selector(CMainMenu::onBtnFight);
+    if (strcmp(pSelectorName, "onBtnTower") == 0) return cccontrol_selector(CMainMenu::onBtnTower);
+    if (strcmp(pSelectorName, "onBtnStore") == 0) return cccontrol_selector(CMainMenu::onBtnStore);
+    if (strcmp(pSelectorName, "onBtnFriends") == 0) return cccontrol_selector(CMainMenu::onBtnFriends);
+    if (strcmp(pSelectorName, "onBtnMessage") == 0) return cccontrol_selector(CMainMenu::onBtnMessage);
+    if (strcmp(pSelectorName, "onBtnExp") == 0) return cccontrol_selector(CMainMenu::onBtnExp);
+    if (strcmp(pSelectorName, "onBtnDefault") == 0) return cccontrol_selector(CMainMenu::onBtnDefault);
     return NULL;
 }
 
 bool CMainMenu::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode) {
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "node_content", CCNode*, this->m_pNodeContent);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "node_forlua", CCNode*, this->m_pNodeForLua);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_name", CCNode*, this->m_pLabelNickname);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_level", CCNode*, this->m_pLabelLevel);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_goldval", CCNode*, this->m_pLabelGold);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_silverval", CCNode*, this->m_pLabelSilver);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_bodyval", CCNode*, this->m_pLabelBody);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_attackval", CCNode*, this->m_pLabelCombatPower);
     return false;
 }
 
-// -------------------------------------------------------------
-// ĐIỀU PHỐI CHUYỂN PHÂN HỆ SUBMENU
-// -------------------------------------------------------------
 void CMainMenu::changeToSub(SUBMENUTYPE subType) {
     if (m_currentSubMenu == subType) return;
     m_currentSubMenu = subType;
 
     if (!m_pNodeContent) return;
 
-    // Xóa view con hiện tại
     if (m_pCurrentView) {
         m_pCurrentView->removeFromParentAndCleanup(true);
         m_pCurrentView = NULL;
@@ -208,11 +191,11 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             m_pDefaultHomeView = CDefaultMainMenu::create();
             m_pNodeContent->addChild(m_pDefaultHomeView);
             m_pCurrentView = m_pDefaultHomeView;
-            CCLog("[CMainMenu] Chuyen ve Trang chu Lang La");
+            CCLog("[CMainMenu] Chuyển về Trang chủ Làng");
             break;
         }
         case SUBMENU_BAG: {
-            CCLog("[CMainMenu] Chuyen sang Tui Do (CMyBackpackCardView)");
+            CCLog("[CMainMenu] Chuyển sang Túi Đồ (CMyBackpackCardView)");
             CMyBackpackCardView* pBagView = CMyBackpackCardView::create();
             if (pBagView) {
                 m_pNodeContent->addChild(pBagView);
@@ -221,7 +204,7 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_NINJA: {
-            CCLog("[CMainMenu] Chuyen sang Doi Hinh Nhan Gia (CMyGroupCardView)");
+            CCLog("[CMainMenu] Chuyển sang Đội Hình Nhẫn Giả (CMyGroupCardView)");
             CMyGroupCardView* pGroupView = CMyGroupCardView::create();
             if (pGroupView) {
                 m_pNodeContent->addChild(pGroupView);
@@ -230,25 +213,16 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_DUNGEON: {
-            CCLog("[CMainMenu] Chuyen sang Phu Ban Cot Truyen (CChapterView)");
-            CChapterView* pChapView = CChapterView::create();
-            if (pChapView) {
-                m_pNodeContent->addChild(pChapView);
-                m_pCurrentView = pChapView;
-            }
-            break;
-        }
-        case SUBMENU_SHOP: {
-            CCLog("[CMainMenu] Chuyen sang Chieu Mo & Cua Hang (CPlayerNinjaRecruitView)");
-            CPlayerNinjaRecruitView* pRecruitView = CPlayerNinjaRecruitView::create();
-            if (pRecruitView) {
-                m_pNodeContent->addChild(pRecruitView);
-                m_pCurrentView = pRecruitView;
+            CCLog("[CMainMenu] Chuyển sang Vượt Ải Cốt Truyện (CChapterView)");
+            CChapterView* pChapterView = CChapterView::create();
+            if (pChapterView) {
+                m_pNodeContent->addChild(pChapterView);
+                m_pCurrentView = pChapterView;
             }
             break;
         }
         case SUBMENU_ARENA: {
-            CCLog("[CMainMenu] Chuyen sang Dau Truong Loi Dai (CPlayerArenaView)");
+            CCLog("[CMainMenu] Chuyển sang Đấu Trường Lôi Đài (CPlayerArenaView)");
             CPlayerArenaView* pArenaView = CPlayerArenaView::create();
             if (pArenaView) {
                 m_pNodeContent->addChild(pArenaView);
@@ -256,8 +230,17 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             }
             break;
         }
+        case SUBMENU_SHOP: {
+            CCLog("[CMainMenu] Chuyển sang Chiêu Mộ Quán Trà (CPlayerNinjaRecruitView)");
+            CPlayerNinjaRecruitView* pRecruitView = CPlayerNinjaRecruitView::create();
+            if (pRecruitView) {
+                m_pNodeContent->addChild(pRecruitView);
+                m_pCurrentView = pRecruitView;
+            }
+            break;
+        }
         case SUBMENU_TOWER: {
-            CCLog("[CMainMenu] Chuyen sang Leo Thap Thi Luyen (CTowerView)");
+            CCLog("[CMainMenu] Chuyển sang Tháp Thí Luyện (CTowerView)");
             CTowerView* pTowerView = CTowerView::create();
             if (pTowerView) {
                 m_pNodeContent->addChild(pTowerView);
@@ -265,9 +248,7 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             }
             break;
         }
-        case SUBMENU_ACTIVITY:
         case SUBMENU_EIGHTGATE: {
-            CCLog("[CMainMenu] Chuyen sang Bat Mon Don Giap (CEightGateView)");
             CEightGateView* pGateView = CEightGateView::create();
             if (pGateView) {
                 m_pNodeContent->addChild(pGateView);
@@ -276,7 +257,6 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_MONEYTREE: {
-            CCLog("[CMainMenu] Chuyen sang Cay Rung Tien (CMoneyTreeView)");
             CMoneyTreeView* pTreeView = CMoneyTreeView::create();
             if (pTreeView) {
                 m_pNodeContent->addChild(pTreeView);
@@ -285,7 +265,6 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_ROULETTE: {
-            CCLog("[CMainMenu] Chuyen sang Vong Quay May Man (CRouletteView)");
             CRouletteView* pRouletteView = CRouletteView::create();
             if (pRouletteView) {
                 m_pNodeContent->addChild(pRouletteView);
@@ -294,7 +273,6 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_FRIEND: {
-            CCLog("[CMainMenu] Chuyen sang Ban Be (CFriendView)");
             CFriendView* pFriendView = CFriendView::create();
             if (pFriendView) {
                 m_pNodeContent->addChild(pFriendView);
@@ -303,7 +281,6 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
             break;
         }
         case SUBMENU_MAIL: {
-            CCLog("[CMainMenu] Chuyen sang Hom Thu (CMailView)");
             CMailView* pMailView = CMailView::create();
             if (pMailView) {
                 m_pNodeContent->addChild(pMailView);
@@ -314,34 +291,15 @@ void CMainMenu::changeToSub(SUBMENUTYPE subType) {
         default:
             break;
     }
-
-    refreshTopHUD();
 }
 
-void CMainMenu::onBtnHome(CCObject* pSender, CCControlEvent pEvent) {
-    changeToSub(SUBMENU_HOME);
-}
-
-void CMainMenu::onBtnNinja(CCObject* pSender, CCControlEvent pEvent) {
-    changeToSub(SUBMENU_NINJA);
-}
-
-void CMainMenu::onBtnBackpack(CCObject* pSender, CCControlEvent pEvent) {
-    changeToSub(SUBMENU_BAG);
-}
-
-void CMainMenu::onBtnDungeon(CCObject* pSender, CCControlEvent pEvent) {
-    changeToSub(SUBMENU_DUNGEON);
-}
-
-void CMainMenu::onBtnActivity(CCObject* pSender, CCControlEvent pEvent) {
-    changeToSub(SUBMENU_ACTIVITY);
-}
-
-void CMainMenu::onBtnLogout(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CMainMenu] Dang xuat khoi tai khoan!");
-    CCScene* pLogin = CLoginScene::scene();
-    if (pLogin) {
-        CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5f, pLogin));
-    }
-}
+void CMainMenu::onBtnHome(CCObject* pSender) { changeToSub(SUBMENU_HOME); }
+void CMainMenu::onBtnMyTeam(CCObject* pSender) { changeToSub(SUBMENU_NINJA); }
+void CMainMenu::onBtnBackpack(CCObject* pSender) { changeToSub(SUBMENU_BAG); }
+void CMainMenu::onBtnFight(CCObject* pSender) { changeToSub(SUBMENU_DUNGEON); }
+void CMainMenu::onBtnTower(CCObject* pSender) { changeToSub(SUBMENU_TOWER); }
+void CMainMenu::onBtnStore(CCObject* pSender) { changeToSub(SUBMENU_SHOP); }
+void CMainMenu::onBtnFriends(CCObject* pSender) { changeToSub(SUBMENU_FRIEND); }
+void CMainMenu::onBtnMessage(CCObject* pSender) { changeToSub(SUBMENU_MAIL); }
+void CMainMenu::onBtnExp(CCObject* pSender) { changeToSub(SUBMENU_ACTIVITY); }
+void CMainMenu::onBtnDefault(CCObject* pSender) { changeToSub(SUBMENU_HOME); }

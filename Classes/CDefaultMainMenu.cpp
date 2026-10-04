@@ -32,20 +32,48 @@ bool CDefaultMainMenu::init() {
         return false;
     }
 
-    // Nạp giao diện DefaultMainMenu.ccbi
+    // 1. Nạp giao diện DefaultMainMenu.ccbi
     CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("DefaultMainMenu.ccbi", this);
     if (!pNode) {
         pNode = CCBManager::sharedManager()->loadNodeFromCCBI("sub_ui/DefaultMainMenu.ccbi", this);
     }
 
     if (pNode) {
-        this->addChild(pNode);
-        CCLog("[CDefaultMainMenu] Nap DefaultMainMenu.ccbi thanh cong!");
+        this->addChild(pNode, 0);
+        CCLog("[CDefaultMainMenu] Nạp DefaultMainMenu.ccbi thành công!");
     } else {
-        CCLog("[CDefaultMainMenu] Failed to load DefaultMainMenu.ccbi, dung layer nen!");
+        CCLog("[CDefaultMainMenu] Failed to load DefaultMainMenu.ccbi, dùng layer nền!");
         CCSize winSize = CCDirector::sharedDirector()->getWinSize();
         CCLayerColor* pBg = CCLayerColor::create(ccc4(15, 23, 42, 255), winSize.width, winSize.height);
         this->addChild(pBg);
+    }
+
+    // 2. Nạp bối cảnh ngôi làng nguyên bản của Quốc gia (Earth / Fire / Water / Wind / Mine)
+    int countryType = CPlayerDataMgr::sharedManager()->getCountryType();
+    std::string countryName = "Earth";
+    if (countryType == 1) countryName = "Fire";
+    else if (countryType == 2) countryName = "Water";
+    else if (countryType == 3) countryName = "Wind";
+    else if (countryType == 4) countryName = "Earth";
+    else if (countryType == 5) countryName = "Mine";
+
+    std::string ccbiName = countryName + "CountryDefaultMenu.ccbi";
+    CCNode* pCountryNode = CCBManager::sharedManager()->loadNodeFromCCBI(ccbiName.c_str(), this);
+    if (!pCountryNode) {
+        pCountryNode = CCBManager::sharedManager()->loadNodeFromCCBI(("sub_ui/" + ccbiName).c_str(), this);
+    }
+
+    if (pCountryNode) {
+        if (m_pLayerBuildingContent) {
+            m_pLayerBuildingContent->addChild(pCountryNode);
+            CCLog("[CDefaultMainMenu] Nạp thành công bối cảnh Làng %s vào layer_buildingcontent!", countryName.c_str());
+        } else if (m_pNodeCountryBk) {
+            m_pNodeCountryBk->addChild(pCountryNode);
+            CCLog("[CDefaultMainMenu] Nạp thành công bối cảnh Làng %s vào node_country_bk!", countryName.c_str());
+        } else {
+            this->addChild(pCountryNode, -1);
+            CCLog("[CDefaultMainMenu] Nạp thành công bối cảnh Làng %s vào this (-1)!", countryName.c_str());
+        }
     }
 
     return true;
@@ -81,7 +109,7 @@ void CDefaultMainMenu::firefly_LoadUserInfo() {
         m_pLabelMsgNews->setString("!");
     }
 
-    CCLog("[CDefaultMainMenu] Cap nhat thong so Làng Lá: LucChien=%d", pData->getCombatPower());
+    CCLog("[CDefaultMainMenu] Cập nhật thông số Làng: LucChien=%d", pData->getCombatPower());
 }
 
 // -------------------------------------------------------------
@@ -92,28 +120,28 @@ SEL_MenuHandler CDefaultMainMenu::onResolveCCBCCMenuItemSelector(CCObject* pTarg
 }
 
 SEL_CCControlHandler CDefaultMainMenu::onResolveCCBCCControlSelector(CCObject* pTarget, const char* pSelectorName) {
-    if (strcmp(pSelectorName, "onBtnTower") == 0) {
+    if (strcmp(pSelectorName, "onBtnTower") == 0 || strcmp(pSelectorName, "BtnTower") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnTower);
     }
-    if (strcmp(pSelectorName, "onBtnActivity") == 0) {
+    if (strcmp(pSelectorName, "onBtnActivity") == 0 || strcmp(pSelectorName, "BtnActivity") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnActivity);
     }
-    if (strcmp(pSelectorName, "onClickNaruto") == 0) {
+    if (strcmp(pSelectorName, "onClickNaruto") == 0 || strcmp(pSelectorName, "BtnNaruto") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onClickNaruto);
     }
-    if (strcmp(pSelectorName, "onBtnBuyFund") == 0) {
+    if (strcmp(pSelectorName, "onBtnBuyFund") == 0 || strcmp(pSelectorName, "BtnBuyFund") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnBuyFund);
     }
-    if (strcmp(pSelectorName, "onBtnSaveTime") == 0) {
+    if (strcmp(pSelectorName, "onBtnSaveTime") == 0 || strcmp(pSelectorName, "BtnSaveTime") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnSaveTime);
     }
-    if (strcmp(pSelectorName, "onClickAwardCenter") == 0) {
+    if (strcmp(pSelectorName, "onClickAwardCenter") == 0 || strcmp(pSelectorName, "BtnAwardCenter") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onClickAwardCenter);
     }
-    if (strcmp(pSelectorName, "onBtnArena") == 0) {
+    if (strcmp(pSelectorName, "onBtnArena") == 0 || strcmp(pSelectorName, "BtnArena") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnArena);
     }
-    if (strcmp(pSelectorName, "onBtnDailyTask") == 0) {
+    if (strcmp(pSelectorName, "onBtnDailyTask") == 0 || strcmp(pSelectorName, "BtnDailyTask") == 0) {
         return cccontrol_selector(CDefaultMainMenu::onBtnDailyTask);
     }
     return NULL;
@@ -124,6 +152,7 @@ bool CDefaultMainMenu::onAssignCCBMemberVariable(CCObject* pTarget, const char* 
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "node_country_bk", CCNode*, this->m_pNodeCountryBk);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "node_menubtns", CCNode*, this->m_pNodeMenuBtns);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_maxattack", CCLabelBMFont*, this->m_pLabelMaxAttack);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_maxdefense", CCLabelBMFont*, this->m_pLabelMaxHonor);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_maxhonor", CCLabelBMFont*, this->m_pLabelMaxHonor);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_msg_news", CCLabelBMFont*, this->m_pLabelMsgNews);
 
@@ -131,68 +160,63 @@ bool CDefaultMainMenu::onAssignCCBMemberVariable(CCObject* pTarget, const char* 
 }
 
 // -------------------------------------------------------------
-// SỰ KIỆN CÔNG TRÌNH & NÚT BẤM
+// SỰ KIỆN CÁC TÒA NHÀ & TÍNH NĂNG
 // -------------------------------------------------------------
 void CDefaultMainMenu::onBtnTower(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo cong trinh: LEO THAP THI LUYEN (SUBMENU_TOWER)");
-    if (CMainMenu::sharedManager()) {
-        CMainMenu::sharedManager()->changeToSub(SUBMENU_TOWER);
+    CCLog("[CDefaultMainMenu] Mở Tháp Thí Luyện (CTowerView)!");
+    if (CMainMenu::sharedMainMenu()) {
+        CMainMenu::sharedMainMenu()->onBtnTower(pSender);
     }
 }
 
 void CDefaultMainMenu::onBtnActivity(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: HOAT DONG & BAT MON DON GIAP (SUBMENU_ACTIVITY)");
-    if (CMainMenu::sharedMainMenu()) {
-        CMainMenu::sharedMainMenu()->changeToSub(SUBMENU_ACTIVITY);
+    CCLog("[CDefaultMainMenu] Mở Trung Tâm Hoạt Động (CAwardCenterView)!");
+    CAwardCenterView* pView = CAwardCenterView::create();
+    if (pView && CMainMenu::sharedMainMenu()) {
+        CMainMenu::sharedMainMenu()->changeSubMenu(SUBMENU_HOME);
+        this->addChild(pView, 100);
     }
 }
 
 void CDefaultMainMenu::onClickNaruto(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: CHIEU MO NHAN GIA (SUBMENU_SHOP)");
-    if (CMainMenu::sharedManager()) {
-        CMainMenu::sharedManager()->changeToSub(SUBMENU_SHOP);
+    CCLog("[CDefaultMainMenu] Bấm vào Naruto / Nhận thưởng hàng ngày!");
+    if (CMainMenu::sharedMainMenu()) {
+        CMainMenu::sharedMainMenu()->onBtnFriends(pSender);
     }
 }
 
 void CDefaultMainMenu::onBtnBuyFund(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: QUY TRUONG THANH");
-    CGrowthFundView* pFundView = CGrowthFundView::create();
-    if (pFundView) {
-        CCNode* pParent = this->getParent() ? this->getParent() : this;
-        pFundView->Show(pParent, 60);
+    CCLog("[CDefaultMainMenu] Mở Quỹ Trưởng Thành (CGrowthFundView)!");
+    CGrowthFundView* pView = CGrowthFundView::create();
+    if (pView) {
+        this->addChild(pView, 100);
     }
 }
 
 void CDefaultMainMenu::onBtnSaveTime(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Nhan thuong: TIET KIEM THOI GIAN / ONLINE");
-    CSaveTimeView* pSaveTimeView = CSaveTimeView::create();
-    if (pSaveTimeView) {
-        CCNode* pParent = this->getParent() ? this->getParent() : this;
-        pSaveTimeView->Show(pParent, 60);
+    CCLog("[CDefaultMainMenu] Mở Sự Kiện Nạp Tích Lũy (CSaveTimeView)!");
+    CSaveTimeView* pView = CSaveTimeView::create();
+    if (pView) {
+        this->addChild(pView, 100);
     }
 }
 
 void CDefaultMainMenu::onClickAwardCenter(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: TRUNG TAM TRAO THUONG");
-    CAwardCenterView* pAwardView = CAwardCenterView::create();
-    if (pAwardView) {
-        CCNode* pParent = this->getParent() ? this->getParent() : this;
-        pAwardView->Show(pParent, 60);
-    }
+    CCLog("[CDefaultMainMenu] Mở Phúc Lợi Máy Chủ!");
+    onBtnActivity(pSender, pEvent);
 }
 
 void CDefaultMainMenu::onBtnArena(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: DAU TRUONG LOI DAI (SUBMENU_ARENA)");
-    if (CMainMenu::sharedManager()) {
-        CMainMenu::sharedManager()->changeToSub(SUBMENU_ARENA);
+    CCLog("[CDefaultMainMenu] Mở Đấu Trường Ninja!");
+    if (CMainMenu::sharedMainMenu()) {
+        CMainMenu::sharedMainMenu()->onBtnFight(pSender);
     }
 }
 
 void CDefaultMainMenu::onBtnDailyTask(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CDefaultMainMenu] Mo giao dien: NHIEM VU HANG NGAY");
-    CDailyTaskView* pTaskView = CDailyTaskView::create();
-    if (pTaskView) {
-        CCNode* pParent = this->getParent() ? this->getParent() : this;
-        pTaskView->Show(pParent, 60);
+    CCLog("[CDefaultMainMenu] Mở Nhiệm Vụ Hàng Ngày (CDailyTaskView)!");
+    CDailyTaskView* pView = CDailyTaskView::create();
+    if (pView) {
+        this->addChild(pView, 100);
     }
 }
