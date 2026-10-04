@@ -5,8 +5,20 @@
 #include "SelectLoginVIew.h"
 #include "CBindAccountView.h"
 #include "CRegisterView.h"
+#include "CSelectAvatorScene.h"
 #include <sstream>
 #include <ctime>
+
+static std::string extractXmlTag(const std::string& xml, const std::string& tag) {
+    std::string openTag = "<" + tag + ">";
+    std::string closeTag = "</" + tag + ">";
+    size_t start = xml.find(openTag);
+    if (start == std::string::npos) return "";
+    start += openTag.length();
+    size_t end = xml.find(closeTag, start);
+    if (end == std::string::npos) return "";
+    return xml.substr(start, end - start);
+}
 
 CLoginScene::CLoginScene()
     : m_pLabelServerName(NULL)
@@ -280,10 +292,32 @@ void CLoginScene::doRegister(const std::string& account, const std::string& pwd)
     pReq->start();
 }
 
+void CLoginScene::requestMainpage() {
+    ServerInfoData curServer = CServerListMgr::sharedManager()->getSelectConfig();
+    CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
+
+    CCLog("[CLoginScene] Nạp dữ liệu Sảnh Làng từ %s/rl_r_mainpage (UID: %d)",
+          curServer.domain.c_str(), pData->getUserId());
+
+    CRLRequest* pReq = CRLRequest::create();
+    pReq->setURL(curServer.domain + "/rl_r_mainpage");
+    pReq->setCMD(1302);
+    pReq->addData("Cmd", 1302);
+    pReq->addData("Uin", pData->getUserId());
+    pReq->addData("Session", pData->getSessionToken().c_str());
+    pReq->addData("ServerID", curServer.id);
+    pReq->setDelegate(this);
+    pReq->start();
+
+    if (m_pLabelVersionInfo) {
+        m_pLabelVersionInfo->setString("Đang tải dữ liệu nhân vật...");
+    }
+}
+
 void CLoginScene::onHttpSuccess(CRLRequest* pRequest, const std::string& responseData) {
     int cmd = pRequest->getCMD();
 
-    if (cmd == 1001) { // Login
+    if (cmd == 1001) { // Gateway Login (/xk_w_login)
         CCUserDefault::sharedUserDefault()->setStringForKey("last_account", m_username);
         CCUserDefault::sharedUserDefault()->flush();
 
@@ -291,6 +325,36 @@ void CLoginScene::onHttpSuccess(CRLRequest* pRequest, const std::string& respons
         CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
         pData->setServerId(curServer.id);
         pData->setServerName(curServer.name);
+        pData->setUsername(m_username);
+
+        // Trích xuất UID, Session, RoleCreated, FirstLogin
+        std::string roleCreatedStr = extractXmlTag(responseData, "role_created");
+        std::string firstLoginStr = extractXmlTag(responseData, "first_login");
+        std::string uidStr = extractXmlTag(responseData, "userid");
+        if (uidStr.empty()) uidStr = extractXmlTag(responseData, "uid");
+        std::string sessionStr = extractXmlTag(responseData, "session");
+
+        if (!uidStr.empty()) pData->setUserId(atoi(uidStr.c_str()));
+        if (!sessionStr.empty()) pData->setSessionToken(sessionStr);
+
+        bool needCreateRole = (roleCreatedStr == "0" || firstLoginStr == "1");
+
+        if (needCreateRole) {
+            CCLog("[CLoginScene] Tài khoản chưa tạo nhân vật -> Mở CSelectAvatorScene!");
+            if (m_pLabelVersionInfo) {
+                m_pLabelVersionInfo->setString("Chưa tạo nhân vật. Mở màn hình chọn Làng & Tướng...");
+            }
+            CCScene* pCountryScene = CSelectAvatorScene::scene();
+            if (pCountryScene) {
+                CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.4f, pCountryScene));
+            }
+        } else {
+            CCLog("[CLoginScene] Tài khoản đã có nhân vật -> Tải thông tin từ /rl_r_mainpage...");
+            requestMainpage();
+        }
+    } else if (cmd == 1302) { // Nhận dữ liệu Sảnh Làng (/rl_r_mainpage)
+        CCLog("[CLoginScene] Nhận dữ liệu Sảnh Làng thành công!");
+        CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
         pData->parseLoginXml(responseData);
 
         if (m_pLabelVersionInfo) {

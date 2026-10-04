@@ -216,9 +216,69 @@ int CPlayerNinja::getWarPower() const {
 }
 
 std::string CPlayerNinja::getPortraitPath() const {
-    return "ui/card/" + m_icon + ".png";
+    if (m_icon.empty()) return "0V.png";
+    return m_icon + ".png";
 }
 
 std::string CPlayerNinja::getIconPath() const {
-    return "ui/icon/" + m_icon + ".png";
+    if (m_icon.empty()) return "0V.png";
+    return "icon_" + m_icon + ".png";
 }
+
+CCSprite* CPlayerNinja::createPortraitSprite() const {
+    if (m_icon.empty()) return CCSprite::create("0V.png");
+
+    CCSpriteFrameCache* pCache = CCSpriteFrameCache::sharedSpriteFrameCache();
+    CCSpriteFrame* pFrame = pCache->spriteFrameByName(m_icon.c_str());
+    if (!pFrame) {
+        pFrame = pCache->spriteFrameByName((m_icon + ".png").c_str());
+    }
+
+    if (!pFrame) {
+        std::string plistPath = "npc/" + m_icon + ".plist";
+        pCache->addSpriteFramesWithFile(plistPath.c_str());
+        pFrame = pCache->spriteFrameByName(m_icon.c_str());
+        if (!pFrame) {
+            pFrame = pCache->spriteFrameByName((m_icon + ".png").c_str());
+        }
+    }
+
+    if (pFrame) {
+        return CCSprite::createWithSpriteFrame(pFrame);
+    }
+
+    CCSprite* pDirect = CCSprite::create((m_icon + ".png").c_str());
+    if (pDirect) return pDirect;
+
+    return CCSprite::create("0V.png");
+}
+
+CCSprite* CPlayerNinja::createIconSprite() const {
+    if (m_icon.empty()) return CCSprite::create("0V.png");
+
+    std::string iconKey = "icon_" + m_icon;
+    CCSpriteFrameCache* pCache = CCSpriteFrameCache::sharedSpriteFrameCache();
+    CCSpriteFrame* pFrame = pCache->spriteFrameByName(iconKey.c_str());
+    if (!pFrame) {
+        pFrame = pCache->spriteFrameByName((iconKey + ".png").c_str());
+    }
+
+    if (!pFrame) {
+        std::string plistPath = "icon/" + iconKey + ".plist";
+        pCache->addSpriteFramesWithFile(plistPath.c_str());
+        pFrame = pCache->spriteFrameByName(iconKey.c_str());
+        if (!pFrame) {
+            pFrame = pCache->spriteFrameByName((iconKey + ".png").c_str());
+        }
+    }
+
+    if (pFrame) {
+        return CCSprite::createWithSpriteFrame(pFrame);
+    }
+
+    CCSprite* pPortrait = createPortraitSprite();
+    if (pPortrait) return pPortrait;
+
+    return CCSprite::create("0V.png");
+}
+

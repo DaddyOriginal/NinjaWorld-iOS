@@ -239,6 +239,19 @@ void CMyGroupCardView::InitUI() {
         } else {
             pSlotNode->setScale(1.0f);
         }
+
+        // Cập nhật biểu tượng icon của Ninja vào slot
+        pSlotNode->removeChildByTag(1001, true);
+        if (hasNinja && pCard->firefly_GetNinja()) {
+            CPlayerNinja* pNinja = pCard->firefly_GetNinja();
+            CCSprite* pIcon = pNinja->createIconSprite();
+            if (pIcon) {
+                pIcon->setTag(1001);
+                pIcon->setPosition(CCPointZero);
+                pIcon->setScale(0.80f);
+                pSlotNode->addChild(pIcon);
+            }
+        }
     }
 
     // 2. Cập nhật thông tin thẻ Tướng tại vị trí đang chọn (m_curSlotIndex)
@@ -248,14 +261,18 @@ void CMyGroupCardView::InitUI() {
     if (hasNinja && pCurCard->firefly_GetNinja()) {
         CPlayerNinja* pNinja = pCurCard->firefly_GetNinja();
 
-        if (m_pSpriteNinjaIcon) {
-            m_pSpriteNinjaIcon->setVisible(true);
-            std::string portrait = pNinja->getPortraitPath();
-            CCTexture2D* pTex = CCTextureCache::sharedTextureCache()->addImage(portrait.c_str());
-            if (pTex) {
-                m_pSpriteNinjaIcon->setTexture(pTex);
-                m_pSpriteNinjaIcon->setTextureRect(CCRectMake(0, 0, pTex->getContentSize().width, pTex->getContentSize().height));
+        if (m_pLayerNinja) {
+            m_pLayerNinja->removeChildByTag(1002, true);
+            CCSprite* pPortrait = pNinja->createPortraitSprite();
+            if (pPortrait) {
+                pPortrait->setTag(1002);
+                pPortrait->setPosition(ccp(0.0f, 40.0f));
+                pPortrait->setScale(0.85f);
+                m_pLayerNinja->addChild(pPortrait);
             }
+            if (m_pSpriteNinjaIcon) m_pSpriteNinjaIcon->setVisible(false);
+        } else if (m_pSpriteNinjaIcon) {
+            m_pSpriteNinjaIcon->setVisible(true);
         }
 
         if (m_pSpriteNoNinja) {

@@ -173,11 +173,7 @@ void CNinjaDetailView::InitUI() {
         m_pLayerScrollView->removeAllChildrenWithCleanup(true);
 
         // Hiển thị Avatar / Chân dung
-        std::string portraitPath = m_pNinja->getPortraitPath();
-        CCSprite* pPortrait = CCSprite::create(portraitPath.c_str());
-        if (!pPortrait) {
-            pPortrait = CCSprite::create("0V.png");
-        }
+        CCSprite* pPortrait = m_pNinja->createPortraitSprite();
         if (pPortrait) {
             pPortrait->setAnchorPoint(ccp(0.0f, 0.5f));
             pPortrait->setPosition(ccp(0.0f, 250.0f));

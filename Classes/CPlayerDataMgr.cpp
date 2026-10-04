@@ -199,8 +199,37 @@ bool CPlayerDataMgr::parseLoginXml(const std::string& xmlData) {
         }
     }
 
-    CCLog("[CPlayerDataMgr] Nap hoan tat: UID=%d, Nick=%s, Level=%d, Vang=%d, Bac=%d, Ninja=%d, TrangBi=%d, Manh=%d, AnKy=%d",
-          m_userId, m_nickname.c_str(), m_level, m_gold, m_silver,
+    // 4. Đảm bảo luôn có ít nhất một Ninja khởi đầu hợp lệ
+    if (m_ninjas.empty()) {
+        int starterId = (m_avatarId > 0) ? m_avatarId : 56;
+        CPlayerNinja* pStarter = CPlayerNinja::create(1, starterId, 1, 5);
+        if (pStarter) {
+            addOrUpdateNinja(pStarter);
+        }
+    }
+
+    if (m_pActiveTeam && !m_ninjas.empty()) {
+        CTeamCard* pSlot1 = m_pActiveTeam->firefly_GetTeamCardByIndex(0);
+        if (pSlot1 && !pSlot1->firefly_HasNinja()) {
+            pSlot1->bindNinja(m_ninjas[0]);
+        }
+        if (m_combatPower == 0) {
+            m_pActiveTeam->recalculateTeamStats();
+            m_combatPower = m_pActiveTeam->firefly_GetWarPower();
+        }
+    }
+
+    if (m_nickname.empty()) {
+        m_nickname = m_username.empty() ? "Ninja" : m_username;
+    }
+    if (m_gold == 0) m_gold = 1000;
+    if (m_silver == 0) m_silver = 100000;
+    if (m_combatPower == 0 && !m_ninjas.empty()) {
+        m_combatPower = m_ninjas[0]->getWarPower();
+    }
+
+    CCLog("[CPlayerDataMgr] Nap hoan tat: UID=%d, Nick=%s, Level=%d, Vang=%d, Bac=%d, LucChien=%d, Ninja=%d, TrangBi=%d, Manh=%d, AnKy=%d",
+          m_userId, m_nickname.c_str(), m_level, m_gold, m_silver, m_combatPower,
           (int)m_ninjas.size(), (int)m_equipments.size(), (int)m_pieces.size(), (int)m_marks.size());
     return true;
 }

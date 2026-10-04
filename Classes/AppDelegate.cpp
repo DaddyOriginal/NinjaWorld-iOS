@@ -86,6 +86,8 @@ void AppDelegate::applicationWillEnterForeground() {
 #include "CBindAccountView.cpp"
 #include "CRegisterView.cpp"
 #include "SelectLoginVIew.cpp"
+#include "CSelectAvatorScene.cpp"
+#include "CSelectRoleAvatorScene.cpp"
 #include "CLoginScene.cpp"
 #include "CNinjaDetailView.cpp"
 #include "CMyGroupCardView.cpp"

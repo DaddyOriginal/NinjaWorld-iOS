@@ -2,6 +2,7 @@
 #include "CCBManager.h"
 #include "CPlayerDataMgr.h"
 #include "CItemTableMgr.h"
+#include "CNinjaDetailView.h"
 #include <sstream>
 
 CMyBackpackCardView::CMyBackpackCardView()
@@ -558,7 +559,19 @@ void CMyBackpackCardView::onTabPetPiece(CCObject* pSender, CCControlEvent pEvent
 }
 
 void CMyBackpackCardView::onBtnActionClick(CCObject* pSender, CCControlEvent pEvent) {
-    CCLog("[CMyBackpackCardView] Nhan nut Action (Trang bi / Hop thanh) cho item %d", m_selectedItemIndex);
+    CCLog("[CMyBackpackCardView] Nhan nut Action (Trang bi / Hop thanh / Chi tiet) cho item %d", m_selectedItemIndex);
+    if (m_currentMode == MODE_ITEMS && m_currentSubTab == TAB_NINJA) {
+        CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
+        if (pData) {
+            const std::vector<CPlayerNinja*>& ninjas = pData->getAllNinjas();
+            if (m_selectedItemIndex >= 0 && m_selectedItemIndex < (int)ninjas.size()) {
+                CNinjaDetailView* pDetail = CNinjaDetailView::createWithNinja(ninjas[m_selectedItemIndex], NULL);
+                if (pDetail) {
+                    pDetail->Show(this->getParent() ? this->getParent() : this, 50);
+                }
+            }
+        }
+    }
 }
 
 void CMyBackpackCardView::onSelectItem(int index) {

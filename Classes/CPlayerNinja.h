@@ -109,6 +109,10 @@ public:
     // Lấy chuỗi đường dẫn hình ảnh sprite avatar thẻ bài
     std::string getPortraitPath() const;
     std::string getIconPath() const;
+
+    // Tạo Sprite chân dung và icon từ Texture/Plist PVR gốc của Ninja World
+    CCSprite* createPortraitSprite() const;
+    CCSprite* createIconSprite() const;
 };
 
 #endif // _CPLAYER_NINJA_H_

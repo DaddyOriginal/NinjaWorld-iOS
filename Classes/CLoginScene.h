@@ -70,6 +70,7 @@ public:
     void doLogin(const std::string& account, const std::string& pwd);
     void doRegister(const std::string& account, const std::string& pwd);
     void requestServerList();
+    void requestMainpage();
     void enterMainGame();
     void showAccountDialog();
     void setAccount(const std::string& account);
