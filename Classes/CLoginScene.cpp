@@ -3,6 +3,8 @@
 #include "CPlayerDataMgr.h"
 #include "CMainMenu.h"
 #include "SelectLoginVIew.h"
+#include "CBindAccountView.h"
+#include "CRegisterView.h"
 #include <sstream>
 #include <ctime>
 
@@ -205,128 +207,10 @@ void CLoginScene::onBtnSelectServerMenu(CCObject* pSender) {
 }
 
 // -------------------------------------------------------------
-// ĐỔI TÀI KHOẢN / ACCOUNT DIALOG
+// ĐỔI TÀI KHOẢN / ĐĂNG KÝ (BindAccountView & RegisterView)
 // -------------------------------------------------------------
-class CAccountSelectDialog : public CCLayerColor {
-private:
-    CLoginScene* m_pOwner;
-public:
-    static CAccountSelectDialog* create(CLoginScene* pOwner) {
-        CAccountSelectDialog* p = new CAccountSelectDialog();
-        if (p && p->initWithColor(ccc4(0, 0, 0, 210))) {
-            p->autorelease();
-            p->m_pOwner = pOwner;
-            p->initUI();
-            return p;
-        }
-        CC_SAFE_DELETE(p);
-        return NULL;
-    }
-
-    virtual void registerWithTouchDispatcher() {
-        CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, -128, true);
-    }
-
-    virtual bool ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent) {
-        return true; // Nuốt touch nền
-    }
-
-    void initUI() {
-        this->setTouchEnabled(true);
-        CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-
-        const float dw = 520.0f;
-        const float dh = 500.0f;
-        const float dx = (winSize.width - dw) * 0.5f;
-        const float dy = (winSize.height - dh) * 0.5f;
-
-        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_bk_frame_19.png");
-        if (!pFrame) pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_bk_frame_19");
-        if (pFrame) {
-            CCScale9Sprite* pBg = CCScale9Sprite::createWithSpriteFrame(pFrame);
-            pBg->setContentSize(CCSizeMake(dw, dh));
-            pBg->setPosition(ccp(dx + dw * 0.5f, dy + dh * 0.5f));
-            this->addChild(pBg, 1);
-        } else {
-            CCLayerColor* pBox = CCLayerColor::create(ccc4(15, 23, 42, 250), dw, dh);
-            pBox->setPosition(ccp(dx, dy));
-            this->addChild(pBox, 1);
-        }
-
-        CCLabelTTF* pTitle = CCLabelTTF::create("CHỌN / ĐỔI TÀI KHOẢN", "Helvetica-Bold", 26.0f);
-        pTitle->setPosition(ccp(dx + dw * 0.5f, dy + dh - 45.0f));
-        pTitle->setColor(ccc3(245, 158, 11));
-        this->addChild(pTitle, 2);
-
-        // Danh sách tài khoản mẫu + tài khoản khách
-        std::vector<std::string> accs;
-        accs.push_back("admin");
-        accs.push_back("player1");
-        accs.push_back("player2");
-        accs.push_back("naruto");
-        accs.push_back("sasuke");
-
-        CCMenu* pMenu = CCMenu::create();
-        pMenu->setPosition(CCPointZero);
-        pMenu->setHandlerPriority(-129);
-        this->addChild(pMenu, 3);
-
-        float itemStartY = dy + dh - 110.0f;
-        for (size_t i = 0; i < accs.size(); ++i) {
-            std::string acc = accs[i];
-            CCMenuItemFont* pItem = CCMenuItemFont::create(acc.c_str(), this, menu_selector(CAccountSelectDialog::onSelectAccount));
-            pItem->setFontSize(22.0f);
-            pItem->setColor(ccc3(255, 255, 255));
-            pItem->setUserData(new std::string(acc));
-            pItem->setPosition(ccp(dx + dw * 0.5f, itemStartY - i * 50.0f));
-            pMenu->addChild(pItem);
-        }
-
-        // Nút Khách Ngẫu Nhiên
-        CCMenuItemFont* pGuest = CCMenuItemFont::create("[ Tạo Tài Khoản Khách Mới ]", this, menu_selector(CAccountSelectDialog::onNewGuest));
-        pGuest->setFontSize(20.0f);
-        pGuest->setColor(ccc3(34, 197, 94)); // Xanh lá
-        pGuest->setPosition(ccp(dx + dw * 0.5f, itemStartY - accs.size() * 50.0f - 10.0f));
-        pMenu->addChild(pGuest);
-
-        // Nút Đóng
-        CCMenuItemFont* pClose = CCMenuItemFont::create("ĐÓNG", this, menu_selector(CAccountSelectDialog::onClose));
-        pClose->setFontSize(22.0f);
-        pClose->setColor(ccc3(239, 68, 68)); // Đỏ
-        pClose->setPosition(ccp(dx + dw * 0.5f, dy + 40.0f));
-        pMenu->addChild(pClose);
-    }
-
-    void onSelectAccount(CCObject* pSender) {
-        CCNode* pNode = dynamic_cast<CCNode*>(pSender);
-        if (pNode && pNode->getUserData()) {
-            std::string* pAcc = (std::string*)pNode->getUserData();
-            if (m_pOwner) {
-                m_pOwner->setAccount(*pAcc);
-            }
-            delete pAcc;
-            pNode->setUserData(NULL);
-        }
-        this->removeFromParentAndCleanup(true);
-    }
-
-    void onNewGuest(CCObject* pSender) {
-        std::stringstream ss;
-        ss << "guest_" << (time(NULL) % 100000);
-        if (m_pOwner) {
-            m_pOwner->setAccount(ss.str());
-            m_pOwner->doRegister(ss.str(), "123456");
-        }
-        this->removeFromParentAndCleanup(true);
-    }
-
-    void onClose(CCObject* pSender) {
-        this->removeFromParentAndCleanup(true);
-    }
-};
-
 void CLoginScene::showAccountDialog() {
-    CAccountSelectDialog* pDlg = CAccountSelectDialog::create(this);
+    CBindAccountView* pDlg = CBindAccountView::create(this);
     if (pDlg) {
         this->addChild(pDlg, 999);
     }

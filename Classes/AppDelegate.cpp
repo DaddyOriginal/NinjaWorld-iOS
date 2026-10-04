@@ -83,6 +83,8 @@ void AppDelegate::applicationWillEnterForeground() {
 #include "CPlayerDataMgr.cpp"
 #include "CServerListMgr.cpp"
 #include "CServerSelector.cpp"
+#include "CBindAccountView.cpp"
+#include "CRegisterView.cpp"
 #include "SelectLoginVIew.cpp"
 #include "CLoginScene.cpp"
 #include "CNinjaDetailView.cpp"
