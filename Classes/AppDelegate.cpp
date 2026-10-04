@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "CCBManager.h"
+#include "UpdateScene.h"
 #include "CLoginScene.h"
 #include "SimpleAudioEngine.h"
 #include "support/zip_support/ZipUtils.h"
@@ -37,20 +38,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
         pEGLView->setDesignResolutionSize(768.0f, 1024.0f, kResolutionNoBorder);
     }
 
-    // Thiết lập đường dẫn tìm kiếm tài nguyên chuẩn của client gốc
+    // Thiết lập đường dẫn tìm kiếm tài nguyên khởi động ban đầu
     std::vector<std::string> searchPaths;
     searchPaths.push_back("ccbi");
     searchPaths.push_back("data");
-    searchPaths.push_back("ccbResources");
-    searchPaths.push_back("characters");
-    searchPaths.push_back("animations");
-    searchPaths.push_back("com_res");
-    searchPaths.push_back("home");
-    searchPaths.push_back("icon");
-    searchPaths.push_back("npc");
-    searchPaths.push_back("sound");
-    searchPaths.push_back("backpack");
-    searchPaths.push_back("equip");
     searchPaths.push_back("");
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
@@ -60,8 +51,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Set FPS 60
     pDirector->setAnimationInterval(1.0 / 60);
 
-    // Khởi chạy trực tiếp màn hình Đăng Nhập GỐC của Ninja World (LoginView.ccbi)
-    CCScene *pScene = CLoginScene::scene();
+    // Khởi chạy trình tải CDN OBB tự động (Mini Client 17MB giống Android)
+    CCScene *pScene = UpdateScene::scene();
     pDirector->runWithScene(pScene);
 
     return true;
@@ -78,6 +69,7 @@ void AppDelegate::applicationWillEnterForeground() {
 }
 
 // Unity compilation for Classes
+#include "UpdateScene.cpp"
 #include "CCBManager.cpp"
 #include "CRLRequest.cpp"
 #include "CNinjaTableMgr.cpp"
@@ -132,5 +124,3 @@ void AppDelegate::applicationWillEnterForeground() {
 #include "CMoneyTreeView.cpp"
 #include "CDefaultMainMenu.cpp"
 #include "CMainMenu.cpp"
-
-

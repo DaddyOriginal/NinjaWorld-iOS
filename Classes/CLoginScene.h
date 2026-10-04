@@ -49,10 +49,15 @@ public:
     // CCBMemberVariableAssigner (Gắn biến CCBI)
     virtual bool onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode);
 
-    // Sự kiện nút bấm
+    // Sự kiện nút bấm CCControl
     void onBtnLogin(CCObject* pSender, CCControlEvent pCCControlEvent);
     void onBtnRegist(CCObject* pSender, CCControlEvent pCCControlEvent);
     void onBtnSelectServer(CCObject* pSender, CCControlEvent pCCControlEvent);
+
+    // Sự kiện nút bấm CCMenu (Overload fallback)
+    void onBtnLoginMenu(CCObject* pSender);
+    void onBtnRegistMenu(CCObject* pSender);
+    void onBtnSelectServerMenu(CCObject* pSender);
 
     // ServerSelectDelegate Callback khi người chơi đổi server
     virtual void onServerSelected(int serverId, const std::string& serverName, const std::string& hostUrl);
@@ -66,6 +71,8 @@ public:
     void doRegister(const std::string& account, const std::string& pwd);
     void requestServerList();
     void enterMainGame();
+    void showAccountDialog();
+    void setAccount(const std::string& account);
 };
 
 #endif // _CLOGIN_SCENE_H_

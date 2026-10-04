@@ -118,7 +118,10 @@ bool UpdateScene::init() {
     CCSprite* pBg = CCSprite::create("0V.png");
     if (pBg) {
         pBg->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
-        pBg->setScale(winSize.width / pBg->getContentSize().width);
+        float scaleX = winSize.width / pBg->getContentSize().width;
+        float scaleY = winSize.height / pBg->getContentSize().height;
+        float scale = (scaleX > scaleY) ? scaleX : scaleY;
+        pBg->setScale(scale);
         this->addChild(pBg, 0);
     } else {
         CCLayerColor* pDark = CCLayerColor::create(ccc4(15, 23, 42, 255), winSize.width, winSize.height);
@@ -177,6 +180,7 @@ bool UpdateScene::init() {
     std::string writable = CCFileUtils::sharedFileUtils()->getWritablePath();
     m_obbSavePath = writable + "main.1.com.ninja.world.obb";
     m_resDir = writable + "res";
+    std::string flagFile = m_resDir + "/obb_extracted.flag";
 
     // Default OBB URL from public VPS
     m_obbUrl = "http://160.22.123.62:8088/download/main.1.com.ninja.world.obb";
@@ -200,12 +204,11 @@ bool UpdateScene::init() {
     }
 
     // Check if resources already exist
-    std::string checkFile = m_resDir + "/tables.bin";
-    if (CCFileUtils::sharedFileUtils()->isFileExist(checkFile)) {
+    if (CCFileUtils::sharedFileUtils()->isFileExist(flagFile)) {
         m_pStatusLabel->setString("Tài nguyên đã sẵn sàng! Đang vào game...");
         m_pFillBar->setContentSize(CCSizeMake(barWidth, barHeight));
         m_pDetailLabel->setString("100% Hoàn tất");
-        scheduleOnce(schedule_selector(UpdateScene::enterGame), 0.5f);
+        scheduleOnce(schedule_selector(UpdateScene::enterGame), 0.3f);
     } else {
         scheduleOnce(schedule_selector(UpdateScene::startDownload), 0.3f);
     }
@@ -245,6 +248,14 @@ void UpdateScene::onDownloadFinished() {
     // Extract archive
     bool ok = extractObbArchive(m_obbSavePath, m_resDir);
     if (ok) {
+        // Ghi flag file hoàn tất
+        FILE* f = fopen((m_resDir + "/obb_extracted.flag").c_str(), "w");
+        if (f) {
+            fputs("ok\n", f);
+            fclose(f);
+        }
+        // Xóa file OBB nén tạm thời để tiết kiệm dung lượng bộ nhớ máy
+        remove(m_obbSavePath.c_str());
         this->onUnzipFinished();
     } else {
         this->onDownloadFailed("Giải nén OBB thất bại!");
@@ -272,16 +283,40 @@ void UpdateScene::enterGame() {
 
     std::vector<std::string> searchPaths;
     searchPaths.push_back(m_resDir);
+    searchPaths.push_back(m_resDir + "/activity");
+    searchPaths.push_back(m_resDir + "/animations");
+    searchPaths.push_back(m_resDir + "/backpack");
     searchPaths.push_back(m_resDir + "/ccbResources");
-    searchPaths.push_back(m_resDir + "/sub_ui");
-    searchPaths.push_back(m_resDir + "/upgrade");
-    searchPaths.push_back(m_resDir + "/dlg_ui");
     searchPaths.push_back(m_resDir + "/characters");
-    searchPaths.push_back(m_resDir + "/level_bg");
+    searchPaths.push_back(m_resDir + "/com_res");
+    searchPaths.push_back(m_resDir + "/config");
+    searchPaths.push_back(m_resDir + "/core_combat");
+    searchPaths.push_back(m_resDir + "/countrywar");
+    searchPaths.push_back(m_resDir + "/dlg_ui");
+    searchPaths.push_back(m_resDir + "/equip");
+    searchPaths.push_back(m_resDir + "/gameobjlist");
     searchPaths.push_back(m_resDir + "/home");
     searchPaths.push_back(m_resDir + "/icon");
-    searchPaths.push_back(m_resDir + "/com_res");
+    searchPaths.push_back(m_resDir + "/level_bg");
+    searchPaths.push_back(m_resDir + "/mark");
+    searchPaths.push_back(m_resDir + "/multiserverbattle");
+    searchPaths.push_back(m_resDir + "/notice");
+    searchPaths.push_back(m_resDir + "/npc");
+    searchPaths.push_back(m_resDir + "/props");
     searchPaths.push_back(m_resDir + "/script");
+    searchPaths.push_back(m_resDir + "/secretshop");
+    searchPaths.push_back(m_resDir + "/serverinfo");
+    searchPaths.push_back(m_resDir + "/skill");
+    searchPaths.push_back(m_resDir + "/skill_res");
+    searchPaths.push_back(m_resDir + "/social");
+    searchPaths.push_back(m_resDir + "/sound");
+    searchPaths.push_back(m_resDir + "/store");
+    searchPaths.push_back(m_resDir + "/sub_ui");
+    searchPaths.push_back(m_resDir + "/upgrade");
+    // Bundle fallback paths
+    searchPaths.push_back("ccbi");
+    searchPaths.push_back("data");
+    searchPaths.push_back("");
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
     CCScene *pScene = CLoginScene::scene();
