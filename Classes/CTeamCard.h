@@ -62,6 +62,8 @@ public:
     int getNinjaInstanceSeq() const { return m_ninjaInstanceSeq; }
     CPlayerNinja* firefly_GetNinja() const { return m_pNinja; }
     bool firefly_HasNinja() const { return (m_pNinja != NULL && m_ninjaInstanceSeq > 0); }
+    int getCardType() const { return (m_ninjaInstanceSeq > 0 || m_pNinja != NULL) ? 1 : 0; }
+    int getCardId() const { return m_pNinja ? m_pNinja->firefly_GetDataID() : 0; }
 
     int getEquipId(int slot) const;
     void setEquipId(int slot, int equipId);

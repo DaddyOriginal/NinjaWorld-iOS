@@ -1,18 +1,8 @@
 #include "CGameCardMark.h"
 #include "CItemTableMgr.h"
+#include "CRLRequest.h"
 #include <sstream>
 #include <cstdlib>
-
-static std::string extractTag(const std::string& xml, const std::string& tag) {
-    std::string openTag = "<" + tag + ">";
-    std::string closeTag = "</" + tag + ">";
-    size_t start = xml.find(openTag);
-    if (start == std::string::npos) return "";
-    start += openTag.length();
-    size_t end = xml.find(closeTag, start);
-    if (end == std::string::npos) return "";
-    return xml.substr(start, end - start);
-}
 
 CGameCardMark::CGameCardMark()
     : m_seq(0)

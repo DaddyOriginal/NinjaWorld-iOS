@@ -26,12 +26,14 @@ public:
     virtual ~CActiveTeamMgr();
 
     static CActiveTeamMgr* create();
+    static CActiveTeamMgr* sharedManager();
 
     // Nạp dữ liệu đội hình từ khối XML <ninjalist> hoặc toàn bộ XML phản hồi
     bool initFromXml(const std::string& xmlData);
 
-    // Lấy thẻ vị trí theo chỉ số (index: 0 -> 5)
+    // Lấy thẻ vị trí theo chỉ số (index: 0 -> 5 hoặc slot: 1 -> 6)
     CTeamCard* firefly_GetTeamCardByIndex(int index);
+    CTeamCard* getTeamCard(int slot) { return firefly_GetTeamCardByIndex(slot - 1); }
 
     // Số lượng thành viên đang ra trận
     int firefly_GetMemberCount() const;

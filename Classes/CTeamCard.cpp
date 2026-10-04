@@ -1,16 +1,6 @@
 #include "CTeamCard.h"
+#include "CRLRequest.h"
 #include <cstdlib>
-
-static std::string extractTag(const std::string& xml, const std::string& tag) {
-    std::string openTag = "<" + tag + ">";
-    std::string closeTag = "</" + tag + ">";
-    size_t start = xml.find(openTag);
-    if (start == std::string::npos) return "";
-    start += openTag.length();
-    size_t end = xml.find(closeTag, start);
-    if (end == std::string::npos) return "";
-    return xml.substr(start, end - start);
-}
 
 CTeamCard::CTeamCard()
     : m_seq(1)

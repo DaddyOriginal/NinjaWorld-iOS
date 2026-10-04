@@ -32,6 +32,10 @@ CActiveTeamMgr* CActiveTeamMgr::create() {
     return NULL;
 }
 
+CActiveTeamMgr* CActiveTeamMgr::sharedManager() {
+    return CPlayerDataMgr::sharedManager()->getActiveTeam();
+}
+
 void CActiveTeamMgr::clear() {
     for (size_t i = 0; i < m_teamCards.size(); ++i) {
         CC_SAFE_RELEASE(m_teamCards[i]);

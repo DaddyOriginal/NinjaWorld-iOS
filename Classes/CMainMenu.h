@@ -66,6 +66,7 @@ public:
 
     static CCScene* scene();
     static CMainMenu* sharedMainMenu();
+    static CMainMenu* sharedManager() { return sharedMainMenu(); }
     CREATE_FUNC(CMainMenu);
 
     virtual bool init();

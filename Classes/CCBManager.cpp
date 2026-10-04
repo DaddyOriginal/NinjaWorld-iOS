@@ -22,7 +22,7 @@ void CCBManager::purge() {
     CC_SAFE_DELETE(s_instance);
 }
 
-CCNode* CCBManager::loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner) {
+CCNode* CCBManager::loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner, CCObject* pExtra) {
     if (!pCCBFileName) return NULL;
 
     CCBReader* ccbReader = new CCBReader(m_pNodeLoaderLibrary);
@@ -53,9 +53,9 @@ CCNode* CCBManager::loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner)
     return ccbReader->readNodeGraphFromFile(pCCBFileName, pOwner);
 }
 
-CCScene* CCBManager::loadSceneFromCCBI(const char* pCCBFileName, CCObject* pOwner) {
+CCScene* CCBManager::loadSceneFromCCBI(const char* pCCBFileName, CCObject* pOwner, CCObject* pExtra) {
     CCScene* scene = CCScene::create();
-    CCNode* node = loadNodeFromCCBI(pCCBFileName, pOwner);
+    CCNode* node = loadNodeFromCCBI(pCCBFileName, pOwner, pExtra);
     if (node) {
         scene->addChild(node);
     }

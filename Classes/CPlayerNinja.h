@@ -44,6 +44,7 @@ public:
     virtual ~CPlayerNinja();
 
     static CPlayerNinja* create();
+    static CPlayerNinja* create(int seq, int ninjaId, int level, int quality);
     static CPlayerNinja* createWithXmlSnippet(const std::string& xmlSnippet);
 
     // Khởi tạo và phân tích từ đoạn XML thẻ <card>
@@ -57,6 +58,7 @@ public:
     // ========================================================
     int firefly_GetDataID() const { return m_ninjaId; }
     void firefly_SetDataID(int id) { m_ninjaId = id; }
+    int getNinjaId() const { return m_ninjaId; }
 
     int getSeq() const { return m_seq; }
     void setSeq(int seq) { m_seq = seq; }

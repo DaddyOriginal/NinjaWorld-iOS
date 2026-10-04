@@ -19,8 +19,8 @@ public:
     static CCBManager* sharedManager();
     static void purge();
 
-    CCNode* loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner = NULL);
-    CCScene* loadSceneFromCCBI(const char* pCCBFileName, CCObject* pOwner = NULL);
+    CCNode* loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner = NULL, CCObject* pExtra = NULL);
+    CCScene* loadSceneFromCCBI(const char* pCCBFileName, CCObject* pOwner = NULL, CCObject* pExtra = NULL);
 };
 
 #endif // _CCB_MANAGER_H_

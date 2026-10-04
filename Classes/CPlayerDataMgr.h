@@ -86,6 +86,7 @@ public:
 
     // Thêm hoặc cập nhật Thẻ Ninja
     void addOrUpdateNinja(CPlayerNinja* pNinja);
+    void addPlayerNinja(CPlayerNinja* pNinja) { addOrUpdateNinja(pNinja); }
 
     // Xóa thẻ Ninja
     void removeNinja(int seq);
@@ -120,10 +121,16 @@ public:
     int firefly_GetGold() const { return m_gold; }
     void firefly_SetGold(int val) { m_gold = val; }
     void firefly_AddGold(int val) { m_gold += val; }
+    int getGold() const { return firefly_GetGold(); }
+    void setGold(int val) { firefly_SetGold(val); }
+    void addGold(int val) { firefly_AddGold(val); }
 
     int firefly_GetSilver() const { return m_silver; }
     void firefly_SetSilver(int val) { m_silver = val; }
     void firefly_AddSilver(int val) { m_silver += val; }
+    int getSilver() const { return firefly_GetSilver(); }
+    void setSilver(int val) { firefly_SetSilver(val); }
+    void addSilver(int val) { firefly_AddSilver(val); }
 
     int firefly_GetBodyValue() const { return m_bodyValue; }
     void firefly_SetBodyValue(int val) { m_bodyValue = val; }
