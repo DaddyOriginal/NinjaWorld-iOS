@@ -36,14 +36,31 @@ CServerSelector* CServerSelector::create(ServerSelectDelegate* pDelegate) {
     return NULL;
 }
 
+static std::string cleanServerName(const std::string& name) {
+    if (name.empty()) return "S1 - Làng Lá";
+    std::string s = name;
+    if (s.find("Lng L") != std::string::npos || s.find("Lng L") != std::string::npos) {
+        return "S1 - Làng Lá";
+    }
+    return s;
+}
+
 bool CServerSelector::init(ServerSelectDelegate* pDelegate) {
-    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 180))) {
+    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 190))) {
         return false;
     }
 
     m_pDelegate = pDelegate;
     this->setTouchEnabled(true);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+
+    // 0. Nạp trước các sprite sheet cần thiết cho ServerSelector.ccbi
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbResources/serverselector.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("serverselector.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbResources/regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("com_res/Resident.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Resident.plist");
 
     // 1. Nạp giao diện ServerSelector.ccbi nguyên bản
     CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("ServerSelector.ccbi", this);
@@ -55,6 +72,33 @@ bool CServerSelector::init(ServerSelectDelegate* pDelegate) {
         pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
         this->addChild(pNode, 1);
         CCLog("[CServerSelector] Nạp ServerSelector.ccbi thành công!");
+    } else {
+        // Fallback UI nếu CCBI nạp không thành công
+        CCLog("[CServerSelector] Tạo fallback modal danh sách máy chủ");
+        const float boxW = 460.0f;
+        const float boxH = 400.0f;
+        CCLayerColor* pBox = CCLayerColor::create(ccc4(20, 24, 39, 245), boxW, boxH);
+        pBox->setPosition(ccp((winSize.width - boxW) * 0.5f, (winSize.height - boxH) * 0.5f));
+        this->addChild(pBox, 1);
+
+        CCLabelTTF* pTitle = CCLabelTTF::create("CHỌN MÁY CHỦ", "Helvetica-Bold", 24.0f);
+        pTitle->setColor(ccc3(245, 158, 11));
+        pTitle->setPosition(ccp(boxW * 0.5f, boxH - 45.0f));
+        pBox->addChild(pTitle);
+
+        CCMenuItemFont* pItemClose = CCMenuItemFont::create("✕ Đóng", this, menu_selector(CServerSelector::onBtnCloseMenu));
+        pItemClose->setFontSize(22);
+        pItemClose->setColor(ccc3(239, 68, 68));
+        pItemClose->setPosition(ccp(boxW * 0.5f, 35.0f));
+
+        CCMenu* pMenu = CCMenu::create(pItemClose, NULL);
+        pMenu->setPosition(CCPointZero);
+        pMenu->setHandlerPriority(-131);
+        pBox->addChild(pMenu);
+
+        m_pNodeListContent = CCNode::create();
+        m_pNodeListContent->setPosition(ccp(boxW * 0.5f, boxH - 100.0f));
+        pBox->addChild(m_pNodeListContent);
     }
 
     // 2. Bảo vệ gắn trực tiếp sự kiện chạm
@@ -75,14 +119,14 @@ bool CServerSelector::init(ServerSelectDelegate* pDelegate) {
     if (m_serverList.empty()) {
         ServerItemInfo s1;
         s1.id = 1;
-        s1.name = "S1. Làng Lá";
+        s1.name = "S1 - Làng Lá";
         s1.ip = "160.22.123.62";
         s1.port = 8088;
         s1.state = 1;
 
         ServerItemInfo s2;
         s2.id = 2;
-        s2.name = "S2. Làng Cát";
+        s2.name = "S2 - Làng Cát";
         s2.ip = "160.22.123.62";
         s2.port = 8088;
         s2.state = 1;
@@ -105,7 +149,12 @@ bool CServerSelector::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent) {
 
 void CServerSelector::setServerList(const std::vector<ServerItemInfo>& list) {
     if (!list.empty()) {
-        m_serverList = list;
+        m_serverList.clear();
+        for (size_t i = 0; i < list.size(); ++i) {
+            ServerItemInfo it = list[i];
+            it.name = cleanServerName(it.name);
+            m_serverList.push_back(it);
+        }
         refreshUI();
     }
 }
@@ -113,13 +162,13 @@ void CServerSelector::setServerList(const std::vector<ServerItemInfo>& list) {
 void CServerSelector::refreshUI() {
     if (!m_serverList.empty()) {
         if (m_pLabelServerName1) {
-            m_pLabelServerName1->setString(m_serverList[0].name.c_str());
+            m_pLabelServerName1->setString(cleanServerName(m_serverList[0].name).c_str());
         }
     }
     if (m_serverList.size() >= 2) {
         if (m_pLabelServerName2) {
             m_pLabelServerName2->setVisible(true);
-            m_pLabelServerName2->setString(m_serverList[1].name.c_str());
+            m_pLabelServerName2->setString(cleanServerName(m_serverList[1].name).c_str());
         }
         if (m_pBtnServer2) {
             m_pBtnServer2->setVisible(true);
@@ -149,12 +198,13 @@ void CServerSelector::refreshUI() {
 
         for (size_t i = 0; i < m_serverList.size(); ++i) {
             const ServerItemInfo& info = m_serverList[i];
-            CCMenuItemFont* pItem = CCMenuItemFont::create(info.name.c_str(), this, menu_selector(CServerSelector::onSelectServerFromList));
+            std::string displayName = cleanServerName(info.name);
+            CCMenuItemFont* pItem = CCMenuItemFont::create(displayName.c_str(), this, menu_selector(CServerSelector::onSelectServerFromList));
             if (pItem) {
                 pItem->setTag(info.id);
-                pItem->setFontSize(24.0f);
-                pItem->setColor(ccc3(180, 50, 10)); // Màu chữ phong cách ninja cổ
-                pItem->setPosition(ccp(0, -((float)i * 60.0f) + 40.0f));
+                pItem->setFontSize(22.0f);
+                pItem->setColor(ccc3(245, 158, 11)); // Màu vàng ninja sáng rõ
+                pItem->setPosition(ccp(0, -((float)i * 50.0f)));
                 pListMenu->addChild(pItem);
             }
         }

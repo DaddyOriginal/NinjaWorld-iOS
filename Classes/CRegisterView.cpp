@@ -47,6 +47,12 @@ bool CRegisterView::init(CLoginScene* pScene) {
     this->setTouchEnabled(true);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
+    // Nạp sẵn sprite frames trước khi CCBReader nạp RegisterView.ccbi
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbResources/regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("com_res/Resident.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Resident.plist");
+
     // Nạp giao diện nguyên bản RegisterView.ccbi
     CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("RegisterView.ccbi", this);
     if (!pNode) {
@@ -68,7 +74,8 @@ bool CRegisterView::init(CLoginScene* pScene) {
     // CCEditBox: Tên tài khoản mới
     if (m_pSpriteName) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
-        CCScale9Sprite* pBg = CCScale9Sprite::createWithSpriteFrameName("reg_inputbtn");
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
+        CCScale9Sprite* pBg = pFrame ? CCScale9Sprite::createWithSpriteFrame(pFrame) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
         if (!pBg) pBg = CCScale9Sprite::create();
         m_pEditUser = CCEditBox::create(boxSize, pBg);
         if (m_pEditUser) {
@@ -90,8 +97,9 @@ bool CRegisterView::init(CLoginScene* pScene) {
     // CCEditBox: Mật khẩu mới
     if (m_pSpritePwd) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
-        CCScale9Sprite* pBg = CCScale9Sprite::createWithSpriteFrameName("reg_inputbtn");
-        if (!pBg) pBg = CCScale9Sprite::create();
+        CCSpriteFrame* pFramePwd = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
+        CCScale9Sprite* pBgPwd = pFramePwd ? CCScale9Sprite::createWithSpriteFrame(pFramePwd) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
+        if (!pBgPwd) pBgPwd = CCScale9Sprite::create();
         m_pEditPwd = CCEditBox::create(boxSize, pBg);
         if (m_pEditPwd) {
             m_pEditPwd->setPosition(ccp(m_pSpritePwd->getContentSize().width * 0.5f, m_pSpritePwd->getContentSize().height * 0.5f));

@@ -31,7 +31,7 @@ SelectLoginVIew* SelectLoginVIew::create(CLoginScene* pDelegate) {
 }
 
 bool SelectLoginVIew::init(CLoginScene* pDelegate) {
-    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 180))) {
+    if (!CCLayerColor::initWithColor(ccc4(0, 0, 0, 190))) {
         return false;
     }
 
@@ -39,7 +39,11 @@ bool SelectLoginVIew::init(CLoginScene* pDelegate) {
     this->setTouchEnabled(true);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
-    // Nạp giao diện nguyên bản SelectLoginView.ccbi
+    // 1. Nạp sẵn sprite frame từ regist.plist để CCBReader không bị thiếu texture
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbResources/regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("regist.plist");
+
+    // 2. Nạp giao diện nguyên bản SelectLoginView.ccbi
     CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("SelectLoginView.ccbi", this);
     if (!pNode) {
         pNode = CCBManager::sharedManager()->loadNodeFromCCBI("ccbi/SelectLoginView.ccbi", this);
@@ -49,9 +53,42 @@ bool SelectLoginVIew::init(CLoginScene* pDelegate) {
         pNode->setPosition(ccp(winSize.width * 0.5f, winSize.height * 0.5f));
         this->addChild(pNode, 1);
         CCLog("[SelectLoginVIew] Nạp SelectLoginView.ccbi thành công!");
+    } else {
+        // Fallback UI nếu CCBI có vấn đề: Hiển thị hộp thoại chọn đăng nhập chuẩn
+        CCLog("[SelectLoginVIew] Tạo giao diện Fallback Modal chọn đăng nhập");
+        const float boxW = 440.0f;
+        const float boxH = 320.0f;
+        CCLayerColor* pBox = CCLayerColor::create(ccc4(20, 24, 39, 245), boxW, boxH);
+        pBox->setPosition(ccp((winSize.width - boxW) * 0.5f, (winSize.height - boxH) * 0.5f));
+        this->addChild(pBox, 1);
+
+        CCLabelTTF* pTitle = CCLabelTTF::create("CHỌN CÁCH ĐĂNG NHẬP", "Helvetica-Bold", 24.0f);
+        pTitle->setColor(ccc3(245, 158, 11));
+        pTitle->setPosition(ccp(boxW * 0.5f, boxH - 45.0f));
+        pBox->addChild(pTitle);
+
+        CCMenuItemFont* pItemAcc = CCMenuItemFont::create("Đăng Nhập Bằng Tài Khoản", this, menu_selector(SelectLoginVIew::onBtnLoginAccountMenu));
+        pItemAcc->setFontSize(22);
+        pItemAcc->setColor(ccc3(255, 255, 255));
+        pItemAcc->setPosition(ccp(boxW * 0.5f, boxH - 110.0f));
+
+        CCMenuItemFont* pItemGuest = CCMenuItemFont::create("Chơi Ngay (Tài Khoản Khách)", this, menu_selector(SelectLoginVIew::onBtnLoginGuestMenu));
+        pItemGuest->setFontSize(22);
+        pItemGuest->setColor(ccc3(34, 197, 94));
+        pItemGuest->setPosition(ccp(boxW * 0.5f, boxH - 175.0f));
+
+        CCMenuItemFont* pItemClose = CCMenuItemFont::create("✕ Đóng", this, menu_selector(SelectLoginVIew::onBtnCloseMenu));
+        pItemClose->setFontSize(20);
+        pItemClose->setColor(ccc3(239, 68, 68));
+        pItemClose->setPosition(ccp(boxW * 0.5f, 40.0f));
+
+        CCMenu* pMenu = CCMenu::create(pItemAcc, pItemGuest, pItemClose, NULL);
+        pMenu->setPosition(CCPointZero);
+        pMenu->setHandlerPriority(-131);
+        pBox->addChild(pMenu);
     }
 
-    // Bảo vệ gắn trực tiếp sự kiện vào nút bấm
+    // Bảo vệ gắn trực tiếp sự kiện vào nút bấm nếu CCBI nạp thành công
     if (m_pBtnLoginAccount) {
         m_pBtnLoginAccount->setTouchPriority(-130);
         m_pBtnLoginAccount->addTargetWithActionForControlEvents(this, cccontrol_selector(SelectLoginVIew::onBtnLoginAccount), CCControlEventTouchUpInside);

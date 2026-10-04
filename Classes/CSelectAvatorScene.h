@@ -34,6 +34,10 @@ private:
     CCSprite* m_pIcons[5];
     CCSprite* m_pIconMaps[5];
 
+    CCSprite* m_pCountryEmblem;
+    CCSprite* m_pCountryMap;
+    CCMenuItemFont* m_pCountryBtnItems[5];
+
     CCLabelTTF* m_pLabelCountryName;
     CCLabelTTF* m_pLabelCountryDesc;
 
@@ -49,6 +53,7 @@ public:
     virtual void onExit();
 
     void updateCountryDisplay();
+    void selectCountry(int countryIndex);
     void nextCountry();
     void prevCountry();
 
@@ -59,8 +64,12 @@ public:
 
     // Callbacks
     void onBtnNext(CCObject* pSender, CCControlEvent pEvent);
+    void onBtnNextMenu(CCObject* pSender);
     void onBtnNextCountry(CCObject* pSender, CCControlEvent pEvent);
+    void onBtnNextCountryMenu(CCObject* pSender);
     void onBtnPreCountry(CCObject* pSender, CCControlEvent pEvent);
+    void onBtnPreCountryMenu(CCObject* pSender);
+    void onSelectCountryTab(CCObject* pSender);
 
     // Touch
     virtual void registerWithTouchDispatcher();

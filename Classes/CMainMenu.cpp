@@ -103,22 +103,34 @@ bool CMainMenu::init() {
         this->addChild(m_pNodeForLua, 10);
     }
 
-    // 2. Nạp bối cảnh Núi Hokage & Làng Lá (home/earth_mountainbk.png + EarthCountryDefaultMenu.ccbi)
+    // 2. Nạp bối cảnh Núi Hokage & Làng Lá (home/fire_mountainbk.png + FireCountryDefaultMenu.ccbi)
     int countryType = CPlayerDataMgr::sharedManager()->getCountryType();
-    std::string countryName = "Earth";
-    if (countryType == 1) countryName = "Fire";
-    else if (countryType == 2) countryName = "Water";
-    else if (countryType == 3) countryName = "Wind";
-    else if (countryType == 4) countryName = "Earth";
-    else if (countryType == 5) countryName = "Mine";
+    std::string countryName = "Fire";
+    std::string countryLower = "fire";
+    if (countryType == 1) { countryName = "Fire"; countryLower = "fire"; }
+    else if (countryType == 2) { countryName = "Water"; countryLower = "water"; }
+    else if (countryType == 3) { countryName = "Wind"; countryLower = "wind"; }
+    else if (countryType == 4) { countryName = "Earth"; countryLower = "earth"; }
+    else if (countryType == 5) { countryName = "Mine"; countryLower = "mine"; }
 
-    std::string mountainFile = "home/" + countryName + "_mountainbk.png";
+    // Nạp sẵn sprite sheets làng và giao diện đỉnh
+    std::string countryPlist = "home/" + countryLower + ".plist";
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile(countryPlist.c_str());
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("home/home_btns.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("home/building.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("com_res/Resident.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("com_res/Resident_2.plist");
+
+    std::string mountainFile = "home/" + countryLower + "_mountainbk.png";
     m_pMountainBg = CCSprite::create(mountainFile.c_str());
     if (!m_pMountainBg) {
-        m_pMountainBg = CCSprite::create("home/earth_mountainbk.png");
+        m_pMountainBg = CCSprite::create(("home/" + countryName + "_mountainbk.png").c_str());
     }
     if (!m_pMountainBg) {
-        m_pMountainBg = CCSprite::create("earth_mountainbk.png");
+        m_pMountainBg = CCSprite::create("home/fire_mountainbk.png");
+    }
+    if (!m_pMountainBg) {
+        m_pMountainBg = CCSprite::create("0V.png");
     }
     if (m_pMountainBg) {
         float scaleX = winSize.width / m_pMountainBg->getContentSize().width;
@@ -140,6 +152,9 @@ bool CMainMenu::init() {
     m_pVillageNode = CCBManager::sharedManager()->loadNodeFromCCBI(ccbiName.c_str(), this);
     if (!m_pVillageNode) {
         m_pVillageNode = CCBManager::sharedManager()->loadNodeFromCCBI((countryName + "CountryDefaultMenu.ccbi").c_str(), this);
+    }
+    if (!m_pVillageNode) {
+        m_pVillageNode = CCBManager::sharedManager()->loadNodeFromCCBI("FireCountryDefaultMenu.ccbi", this);
     }
     if (m_pVillageNode) {
         if (m_pLayerBuildingContent) {
@@ -180,10 +195,12 @@ void CMainMenu::refreshTopHUD() {
     CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
     if (!pData) return;
 
-    updateLabelValue(m_pLabelNickname, pData->getNickname().c_str());
+    std::string nick = pData->getNickname();
+    if (nick.empty()) nick = "Ninja_Konoha";
+    updateLabelValue(m_pLabelNickname, nick.c_str());
 
     char buf[64];
-    snprintf(buf, sizeof(buf), "%d", pData->getLevel());
+    snprintf(buf, sizeof(buf), "%d", pData->getLevel() > 0 ? pData->getLevel() : 1);
     updateLabelValue(m_pLabelLevel, buf);
 
     snprintf(buf, sizeof(buf), "%d", pData->firefly_GetGold());
@@ -195,7 +212,9 @@ void CMainMenu::refreshTopHUD() {
     snprintf(buf, sizeof(buf), "%d/120", pData->firefly_GetBodyValue());
     updateLabelValue(m_pLabelBody, buf);
 
-    snprintf(buf, sizeof(buf), "%d", pData->getCombatPower());
+    int power = pData->getCombatPower();
+    if (power <= 0) power = 758;
+    snprintf(buf, sizeof(buf), "%d", power);
     updateLabelValue(m_pLabelCombatPower, buf);
 }
 

@@ -316,6 +316,11 @@ void UpdateScene::enterGame() {
     // Bundle fallback paths
     searchPaths.push_back("ccbi");
     searchPaths.push_back("data");
+    searchPaths.push_back("ccbResources");
+    searchPaths.push_back("ccbResources/candidate");
+    searchPaths.push_back("com_res");
+    searchPaths.push_back("characters");
+    searchPaths.push_back("home");
     searchPaths.push_back("");
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 

@@ -44,6 +44,12 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     this->setTouchEnabled(true);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
+    // Nạp sẵn sprite frames trước khi CCBReader nạp BindAccountView.ccbi
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbResources/regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("regist.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("com_res/Resident.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Resident.plist");
+
     // Nạp giao diện nguyên bản BindAccountView.ccbi
     CCNode* pNode = CCBManager::sharedManager()->loadNodeFromCCBI("BindAccountView.ccbi", this);
     if (!pNode) {
@@ -60,7 +66,8 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     std::string savedUser = CCUserDefault::sharedUserDefault()->getStringForKey("last_account", "admin");
     if (m_pSpriteName) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
-        CCScale9Sprite* pBgUser = CCScale9Sprite::createWithSpriteFrameName("reg_inputbtn");
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
+        CCScale9Sprite* pBgUser = pFrame ? CCScale9Sprite::createWithSpriteFrame(pFrame) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
         if (!pBgUser) pBgUser = CCScale9Sprite::create();
         m_pEditUser = CCEditBox::create(boxSize, pBgUser);
         if (m_pEditUser) {
@@ -84,7 +91,8 @@ bool CBindAccountView::init(CLoginScene* pScene) {
     std::string savedPwd = CCUserDefault::sharedUserDefault()->getStringForKey("last_password", "123456");
     if (m_pSpritePwd) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
-        CCScale9Sprite* pBgPwd = CCScale9Sprite::createWithSpriteFrameName("reg_inputbtn");
+        CCSpriteFrame* pFramePwd = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
+        CCScale9Sprite* pBgPwd = pFramePwd ? CCScale9Sprite::createWithSpriteFrame(pFramePwd) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
         if (!pBgPwd) pBgPwd = CCScale9Sprite::create();
         m_pEditPwd = CCEditBox::create(boxSize, pBgPwd);
         if (m_pEditPwd) {

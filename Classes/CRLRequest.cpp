@@ -72,11 +72,19 @@ void CRLRequest::start() {
         if (CServerListMgr::sharedManager() && !CServerListMgr::sharedManager()->getSelectConfig().domain.empty()) {
             baseDomain = CServerListMgr::sharedManager()->getSelectConfig().domain;
         }
+        while (!baseDomain.empty() && baseDomain.back() == '/') {
+            baseDomain.pop_back();
+        }
         if (!m_targetUrl.empty() && m_targetUrl[0] == '/') {
             m_url = baseDomain + m_targetUrl;
         } else {
             m_url = baseDomain + "/" + m_targetUrl;
         }
+    }
+
+    if (m_url.empty() || m_url.find("http") == std::string::npos) {
+        CCLog("[CRLRequest] URL rong hoac sai dinh dang (%s) -> Dung dia chi may chu mac dinh", m_url.c_str());
+        m_url = "http://160.22.123.62:8088/xk_r_dir";
     }
 
     CCHttpRequest* pHttpRequest = new CCHttpRequest();
@@ -114,6 +122,7 @@ void CRLRequest::start() {
     }
 
     CCLog("[CRLRequest] Gui request: %s (CMD: %d, DataLen: %lu)", m_url.c_str(), m_cmdId, (unsigned long)requestBody.length());
+    this->retain(); // Giữ an toàn đối tượng CRLRequest qua luồng mạng bất đồng bộ
     CCHttpClient::getInstance()->send(pHttpRequest);
     pHttpRequest->release();
 }
@@ -130,6 +139,7 @@ void CRLRequest::onHttpRequestCompleted(CCHttpClient* pSender, CCHttpResponse* p
             SEL_CallFuncReq sel = (SEL_CallFuncReq)m_pSelectorND;
             (m_pTarget->*sel)(this);
         }
+        this->release(); // Khớp với retain() trong start()
         return;
     }
 
@@ -147,6 +157,7 @@ void CRLRequest::onHttpRequestCompleted(CCHttpClient* pSender, CCHttpResponse* p
             SEL_CallFuncReq sel = (SEL_CallFuncReq)m_pSelectorND;
             (m_pTarget->*sel)(this);
         }
+        this->release(); // Khớp với retain() trong start()
         return;
     }
 
@@ -168,5 +179,6 @@ void CRLRequest::onHttpRequestCompleted(CCHttpClient* pSender, CCHttpResponse* p
         SEL_CallFuncReq sel = (SEL_CallFuncReq)m_pSelectorND;
         (m_pTarget->*sel)(this);
     }
+    this->release(); // Khớp với retain() trong start()
 }
 

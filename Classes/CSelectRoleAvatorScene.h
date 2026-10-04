@@ -75,6 +75,13 @@ public:
     void onBtnEnterGame(CCObject* pSender, CCControlEvent pEvent);
     void onBtnBack(CCObject* pSender, CCControlEvent pEvent);
 
+    void onBtnSelectNinja003Menu(CCObject* pSender);
+    void onBtnSelectNinja004Menu(CCObject* pSender);
+    void onBtnSelectNinja005Menu(CCObject* pSender);
+    void onBtnRandNameMenu(CCObject* pSender);
+    void onBtnEnterGameMenu(CCObject* pSender);
+    void onBtnBackMenu(CCObject* pSender);
+
     // CCEditBox Delegate
     virtual void editBoxEditingDidBegin(CCEditBox* editBox) {}
     virtual void editBoxEditingDidEnd(CCEditBox* editBox) {}
