@@ -100,7 +100,7 @@ void CLoginScene::onEnter() {
     ServerInfoData curServer = CServerListMgr::sharedManager()->getSelectConfig();
 
     if (m_pLabelVersionInfo) {
-        m_pLabelVersionInfo->setString("Phiên bản: 1.0.8");
+        m_pLabelVersionInfo->setString("Phiên bản: 1.0.9");
     }
     if (m_pLabelServerName) {
         m_pLabelServerName->setString(curServer.name.c_str());

@@ -30,6 +30,7 @@ private:
     CCControlButton* m_pBtnRegist;
     CCControlButton* m_pBtnClose;
     CCLabelTTF* m_pLabelTitle;
+    CCLabelTTF* m_pLabelTip;
 
     // EditBox nhập liệu
     CCEditBox* m_pEditUser;

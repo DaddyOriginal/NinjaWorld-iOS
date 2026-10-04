@@ -11,6 +11,7 @@ CBindAccountView::CBindAccountView()
     , m_pBtnRegist(NULL)
     , m_pBtnClose(NULL)
     , m_pLabelTitle(NULL)
+    , m_pLabelTip(NULL)
     , m_pEditUser(NULL)
     , m_pEditPwd(NULL)
 {
@@ -23,6 +24,7 @@ CBindAccountView::~CBindAccountView() {
     CC_SAFE_RELEASE_NULL(m_pBtnRegist);
     CC_SAFE_RELEASE_NULL(m_pBtnClose);
     CC_SAFE_RELEASE_NULL(m_pLabelTitle);
+    CC_SAFE_RELEASE_NULL(m_pLabelTip);
 }
 
 CBindAccountView* CBindAccountView::create(CLoginScene* pScene) {
@@ -165,6 +167,8 @@ bool CBindAccountView::onAssignCCBMemberVariable(CCObject* pTarget, const char* 
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "ctrl_create", CCControlButton*, this->m_pBtnRegist);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "BtnClose", CCControlButton*, this->m_pBtnClose);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "ctrl_close", CCControlButton*, this->m_pBtnClose);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label_tip", CCLabelTTF*, this->m_pLabelTip);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pLabelTip", CCLabelTTF*, this->m_pLabelTip);
     return false;
 }
 
