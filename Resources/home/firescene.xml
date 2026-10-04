@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLayers>
+	<Border>
+		<left>-50</left>
+		<right>70</right>
+	</Border>
+	<Btn_Building>
+		<btn>
+			<name>btn_borderWar</name>
+			<iconname>sprite_borderWar</iconname>
+			<borderame>node_borderWar_border</borderame>
+			<open>1</open>
+		</btn>
+		<btn>
+			<name>btn_secretshop</name>
+			<iconname>sprite_secretshop</iconname>
+			<borderame>node_secretshop_border</borderame>
+			<open>1</open>
+		</btn>
+		<btn>
+			<name>btn_treasure</name>
+			<iconname>sprite_treasure</iconname>
+			<borderame>node_treasure_border</borderame>
+			<open>1</open>
+		</btn>
+		<btn>
+			<name>btn_ninja</name>
+			<iconname>sprite_ninja</iconname>
+			<borderame>node_ninja_border</borderame>
+			<open>1</open>
+		</btn>
+		<btn>
+			<name>btn_energy</name>
+			<iconname>sprite_energy</iconname>
+			<borderame>node_energy_border</borderame>
+			<open>1</open>
+		</btn>
+		<btn>
+			<name>btn_tree</name>
+			<iconname>sprite_tree</iconname>
+			<borderame>node_tree_border</borderame>
+			<open>1</open>
+		</btn>
+	</Btn_Building>
+</SceneLayers>

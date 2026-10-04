@@ -1,0 +1,41 @@
+[
+	{
+		"server":{
+		        "url":"http://58.67.219.92:8080",
+		        "cgi":"xk_w_login",
+		        "cmd":2,
+		        "Pt":1007,
+				"GroupID":2
+				},
+		"localCache":2,
+		"Recommend":1000,
+		"AreaUrl":"http://58.67.219.92:8080/xk_r_dir",
+		"ServerDesc":"release server"
+	},
+	{
+		"server":{
+		    "url":"http://58.67.219.7:8080",
+		    "cgi":"xk_w_login",
+		    "cmd":2,
+		    "Pt":1007,
+			"GroupID":2
+			},
+		"localCache":2,
+		"Recommend":1000,
+		"AreaUrl":"http://58.67.219.7:8080/xk_r_dir",
+		"ServerDesc":"pre release server"
+	},
+	{
+	"server":{
+	        "url":"http://58.67.219.90:8080",
+	        "cgi":"xk_w_login",
+	        "cmd":2,
+	        "Pt":1007,
+			"GroupID":2
+			},
+		"localCache":2,
+		"Recommend":1000,
+		"AreaUrl":"http://58.67.219.90:8080/xk_r_dir",
+		"ServerDesc":"test server"
+	}
+]

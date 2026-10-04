@@ -6,6 +6,12 @@ CServerListMgr* CServerListMgr::s_instance = NULL;
 CServerListMgr::CServerListMgr()
     : m_gatewayUrl("http://160.22.123.62:8088")
 {
+    m_selectedServer.id = 1;
+    m_selectedServer.name = "S1 - Làng Lá";
+    m_selectedServer.domain = "http://160.22.123.62:8088";
+    m_selectedServer.port = 8088;
+    m_selectedServer.state = 1;
+    m_selectedServer.recommend = 1;
     loadCacheServer();
 }
 
