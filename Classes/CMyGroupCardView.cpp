@@ -467,20 +467,23 @@ void CMyGroupCardView::requestChangeFormation(int slotSeq, int newNinjaSeq, int 
     if (!pData) return;
 
     CRLRequest* pReq = CRLRequest::create();
-    pReq->setDelegate(this);
-    pReq->setCmd(2300);
-    pReq->addParam("seq", slotSeq);
-    pReq->addParam("newid", newNinjaSeq);
-    pReq->addParam("oldid", oldNinjaSeq);
-    pReq->addParam("teamid", pData->getActiveTeam()->getActiveTeamIndex());
-    pReq->addParam("ServerID", pData->getServerId());
-    pReq->sendPost("/rl_w_ninjalist");
+    if (!pReq) return;
+    pReq->setTargetUrl("/rl_w_ninjalist");
+    pReq->setMethod(CRLRequest::METHOD_POST);
+    pReq->setParam("cmd", "2300");
+    pReq->setParam("seq", CCString::createWithFormat("%d", slotSeq)->getCString());
+    pReq->setParam("newid", CCString::createWithFormat("%d", newNinjaSeq)->getCString());
+    pReq->setParam("oldid", CCString::createWithFormat("%d", oldNinjaSeq)->getCString());
+    pReq->setParam("teamid", CCString::createWithFormat("%d", pData->getActiveTeam()->getActiveTeamIndex())->getCString());
+    pReq->setParam("ServerID", CCString::createWithFormat("%d", pData->getServerId())->getCString());
+    pReq->setCallback(this, callfuncND_selector(CMyGroupCardView::onHttpRequestCompleted));
+    pReq->send();
 }
 
 void CMyGroupCardView::onHttpRequestCompleted(CRLRequest* pRequest) {
-    if (!pRequest || pRequest->getState() != CRLRequest::REQ_SUCCESS) return;
+    if (!pRequest || !pRequest->isSuccess()) return;
 
-    std::string resp = pRequest->getResponseData();
+    std::string resp = pRequest->getResponseString();
     CCLog("[CMyGroupCardView] Server tra ve doi hinh moi: %s", resp.substr(0, 150).c_str());
 
     CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();

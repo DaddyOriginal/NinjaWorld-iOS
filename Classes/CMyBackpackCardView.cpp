@@ -453,7 +453,7 @@ void CMyBackpackCardView::updatePreviewPanel() {
                     m_pLabelPreviewStats->setString(ss.str().c_str());
                 }
                 if (m_pLabelPreviewDesc) m_pLabelPreviewDesc->setString(n->firefly_GetDesc().c_str());
-                if (m_pBtnAction && m_pBtnAction->getTitleLabel()) m_pBtnAction->getTitleLabel()->setString("Xem Tướng");
+                if (m_pBtnAction) m_pBtnAction->setTitleForState(CCString::create("Xem Tướng"), CCControlStateNormal);
             }
         } else if (m_currentSubTab == TAB_WEAPON || m_currentSubTab == TAB_ARMOR || m_currentSubTab == TAB_ACCESSORY) {
             int slotType = (m_currentSubTab == TAB_WEAPON) ? 1 : ((m_currentSubTab == TAB_ARMOR) ? 2 : 3);
@@ -474,8 +474,8 @@ void CMyBackpackCardView::updatePreviewPanel() {
                     m_pLabelPreviewStats->setString(ss.str().c_str());
                 }
                 if (m_pLabelPreviewDesc) m_pLabelPreviewDesc->setString(eq->getDesc().c_str());
-                if (m_pBtnAction && m_pBtnAction->getTitleLabel()) {
-                    m_pBtnAction->getTitleLabel()->setString(eq->isEquipped() ? "Tháo Ra" : "Trang Bị");
+                if (m_pBtnAction) {
+                    m_pBtnAction->setTitleForState(CCString::create(eq->isEquipped() ? "Tháo Ra" : "Trang Bị"), CCControlStateNormal);
                 }
             }
         }
@@ -499,8 +499,8 @@ void CMyBackpackCardView::updatePreviewPanel() {
                 m_pLabelPreviewStats->setString(p->canSynthesize() ? "Đã đủ mảnh để Hợp Thành!" : "Cần thu thập thêm mảnh.");
             }
             if (m_pLabelPreviewDesc) m_pLabelPreviewDesc->setString("Thu thập đủ số lượng mảnh để hợp thành nhận Nhẫn Giả / Trang bị hoàn chỉnh.");
-            if (m_pBtnAction && m_pBtnAction->getTitleLabel()) {
-                m_pBtnAction->getTitleLabel()->setString(p->canSynthesize() ? "Hợp Thành" : "Chưa Đủ");
+            if (m_pBtnAction) {
+                m_pBtnAction->setTitleForState(CCString::create(p->canSynthesize() ? "Hợp Thành" : "Chưa Đủ"), CCControlStateNormal);
             }
         }
     }
@@ -616,6 +616,6 @@ bool CMyBackpackCardView::onAssignCCBMemberVariable(CCObject* pTarget, const cha
 }
 
 void CMyBackpackCardView::onHttpRequestCompleted(CRLRequest* pRequest) {
-    if (!pRequest || pRequest->getState() != CRLRequest::REQ_SUCCESS) return;
+    if (!pRequest || !pRequest->isSuccess()) return;
     refreshItemList();
 }

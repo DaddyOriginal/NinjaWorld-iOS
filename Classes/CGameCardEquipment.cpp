@@ -3,7 +3,7 @@
 #include <sstream>
 #include <cstdlib>
 
-static std::string extractTag(const std::string& xml, const std::string& tag) {
+static std::string extractEquipTag(const std::string& xml, const std::string& tag) {
     std::string openTag = "<" + tag + ">";
     std::string closeTag = "</" + tag + ">";
     size_t start = xml.find(openTag);
@@ -56,7 +56,7 @@ CGameCardEquipment* CGameCardEquipment::createWithXmlSnippet(const std::string& 
 bool CGameCardEquipment::initFromXmlSnippet(const std::string& xml) {
     if (xml.empty()) return false;
 
-    std::string typeStr = extractTag(xml, "type");
+    std::string typeStr = extractEquipTag(xml, "type");
     int cardType = !typeStr.empty() ? atoi(typeStr.c_str()) : 2;
     if (cardType < 2 || cardType > 4) {
         return false; // Chỉ nhận Type 2 (Vũ khí), 3 (Giáp), 4 (Trang sức)
@@ -65,16 +65,16 @@ bool CGameCardEquipment::initFromXmlSnippet(const std::string& xml) {
     // Gán slotType: 1 = Vũ khí, 2 = Giáp, 3 = Trang sức
     m_slotType = cardType - 1;
 
-    std::string seqStr = extractTag(xml, "seq");
+    std::string seqStr = extractEquipTag(xml, "seq");
     if (!seqStr.empty()) m_seq = atoi(seqStr.c_str());
 
-    std::string idStr = extractTag(xml, "id");
+    std::string idStr = extractEquipTag(xml, "id");
     if (!idStr.empty()) m_equipId = atoi(idStr.c_str());
 
-    std::string lvlStr = extractTag(xml, "level");
+    std::string lvlStr = extractEquipTag(xml, "level");
     if (!lvlStr.empty()) m_level = atoi(lvlStr.c_str());
 
-    std::string starStr = extractTag(xml, "starlevel");
+    std::string starStr = extractEquipTag(xml, "starlevel");
     if (!starStr.empty()) m_star = atoi(starStr.c_str());
 
     // Nạp thông tin mẫu từ CItemTableMgr

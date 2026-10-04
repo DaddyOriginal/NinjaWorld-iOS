@@ -43,7 +43,7 @@ bool CChapterView::init() {
     if (!CCLayer::init()) return false;
 
     // Nạp giao diện ChapterView.ccbi
-    CCNode* pRoot = CCBManager::sharedManager()->loadNodeFromCCBI("ChapterView.ccbi", this, this);
+    CCNode* pRoot = CCBManager::sharedManager()->loadNodeFromCCBI("ChapterView.ccbi", this);
     if (pRoot) {
         this->addChild(pRoot);
     } else {
@@ -122,7 +122,7 @@ void CChapterView::updatePageDisplay(int page) {
     m_pNodeSectionContainer->removeAllChildrenWithCleanup(true);
 
     // Nạp ChapterCellView.ccbi đại diện cho 1 trang chứa 6 chương
-    m_pCurrentPageNode = CCBManager::sharedManager()->loadNodeFromCCBI("ChapterCellView.ccbi", NULL, NULL);
+    m_pCurrentPageNode = CCBManager::sharedManager()->loadNodeFromCCBI("ChapterCellView.ccbi", NULL);
     if (!m_pCurrentPageNode) {
         CCLog("[CChapterView] Canh bao: Khong the tai ChapterCellView.ccbi");
         return;
@@ -234,16 +234,11 @@ void CChapterView::onChapterClicked(CCObject* pSender) {
 void CCombatPowerCalc(int& totalAtk, int& totalDef) {
     totalAtk = 0;
     totalDef = 0;
-    CActiveTeamMgr* pTeamMgr = CActiveTeamMgr::sharedManager();
-    if (!pTeamMgr) return;
+    CPlayerDataMgr* pData = CPlayerDataMgr::sharedManager();
+    if (!pData || !pData->getActiveTeam()) return;
 
-    for (int slot = 1; slot <= 6; ++slot) {
-        CTeamCard* card = pTeamMgr->getTeamCard(slot);
-        if (card && card->getCardType() > 0) {
-            totalAtk += card->firefly_GetAttackMin();
-            totalDef += card->firefly_GetDefenseMin();
-        }
-    }
+    totalAtk = pData->getActiveTeam()->firefly_GetAttack();
+    totalDef = pData->getActiveTeam()->firefly_GetDefense();
 }
 
 void CChapterView::updateCombatPowerLabels() {
