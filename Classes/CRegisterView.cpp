@@ -100,7 +100,7 @@ bool CRegisterView::init(CLoginScene* pScene) {
         CCSpriteFrame* pFramePwd = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
         CCScale9Sprite* pBgPwd = pFramePwd ? CCScale9Sprite::createWithSpriteFrame(pFramePwd) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
         if (!pBgPwd) pBgPwd = CCScale9Sprite::create();
-        m_pEditPwd = CCEditBox::create(boxSize, pBg);
+        m_pEditPwd = CCEditBox::create(boxSize, pBgPwd);
         if (m_pEditPwd) {
             m_pEditPwd->setPosition(ccp(m_pSpritePwd->getContentSize().width * 0.5f, m_pSpritePwd->getContentSize().height * 0.5f));
             m_pEditPwd->setFontName("Helvetica");
@@ -121,9 +121,10 @@ bool CRegisterView::init(CLoginScene* pScene) {
     // CCEditBox: Xác nhận mật khẩu
     if (m_pSpritePwd1) {
         CCSize boxSize = CCSizeMake(280.0f, 48.0f);
-        CCScale9Sprite* pBg = CCScale9Sprite::createWithSpriteFrameName("reg_inputbtn");
-        if (!pBg) pBg = CCScale9Sprite::create();
-        m_pEditPwd1 = CCEditBox::create(boxSize, pBg);
+        CCSpriteFrame* pFramePwd1 = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("reg_inputbtn");
+        CCScale9Sprite* pBgPwd1 = pFramePwd1 ? CCScale9Sprite::createWithSpriteFrame(pFramePwd1) : CCScale9Sprite::create("com_res/reg_inputbtn.png");
+        if (!pBgPwd1) pBgPwd1 = CCScale9Sprite::create();
+        m_pEditPwd1 = CCEditBox::create(boxSize, pBgPwd1);
         if (m_pEditPwd1) {
             m_pEditPwd1->setPosition(ccp(m_pSpritePwd1->getContentSize().width * 0.5f, m_pSpritePwd1->getContentSize().height * 0.5f));
             m_pEditPwd1->setFontName("Helvetica");
