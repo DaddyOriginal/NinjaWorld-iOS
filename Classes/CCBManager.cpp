@@ -28,8 +28,29 @@ CCNode* CCBManager::loadNodeFromCCBI(const char* pCCBFileName, CCObject* pOwner)
     CCBReader* ccbReader = new CCBReader(m_pNodeLoaderLibrary);
     ccbReader->autorelease();
 
-    CCNode* node = ccbReader->readNodeGraphFromFile(pCCBFileName, pOwner);
-    return node;
+    std::string path = pCCBFileName;
+    if (CCFileUtils::sharedFileUtils()->isFileExist(path)) {
+        return ccbReader->readNodeGraphFromFile(path.c_str(), pOwner);
+    }
+
+    std::string ccbiPath = "ccbi/" + path;
+    if (CCFileUtils::sharedFileUtils()->isFileExist(ccbiPath)) {
+        return ccbReader->readNodeGraphFromFile(ccbiPath.c_str(), pOwner);
+    }
+
+    size_t lastSlash = path.find_last_of("/\\");
+    if (lastSlash != std::string::npos) {
+        std::string baseName = path.substr(lastSlash + 1);
+        if (CCFileUtils::sharedFileUtils()->isFileExist(baseName)) {
+            return ccbReader->readNodeGraphFromFile(baseName.c_str(), pOwner);
+        }
+        std::string baseCcbiPath = "ccbi/" + baseName;
+        if (CCFileUtils::sharedFileUtils()->isFileExist(baseCcbiPath)) {
+            return ccbReader->readNodeGraphFromFile(baseCcbiPath.c_str(), pOwner);
+        }
+    }
+
+    return ccbReader->readNodeGraphFromFile(pCCBFileName, pOwner);
 }
 
 CCScene* CCBManager::loadSceneFromCCBI(const char* pCCBFileName, CCObject* pOwner) {

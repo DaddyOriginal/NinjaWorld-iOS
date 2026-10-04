@@ -1,0 +1,976 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 2.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_bkg_1"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "selector_country_content",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 89.0625,
+                "h": 75.2562255859375,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCNode",
+                "name": "selector_country_node",
+                "props": {
+                  "position": {
+                    "x": 50.0,
+                    "y": 50.0,
+                    "type": 4
+                  },
+                  "contentSize": {
+                    "w": 78.9473648071289,
+                    "h": 99.99999237060547,
+                    "type": 1
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_01",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_2.plist",
+                        "frame": "Candidate_mapWind"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_02",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_mapThunder"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_03",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_2.plist",
+                        "frame": "Candidate_mapWater"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_04",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_mapFire"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_05",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate.plist",
+                        "frame": "Candidate_mapSoil"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_01",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_wind"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_02",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_2.plist",
+                        "frame": "Candidate_thunder"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_03",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate.plist",
+                        "frame": "Candidate_water"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_04",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_2.plist",
+                        "frame": "Candidate_fire"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_05",
+                    "props": {
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_soil"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_pre",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": -40.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_2.plist",
+                        "frame": "Candidate_mapWater"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_now",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": 50.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_mapFire"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_iconMap_next",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": 140.0,
+                        "y": 65.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate.plist",
+                        "frame": "Candidate_mapSoil"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_pre",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": -40.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_soil"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_now",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": 50.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_soil"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "selector_country_icon_next",
+                    "props": {
+                      "visible": false,
+                      "position": {
+                        "x": 140.0,
+                        "y": 20.0,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/candidate/candidate_1.plist",
+                        "frame": "Candidate_soil"
+                      }
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "spr_preC",
+            "props": {
+              "position": {
+                "x": 16.0,
+                "y": 62.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_arrow"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "spr_nextC",
+            "props": {
+              "position": {
+                "x": 84.0,
+                "y": 63.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 180.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_arrow"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLayer",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 5.078125,
+                "y": 88.37890625,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 686.0,
+                "h": 151.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 180.0,
+              "ignoreAnchorPointForPosition": true,
+              "touchEnabled": true,
+              "mouseEnabled": true
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 24.913816452026367,
+                    "y": 56.38887405395508,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_submenu_bk"
+                  },
+                  "flip": {
+                    "x": true,
+                    "y": false
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 74.78904724121094,
+                    "y": 56.38887405395508,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_submenu_bk"
+                  },
+                  "flip": {
+                    "x": true,
+                    "y": false
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 50.0,
+                    "y": 56.29138946533203,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "rotation": 180.0,
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/candidate/candidate.plist",
+                    "frame": "Candidate_country"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCLayer",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 5.338541507720947,
+                "y": 0.390625,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 686.0,
+                "h": 151.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": true,
+              "touchEnabled": true,
+              "mouseEnabled": true
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 25.0,
+                    "y": 50.0,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_submenu_bk"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 75.0,
+                    "y": 50.0,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_submenu_bk"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "selector_country_nextBtn",
+                "props": {
+                  "position": {
+                    "x": 50.0,
+                    "y": 44.3708610534668,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "BtnNext",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 35.86005783081055,
+                    "h": 68.21192169189453,
+                    "type": 1
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/candidate/candidate.plist",
+                    "frame": "Candidate_nextBtn"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/candidate/candidate.plist",
+                    "frame": "Candidate_nextBtn"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/candidate/candidate.plist",
+                    "frame": "Candidate_nextBtn"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -0.2604166567325592,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 4.616000175476074,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_safe_bar"
+              },
+              "preferedSize": {
+                "w": 42.0,
+                "h": 288.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 99.86978912353516,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 4.616018295288086,
+                "type": 0
+              },
+              "rotation": 180.0,
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_safe_bar"
+              },
+              "preferedSize": {
+                "w": 42.0,
+                "h": 288.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

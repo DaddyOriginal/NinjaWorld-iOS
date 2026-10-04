@@ -1,0 +1,98 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "loadinganim",
+      "duration": 2.5,
+      "id": 0,
+      "chained_id": 0
+    }
+  ],
+  "auto_play": -1,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCLayerColor",
+        "name": "",
+        "props": {
+          "visible": false,
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "opacity": 150,
+          "blendFunc": {
+            "src": 770,
+            "dst": 771
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/largespinner.plist",
+            "frame": "largespinner12"
+          }
+        },
+        "children": []
+      }
+    ]
+  }
+}

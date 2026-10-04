@@ -1,0 +1,1076 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCLayerColor",
+        "name": "",
+        "props": {
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "opacity": 255,
+          "blendFunc": {
+            "src": 770,
+            "dst": 771
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/background/background_01.plist",
+            "frame": "background_01"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "country_fix_node",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 86.46273803710938,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 220.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "BtnCountyType2",
+            "props": {
+              "position": {
+                "x": 247.0,
+                "y": 101.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnCountyType2",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 121.0,
+                "h": 120.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_thunder"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_thunder"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_thunder"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnCountyType1",
+            "props": {
+              "position": {
+                "x": 115.0,
+                "y": 102.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnCountyType1",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 121.0,
+                "h": 120.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_wind"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_wind"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_wind"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnCountyType5",
+            "props": {
+              "position": {
+                "x": 653.0,
+                "y": 101.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnCountyType3",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 121.0,
+                "h": 120.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_soil"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_soil"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_soil"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnCountyType4",
+            "props": {
+              "position": {
+                "x": 520.0,
+                "y": 101.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnCountyType4",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 121.0,
+                "h": 120.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_fire"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_fire"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_fire"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnCountyType3",
+            "props": {
+              "position": {
+                "x": 383.0,
+                "y": 101.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnCountyType3",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 121.0,
+                "h": 120.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_water"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_water"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_water"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 193.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_country"
+              },
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "name_fix_node",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 69.7265625,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCScale9Sprite",
+            "name": "BtnInputName",
+            "props": {
+              "position": {
+                "x": 372.0,
+                "y": 68.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_inputbtn"
+              },
+              "preferedSize": {
+                "w": 417.0,
+                "h": 70.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 628.0,
+                "y": 71.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnRoundName",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 70.0,
+                "h": 70.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_007"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_008"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_007"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 140.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_inputname"
+              },
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "card_fix_node",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 38.96359634399414,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 481.2799987792969,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "BtnNinja1",
+            "props": {
+              "position": {
+                "x": 156.0,
+                "y": 210.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnNinja1",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 182.0,
+                "h": 397.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_003"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_003"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_003"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnNinja2",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 213.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnNinja2",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 182.0,
+                "h": 397.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_005"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_005"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_005"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "BtnNinja3",
+            "props": {
+              "position": {
+                "x": 612.0,
+                "y": 213.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnNinja3",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 182.0,
+                "h": 397.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_004"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_004"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_004"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 444.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "Candidate_teammate"
+              },
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 6.998401641845703,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 191.24000549316406,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "control_enter",
+            "props": {
+              "position": {
+                "x": 379.0,
+                "y": 120.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnEnterGame",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 230.39999389648438,
+                "h": 81.91999816894531,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "c_btn_0"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "c_btn_1"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/candidate/candidate.plist",
+                "frame": "c_btn_1"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 382.0,
+                "y": 123.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "characters/characters_010.plist",
+                "frame": "SureToEnter10_ch10"
+              }
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

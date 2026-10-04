@@ -1,0 +1,899 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.2000000476837158,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/background/background_09.plist",
+            "frame": "Background_09"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCBFile",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 100.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ccbFile": "sub_ui/NormalTopBar.ccb"
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "team_bk_top",
+        "props": {
+          "position": {
+            "x": 41.72800064086914,
+            "y": 89.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_normal_btn_bk"
+          }
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "color_suit_btn",
+            "props": {
+              "position": {
+                "x": 75.0,
+                "y": 48.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "colorSuitBtn",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 59.0,
+                "h": 48.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/suit.plist",
+                "frame": "suit_blue"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/ccbDefaultImages.plist",
+                "frame": "ccbButtonHilite.png"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/ccbDefaultImages.plist",
+                "frame": "ccbButtonDisabled.png"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "level_suit_btn",
+            "props": {
+              "position": {
+                "x": 90.0,
+                "y": 48.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "levelSuitBtn",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 59.0,
+                "h": 59.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/suit.plist",
+                "frame": "suit_sun_blue"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/ccbDefaultImages.plist",
+                "frame": "ccbButtonHilite.png"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/ccbDefaultImages.plist",
+                "frame": "ccbButtonDisabled.png"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_color_num",
+            "props": {
+              "position": {
+                "x": 78.54014587402344,
+                "y": 30.55555534362793,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/tz_24.fnt",
+              "string": "12"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_level_num",
+            "props": {
+              "position": {
+                "x": 94.45255279541016,
+                "y": 29.16666603088379,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/tz_24.fnt",
+              "string": "12"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 42.0,
+            "y": 163.0,
+            "type": 1
+          },
+          "contentSize": {
+            "w": 685.0,
+            "h": 65.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_firstTeam",
+            "props": {
+              "position": {
+                "x": 11.0,
+                "y": 61.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnFirstTeam",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "第一隊",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 24.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.800000011920929
+              },
+              "preferedSize": {
+                "w": 106.0,
+                "h": 54.38999938964844,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_secondTeam",
+            "props": {
+              "position": {
+                "x": 133.0,
+                "y": 61.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnSecTeam",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "第二隊",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 24.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.800000011920929
+              },
+              "preferedSize": {
+                "w": 106.0,
+                "h": 54.38999938964844,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "btn_active_team",
+            "props": {
+              "position": {
+                "x": 477.0,
+                "y": 29.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnActiveTeam",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "激活當前隊列",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 24.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 160.0,
+                "h": 58.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_03"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_03"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_03"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "btn_active_desc",
+            "props": {
+              "position": {
+                "x": 619.0,
+                "y": 29.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnDesc",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "說 明",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 24.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 100.0,
+                "h": 58.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_02"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_gou1",
+            "props": {
+              "position": {
+                "x": 115.0,
+                "y": 22.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.800000011920929,
+                "y": 0.800000011920929,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_bt_gou"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_gou2",
+            "props": {
+              "position": {
+                "x": 237.0,
+                "y": 22.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.800000011920929,
+                "y": 0.800000011920929,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_bt_gou"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_bk_frame_41"
+              },
+              "preferedSize": {
+                "w": 684.0,
+                "h": 5.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_tablecontent",
+        "props": {
+          "position": {
+            "x": 45.0,
+            "y": 228.0,
+            "type": 1
+          },
+          "contentSize": {
+            "w": 90.0,
+            "h": 230.0,
+            "type": 2
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_cardcontent",
+        "props": {
+          "position": {
+            "x": 5.447536468505859,
+            "y": 30.667598724365234,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 88.28125,
+            "h": 341.3793029785156,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCControlButton",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 120.0,
+            "y": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "BtnBack",
+            "target": 2,
+            "events": 32
+          },
+          "enabled": true,
+          "title|1": "",
+          "titleTTF|1": "Helvetica",
+          "titleTTFSize|1": {
+            "val": 12.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 130.55999755859375,
+            "h": 59.74137878417969,
+            "type": 0
+          },
+          "zoomOnTouchDown": false,
+          "backgroundSpriteFrame|1": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_btn_green_01"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_btn_green_01"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_btn_green_01"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_touchcontent",
+        "props": {
+          "position": {
+            "x": 5.895453453063965,
+            "y": 27.757282257080078,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 87.23958587646484,
+            "h": 356.15338134765625,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 120.0,
+            "y": 128.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/characters_009.plist",
+            "frame": "Return_ch9"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 378.0,
+            "y": 128.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/characters_002.plist",
+            "frame": "TeamOfNinja_ch2"
+          }
+        },
+        "children": []
+      }
+    ]
+  }
+}

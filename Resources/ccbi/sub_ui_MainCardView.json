@@ -1,0 +1,331 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "sprite_backview",
+        "props": {
+          "position": {
+            "x": -0.884955644607544,
+            "y": 1.8045110702514648,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident_2.plist",
+            "frame": "small_icon_frame_01"
+          }
+        },
+        "children": [
+          {
+            "class": "CCNode",
+            "name": "node_inlay_frame",
+            "props": {
+              "position": {
+                "x": 57.0,
+                "y": 66.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 113.0,
+                "h": 133.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_frame_corner1",
+                "props": {
+                  "position": {
+                    "x": 20.0,
+                    "y": 106.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident_2.plist",
+                    "frame": "small_top_inlay_frame1"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_frame_corner2",
+                "props": {
+                  "position": {
+                    "x": 93.0,
+                    "y": 29.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident_2.plist",
+                    "frame": "small_down_inlay_frame1"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "node_shadow_back",
+            "props": {
+              "position": {
+                "x": 50.44247817993164,
+                "y": 50.375938415527344,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 309.7345275878906,
+                "h": 272.9323425292969,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.28999999165534973,
+                "y": 0.33000001311302185,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "node_icon",
+            "props": {
+              "position": {
+                "x": 1.769911527633667,
+                "y": 14.285714149475098,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 97.34513092041016,
+                "h": 82.7067642211914,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "node_levelinfo",
+            "props": {
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 88.49557495117188,
+                "h": 22.5563907623291,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCLabelBMFont",
+                "name": "label_levelvalue",
+                "props": {
+                  "position": {
+                    "x": 46.0,
+                    "y": 60.0,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fntFile": "characters/number_24.fnt",
+                  "blendFunc": {
+                    "src": 770,
+                    "dst": 771
+                  },
+                  "string": "100"
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 28.0,
+                    "y": 56.66666793823242,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_text_lv"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "node_shadow_front",
+            "props": {
+              "position": {
+                "x": 50.44247817993164,
+                "y": 50.400001525878906,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 350.0,
+                "h": 363.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.28999999165534973,
+                "y": 0.33000001311302185,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_tupo_level",
+            "props": {
+              "position": {
+                "x": 91.0,
+                "y": 108.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/NumB.fnt",
+              "string": "+1"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

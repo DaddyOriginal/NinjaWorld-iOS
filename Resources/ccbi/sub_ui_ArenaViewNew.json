@@ -1,0 +1,1263 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/background/background_09.plist",
+            "frame": "Background_09"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCBFile",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 100.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ccbFile": "sub_ui/NormalTopBar.ccb"
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 384.0,
+            "y": 125.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_normal_btn_bk"
+          }
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_arena",
+            "props": {
+              "position": {
+                "x": 10.0,
+                "y": 70.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnArena",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "竞技",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 30.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 130.0,
+                "h": 60.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_rank",
+            "props": {
+              "position": {
+                "x": 150.0,
+                "y": 70.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnRank",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "排行",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 30.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 130.0,
+                "h": 60.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_exchange",
+            "props": {
+              "position": {
+                "x": 290.0,
+                "y": 70.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnExchange",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "兑换",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 30.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 130.0,
+                "h": 60.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_tab_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 595.0,
+                "y": 40.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnPurchase",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "充值",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 30.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 163.4766082763672,
+                "h": 63.000003814697266,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_01"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_red_01"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 520.0,
+                "y": 40.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/shop/shop.plist",
+                "frame": "shop_13"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_rank",
+        "props": {
+          "position": {
+            "x": 384.0,
+            "y": 215.0,
+            "type": 1
+          },
+          "contentSize": {
+            "w": 686.0,
+            "h": 116.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_16"
+              },
+              "preferedSize": {
+                "w": 686.0,
+                "h": 116.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 45.0,
+              "insetTop": 45.0,
+              "insetRight": 45.0,
+              "insetBottom": 45.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 96.0,
+                "y": 85.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_10"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 96.0,
+                "y": 28.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_11"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 185.0,
+                "y": 28.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_popularity _icon"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_rank",
+            "props": {
+              "position": {
+                "x": 178.0,
+                "y": 85.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Helvetica",
+              "fontSize": {
+                "val": 30.0,
+                "type": 0
+              },
+              "color": {
+                "r": 254,
+                "g": 252,
+                "b": 120
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "9999"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_popularity",
+            "props": {
+              "position": {
+                "x": 213.0,
+                "y": 28.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Helvetica",
+              "fontSize": {
+                "val": 30.0,
+                "type": 0
+              },
+              "color": {
+                "r": 254,
+                "g": 252,
+                "b": 120
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "999"
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "ctrl_luckyrank",
+            "props": {
+              "visible": false,
+              "position": {
+                "x": 65.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnLuckyRank",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 173.0,
+                "h": 59.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_15"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_15"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_15"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "node_arena",
+            "props": {
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 100.0,
+                "h": 100.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCLabelTTF",
+                "name": "label_ArenaViewNew0",
+                "props": {
+                  "position": {
+                    "x": 253.0,
+                    "y": 85.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Helvetica",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 141,
+                    "g": 249,
+                    "b": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "number of challanges to ffdd"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_remain_times",
+                "props": {
+                  "position": {
+                    "x": 580.0,
+                    "y": 85.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Helvetica",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 117,
+                    "g": 213,
+                    "b": 255
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "800/900"
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_next_viplevel",
+                "props": {
+                  "position": {
+                    "x": 280.0,
+                    "y": 57.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident_2.plist",
+                    "frame": "vip_003"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_add_desc",
+                "props": {
+                  "position": {
+                    "x": 310.0,
+                    "y": 57.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "＋"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_next_level_add",
+                "props": {
+                  "position": {
+                    "x": 333.0,
+                    "y": 57.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "9"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_per_day_desc",
+                "props": {
+                  "position": {
+                    "x": 360.0,
+                    "y": 57.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "次/天"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_max_vip",
+                "props": {
+                  "visible": false,
+                  "position": {
+                    "x": 370.0,
+                    "y": 57.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "已达最高"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_ArenaViewNew1",
+                "props": {
+                  "position": {
+                    "x": 280.0,
+                    "y": 27.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Helvetica",
+                  "fontSize": {
+                    "val": 20.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 254,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "(node "
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_exchange",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 384.0,
+            "y": 215.0,
+            "type": 1
+          },
+          "contentSize": {
+            "w": 686.0,
+            "h": 116.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 1.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 1.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": -1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 40.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/arena.plist",
+                "frame": "arena_05"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 56.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_popularity _icon"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_curr_popularity",
+            "props": {
+              "position": {
+                "x": 60.14577102661133,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Helvetica",
+              "fontSize": {
+                "val": 35.0,
+                "type": 0
+              },
+              "color": {
+                "r": 254,
+                "g": 252,
+                "b": 120
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "9999"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_tablecontent",
+        "props": {
+          "position": {
+            "x": 384.0,
+            "y": 275.0,
+            "type": 1
+          },
+          "contentSize": {
+            "w": 79.9999771118164,
+            "h": 280.0,
+            "type": 2
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_cardcontent",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 686.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      }
+    ]
+  }
+}

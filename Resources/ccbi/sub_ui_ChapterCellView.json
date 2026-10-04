@@ -1,0 +1,756 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCNode",
+            "name": "chapter_container1",
+            "props": {
+              "position": {
+                "x": 174.5,
+                "y": 577.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 340.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter1",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_1"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 236.95040893554688,
+                    "y": 32.443138122558594,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter1",
+                "props": {
+                  "position": {
+                    "x": 234.72003173828125,
+                    "y": 34.56000518798828,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第一章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "chapter_container2",
+            "props": {
+              "position": {
+                "x": 512.02001953125,
+                "y": 577.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 340.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter2",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_2"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 236.95040893554688,
+                    "y": 32.443138122558594,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter2",
+                "props": {
+                  "position": {
+                    "x": 234.72003173828125,
+                    "y": 34.56000518798828,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第二章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "chapter_container3",
+            "props": {
+              "position": {
+                "x": 120.5,
+                "y": 342.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 230.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter3",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_3"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 141.910400390625,
+                    "y": 36.76313781738281,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter3",
+                "props": {
+                  "position": {
+                    "x": 133.92001342773438,
+                    "y": 37.440006256103516,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第三章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "chapter_container4",
+            "props": {
+              "position": {
+                "x": 347.20001220703125,
+                "y": 342.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 230.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter4",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_4"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 141.910400390625,
+                    "y": 36.76313781738281,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter4",
+                "props": {
+                  "position": {
+                    "x": 133.92001342773438,
+                    "y": 37.440006256103516,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第四章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "chapter_container5",
+            "props": {
+              "position": {
+                "x": 566.2999877929688,
+                "y": 342.29998779296875,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 230.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter5",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_5"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 141.910400390625,
+                    "y": 36.76313781738281,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter5",
+                "props": {
+                  "position": {
+                    "x": 133.92001342773438,
+                    "y": 37.440006256103516,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第五章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "chapter_container6",
+            "props": {
+              "position": {
+                "x": 342.3999938964844,
+                "y": 114.9000015258789,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 690.0,
+                "h": 240.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_chapter6",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/level_page1.plist",
+                    "frame": "level_chapter_6"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 562.3904418945312,
+                    "y": 45.40313720703125,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/level_background/exp_background.plist",
+                    "frame": "outline_002"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_chapter6",
+                "props": {
+                  "position": {
+                    "x": 568.800048828125,
+                    "y": 46.08000564575195,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "第六章"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_frame",
+            "props": {
+              "position": {
+                "x": -0.2548673152923584,
+                "y": -7.1680006980896,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": true,
+              "displayFrame": {
+                "sheet": "ccbResources/level_background/exp_background.plist",
+                "frame": "outline_001"
+              }
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

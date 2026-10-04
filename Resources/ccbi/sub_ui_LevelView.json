@@ -1,0 +1,403 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 47.727272033691406,
+            "y": 56.666664123535156,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/experience/experience.plist",
+            "frame": "experience_22"
+          }
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "sprite_levelicon",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 49.75609588623047,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "round_icon/round_01.plist",
+                "frame": "round_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "sprite_completeratio",
+            "props": {
+              "position": {
+                "x": 24.761905670166016,
+                "y": 77.56097412109375,
+                "type": 4
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_brown_infoframe"
+              },
+              "preferedSize": {
+                "w": 50.0,
+                "h": 16.09756088256836,
+                "type": 1
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_completeratio",
+            "props": {
+              "position": {
+                "x": 50.47618865966797,
+                "y": 85.36585235595703,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "10"
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 3.9024391174316406,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/experience/experience.plist",
+                "frame": "experience_21"
+              }
+            },
+            "children": [
+              {
+                "class": "CCLabelTTF",
+                "name": "label_levelname",
+                "props": {
+                  "position": {
+                    "x": 55.71428680419922,
+                    "y": 52.96689987182617,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Helvetica",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 1
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "name"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelBMFont",
+                "name": "label_text",
+                "props": {
+                  "position": {
+                    "x": 16.190475463867188,
+                    "y": 53.57143020629883,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fntFile": "characters/number_24.fnt",
+                  "string": "18"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_hardlevel",
+            "props": {
+              "position": {
+                "x": 90.0,
+                "y": 54.14634323120117,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/experience/experience.plist",
+                "frame": "experience_23"
+              }
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sprite_star1",
+                "props": {
+                  "position": {
+                    "x": 52.727272033691406,
+                    "y": 80.82191467285156,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/experience/experience.plist",
+                    "frame": "experience_24"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_star2",
+                "props": {
+                  "position": {
+                    "x": 52.727272033691406,
+                    "y": 65.06849670410156,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/experience/experience.plist",
+                    "frame": "experience_24"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_star3",
+                "props": {
+                  "position": {
+                    "x": 52.727272033691406,
+                    "y": 47.94520568847656,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/experience/experience.plist",
+                    "frame": "experience_24"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_star4",
+                "props": {
+                  "position": {
+                    "x": 52.727272033691406,
+                    "y": 32.876712799072266,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/experience/experience.plist",
+                    "frame": "experience_24"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_star5",
+                "props": {
+                  "position": {
+                    "x": 52.727272033691406,
+                    "y": 17.123287200927734,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/experience/experience.plist",
+                    "frame": "experience_24"
+                  }
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

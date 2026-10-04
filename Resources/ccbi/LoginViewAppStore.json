@@ -1,0 +1,873 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "runanim",
+      "duration": 6.0,
+      "id": 0,
+      "chained_id": 0
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 2.0,
+            "y": 2.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/regist_bk.plist",
+            "frame": "reg_kuang_06"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 960.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 56.04166793823242,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 2.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/regist_bk.plist",
+                "frame": "reg_line_01"
+              },
+              "opacity": 255
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 28.5,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/background/background_02.plist",
+                "frame": "background_02"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "visible": false,
+              "position": {
+                "x": 50.0,
+                "y": 30.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.9074257016181946,
+                "y": 0.9074257016181946,
+                "type": 0
+              },
+              "rotation": 0.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_line_02.png"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "btn_enter_game",
+            "props": {
+              "position": {
+                "x": 386.0,
+                "y": 256.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnLogin",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 304.0,
+                "h": 89.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_enter_the_game"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_enter_the_game"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_enter_the_game"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "btn_enter_game_for_vis",
+            "props": {
+              "visible": false,
+              "position": {
+                "x": 386.0,
+                "y": 256.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnVisLogin",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 304.0,
+                "h": 89.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "noregister_enter_the_game"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "noregister_enter_the_game"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "noregister_enter_the_game"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 80.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 204.8000030517578,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 52.34375,
+                "y": 92.7734375,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "",
+                "frame": "ccbResources/logo.png"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 15.33203125,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 204.8000030517578,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 389.0,
+                "y": 138.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnReg",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 519.0,
+                "h": 90.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 390.0,
+                "y": 32.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "BtnSelectServer",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 519.0,
+                "h": 90.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_02"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/regist.plist",
+                "frame": "reg_kuang_02"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_idname",
+            "props": {
+              "position": {
+                "x": 427.0,
+                "y": 147.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 28.0,
+                "type": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Sample Text"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_servername",
+            "props": {
+              "position": {
+                "x": 434.0,
+                "y": 40.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 28.0,
+                "type": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Sample Text"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 189.0,
+                "y": 145.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 20.0,
+                "type": 0
+              },
+              "color": {
+                "r": 160,
+                "g": 171,
+                "b": 193
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "账号切换"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 192.0,
+                "y": 38.488319396972656,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 20.0,
+                "type": 0
+              },
+              "color": {
+                "r": 160,
+                "g": 171,
+                "b": 193
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "点击选区"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCLabelTTF",
+        "name": "label_versioninfo",
+        "props": {
+          "position": {
+            "x": 45.0,
+            "y": 44.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "fontName": "Arial-BoldMT",
+          "fontSize": {
+            "val": 24.0,
+            "type": 0
+          },
+          "color": {
+            "r": 207,
+            "g": 207,
+            "b": 236
+          },
+          "dimensions": {
+            "w": 0.0,
+            "h": 0.0,
+            "type": 0
+          },
+          "horizontalAlignment": 0,
+          "verticalAlignment": 0,
+          "string": "Sample Text"
+        },
+        "children": []
+      },
+      {
+        "class": "CCControlButton",
+        "name": "ctrl_left_server",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 45.0,
+            "y": 0.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "BtnLeftServer",
+            "target": 2,
+            "events": 32
+          },
+          "enabled": true,
+          "title|1": "",
+          "titleTTF|1": "Arial-BoldMT",
+          "titleTTFSize|1": {
+            "val": 30.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 150.0,
+            "h": 150.0,
+            "type": 0
+          },
+          "zoomOnTouchDown": false,
+          "backgroundSpriteFrame|1": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_01"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_02"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_02"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCControlButton",
+        "name": "ctrl_right_server",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 45.0,
+            "y": 0.0,
+            "type": 2
+          },
+          "anchorPoint": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "BtnRightServer",
+            "target": 2,
+            "events": 32
+          },
+          "enabled": true,
+          "title|1": "",
+          "titleTTF|1": "Arial-BoldMT",
+          "titleTTFSize|1": {
+            "val": 30.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 150.0,
+            "h": 150.0,
+            "type": 0
+          },
+          "zoomOnTouchDown": false,
+          "backgroundSpriteFrame|1": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_01"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_02"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "ccbResources/regist.plist",
+            "frame": "reg_button_02"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      }
+    ]
+  }
+}

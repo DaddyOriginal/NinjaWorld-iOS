@@ -1,5 +1,6 @@
 #include "UpdateScene.h"
 #include "CCBManager.h"
+#include "CLoginScene.h"
 #include "CDNDownloaderBridge.h"
 #include "support/zip_support/ZipUtils.h"
 #include "support/zip_support/unzip.h"
@@ -283,12 +284,10 @@ void UpdateScene::enterGame() {
     searchPaths.push_back(m_resDir + "/script");
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
-    CCScene *pScene = CCScene::create();
-    CCNode *loginNode = CCBManager::sharedManager()->loadNodeFromCCBI("LoginView.ccbi");
-    if (loginNode) {
-        pScene->addChild(loginNode);
-    } else {
-        CCLog("[ERROR] Failed to load LoginView.ccbi from extracted OBB");
+    CCScene *pScene = CLoginScene::scene();
+    if (!pScene) {
+        CCLog("[ERROR] Failed to create CLoginScene!");
+        pScene = CCScene::create();
     }
 
     CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5f, pScene));

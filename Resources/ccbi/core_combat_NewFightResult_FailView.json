@@ -1,0 +1,1809 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCLayerColor",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "opacity": 120,
+          "blendFunc": {
+            "src": 770,
+            "dst": 771
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCLayer",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 6.065281391143799,
+            "y": 10.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 680.0,
+            "h": 685.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 348.0,
+                "y": -88.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 2.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_012"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.99177551269531,
+                "y": 109.04534149169922,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_011"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 38.394161224365234,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_005"
+              },
+              "preferedSize": {
+                "w": 680.0,
+                "h": 560.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 340.4022521972656,
+                "y": 599.2249755859375,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_004"
+              },
+              "preferedSize": {
+                "w": 690.0,
+                "h": 190.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 80.0,
+              "insetTop": 0.0,
+              "insetRight": 80.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 5.147058963775635,
+                "y": 77.51824951171875,
+                "type": 4
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_007"
+              },
+              "preferedSize": {
+                "w": 245.0,
+                "h": 150.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCScale9Sprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 58.82352828979492,
+                "y": 77.51824951171875,
+                "type": 4
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "spriteFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_008"
+              },
+              "preferedSize": {
+                "w": 245.0,
+                "h": 150.0,
+                "type": 0
+              },
+              "opacity": 255,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "insetLeft": 0.0,
+              "insetTop": 0.0,
+              "insetRight": 0.0,
+              "insetBottom": 0.0
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.08659362792969,
+                "y": 89.92608642578125,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_006"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 9.882353782653809,
+                "y": 94.072998046875,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_text_lv"
+              }
+            },
+            "children": [
+              {
+                "class": "CCLabelBMFont",
+                "name": "label_mylevel",
+                "props": {
+                  "position": {
+                    "x": 42.000003814697266,
+                    "y": 20.400001525878906,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fntFile": "characters/number_34.fnt",
+                  "string": "1000"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 63.35294723510742,
+                "y": 94.24818420410156,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_text_lv"
+              }
+            },
+            "children": [
+              {
+                "class": "CCLabelBMFont",
+                "name": "label_enemylevel",
+                "props": {
+                  "position": {
+                    "x": 44.40000534057617,
+                    "y": 19.200000762939453,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fntFile": "characters/number_34.fnt",
+                  "string": "1000"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_myname",
+            "props": {
+              "position": {
+                "x": 7.794117450714111,
+                "y": 89.92700958251953,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Sample Text"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_enemyname",
+            "props": {
+              "position": {
+                "x": 60.735294342041016,
+                "y": 90.21897888183594,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Sample Text"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_defensetext",
+            "props": {
+              "position": {
+                "x": 71.76470947265625,
+                "y": 85.78102111816406,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "DEF："
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_attacktext",
+            "props": {
+              "position": {
+                "x": 16.176471710205078,
+                "y": 85.34306335449219,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "ATK："
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "level_myattack",
+            "props": {
+              "position": {
+                "x": 22.058822631835938,
+                "y": 85.34306335449219,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "78999"
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_attackicon",
+            "props": {
+              "position": {
+                "x": 7.647058486938477,
+                "y": 85.25547790527344,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_022"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_enemyattack",
+            "props": {
+              "position": {
+                "x": 77.64705657958984,
+                "y": 85.71754455566406,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "78999"
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_defenseicon",
+            "props": {
+              "position": {
+                "x": 62.352943420410156,
+                "y": 85.69343566894531,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_023"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLayer",
+            "name": "layer_content",
+            "props": {
+              "position": {
+                "x": 1.6176470518112183,
+                "y": 1.6058393716812134,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 20.0,
+                "h": 171.25,
+                "type": 2
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": true,
+              "touchEnabled": true,
+              "mouseEnabled": true
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 22.953868865966797,
+                    "y": 90.4000015258789,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_text_exp_01"
+                  }
+                },
+                "children": [
+                  {
+                    "class": "CCLabelBMFont",
+                    "name": "label_getexp",
+                    "props": {
+                      "position": {
+                        "x": 96.0,
+                        "y": 12.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fntFile": "characters/number_24.fnt",
+                      "string": "+100"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_goldicon",
+                "props": {
+                  "position": {
+                    "x": 64.67926025390625,
+                    "y": 90.54598236083984,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_gold_icon"
+                  }
+                },
+                "children": [
+                  {
+                    "class": "CCLabelBMFont",
+                    "name": "label_getgold",
+                    "props": {
+                      "position": {
+                        "x": 83.0,
+                        "y": 21.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fntFile": "characters/number_24.fnt",
+                      "string": "+100"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 22.927244186401367,
+                    "y": 82.14891052246094,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_silver_icon"
+                  }
+                },
+                "children": [
+                  {
+                    "class": "CCLabelBMFont",
+                    "name": "label_getsilver",
+                    "props": {
+                      "position": {
+                        "x": 90.0,
+                        "y": 22.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fntFile": "characters/number_24.fnt",
+                      "string": "+100"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_bodyicon",
+                "props": {
+                  "position": {
+                    "x": 65.09381103515625,
+                    "y": 82.06014251708984,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_text_body"
+                  }
+                },
+                "children": [
+                  {
+                    "class": "CCLabelBMFont",
+                    "name": "label_needbdoy",
+                    "props": {
+                      "position": {
+                        "x": 83.0,
+                        "y": 22.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fntFile": "characters/number_24.fnt",
+                      "string": "+100"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_teamcompare",
+                "props": {
+                  "position": {
+                    "x": 30.15752601623535,
+                    "y": 9.417811393737793,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onTeamCompare",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "Title",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 160.0,
+                    "h": 50.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_008"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_008"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_008"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 30.170900344848633,
+                    "y": 9.081460952758789,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_017"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCScale9Sprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 27.44619369506836,
+                    "type": 4
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "spriteFrame": {
+                    "sheet": "com_res/Resident_2.plist",
+                    "frame": "Resident_bk_003"
+                  },
+                  "preferedSize": {
+                    "w": 100.0,
+                    "h": 35.0,
+                    "type": 1
+                  },
+                  "opacity": 255,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "insetLeft": 0.0,
+                  "insetTop": 0.0,
+                  "insetRight": 0.0,
+                  "insetBottom": 0.0
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 311.0400390625,
+                    "y": 348.3648376464844,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_117"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "spr_bk_btn1",
+                "props": {
+                  "position": {
+                    "x": 10.454545021057129,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_bg_fail"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "spr_bk_btn2",
+                "props": {
+                  "position": {
+                    "x": 30.0,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_bg_fail"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "spr_bk_btn3",
+                "props": {
+                  "position": {
+                    "x": 49.84848403930664,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_bg_fail"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "spr_bk_btn4",
+                "props": {
+                  "position": {
+                    "x": 69.69696807861328,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_bg_fail"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "spr_bk_btn5",
+                "props": {
+                  "position": {
+                    "x": 89.54545593261719,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_bg_fail"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_pray",
+                "props": {
+                  "position": {
+                    "x": 10.0,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onBtnPray",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 110.0,
+                    "h": 101.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_116"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_116"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_116"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_upgrade",
+                "props": {
+                  "position": {
+                    "x": 30.185758590698242,
+                    "y": 44.37956237792969,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onBtnUpgrade",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 110.0,
+                    "h": 100.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_115"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_115"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_115"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_cuilian",
+                "props": {
+                  "position": {
+                    "x": 69.80000305175781,
+                    "y": 44.768856048583984,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onBtnCuiLian",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 110.0,
+                    "h": 101.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_114"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_114"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_114"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_weapon",
+                "props": {
+                  "position": {
+                    "x": 49.79999923706055,
+                    "y": 45.15814971923828,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onBtnWeapon",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 110.0,
+                    "h": 101.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_113"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_113"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_113"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btn_newlife",
+                "props": {
+                  "position": {
+                    "x": 89.54545593261719,
+                    "y": 44.79999923706055,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "onBtnNewLife",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Arial-BoldMT",
+                  "titleTTFSize|1": {
+                    "val": 36.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 110.0,
+                    "h": 101.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_118"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_118"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/fight_result.plist",
+                    "frame": "result_118"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCControlButton",
+            "name": "btn_back",
+            "props": {
+              "position": {
+                "x": 199.03378295898438,
+                "y": 58.070411682128906,
+                "type": 3
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "onBtnBack",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 176.0,
+                "h": 61.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_034"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_034"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/fight_result.plist",
+                "frame": "result_034"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLayer",
+            "name": "layer_animtip",
+            "props": {
+              "position": {
+                "x": 25.0,
+                "y": 3.0,
+                "type": 1
+              },
+              "contentSize": {
+                "w": 685.0,
+                "h": 150.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": true,
+              "touchEnabled": true,
+              "mouseEnabled": true
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_attacktext11",
+            "props": {
+              "position": {
+                "x": 16.176469802856445,
+                "y": 81.02189636230469,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Restrain："
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_myRestrain",
+            "props": {
+              "position": {
+                "x": 23.52941131591797,
+                "y": 81.02189636230469,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.800000011920929,
+                "y": 0.800000011920929,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/text_36_red.fnt",
+              "string": "78999"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_defensetext11",
+            "props": {
+              "position": {
+                "x": 71.76470947265625,
+                "y": 81.45985412597656,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "dimensions": {
+                "w": 0.0,
+                "h": 0.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "Restrain："
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_enemyRestrain",
+            "props": {
+              "position": {
+                "x": 79.11764526367188,
+                "y": 81.45985412597656,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 0.800000011920929,
+                "y": 0.800000011920929,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/text_36_red.fnt",
+              "string": "78999"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

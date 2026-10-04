@@ -1,0 +1,1550 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 768.0,
+        "h": 840.0,
+        "type": 0
+      },
+      "anchorPoint": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 49.73958206176758,
+            "y": 50.9523811340332,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "home/heaven_01.plist",
+            "frame": "heaven_01"
+          },
+          "blendFunc": {
+            "src": 770,
+            "dst": 771
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_cloud",
+        "props": {
+          "contentSize": {
+            "w": 768.0,
+            "h": 840.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -0.27000001072883606
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 74.86978912353516,
+                "y": 56.19047546386719,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 22.71076011657715,
+                "y": 49.06720733642578,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_02"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 19.53125,
+                "y": 62.519588470458984,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 138.7885284423828,
+                "y": 17.3726749420166,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 40.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -272.8154296875,
+                "y": 199.0950164794922,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -38.87517166137695,
+                "y": 0.8648815155029297,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -60.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_02"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 1081.627197265625,
+                "y": 381.8372802734375,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 40.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/home_btns.plist",
+                "frame": "cloud_03"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCSprite",
+        "name": "layer_bg",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": -30.119047164916992,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -0.30000001192092896
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "",
+            "frame": "home/water_mountainbk.png"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_container",
+        "props": {
+          "position": {
+            "x": 6.297946929931641,
+            "y": 17.52252197265625,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 88.54166412353516,
+            "h": 55.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true
+        },
+        "children": []
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_mid",
+        "props": {
+          "contentSize": {
+            "w": 768.0,
+            "h": 840.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -0.27000001072883606
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 63.225372314453125,
+                "y": 41.96144485473633,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 5.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 77.15450286865234,
+                "y": 34.75025177001953,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 15.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 101.85301208496094,
+                "y": 23.97806167602539,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 25.164005279541016,
+                "y": 32.53577423095703,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -15.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 112.42801666259766,
+                "y": 7.726629257202148,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 60.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_05"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 122.55301666259766,
+                "y": -31.56480598449707,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 90.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_05"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 2.4390006065368652,
+                "y": 17.31291389465332,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -40.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -6.237001419067383,
+                "y": 13.412574768066406,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -40.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -17.58600425720215,
+                "y": -5.883431434631348,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -65.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_05"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 123.18301391601562,
+                "y": -18.966861724853516,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 80.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -22.323617935180664,
+                "y": -31.59377098083496,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -100.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_03"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_near",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 3.583181619644165,
+            "type": 0
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 840.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -0.27000001072883606
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 49.712581634521484,
+                "y": 30.516990661621094,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 83.23759460449219,
+                "y": 22.905561447143555,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.837581634521484,
+                "y": 25.57984733581543,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 107.08760070800781,
+                "y": 0.4826994240283966,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 65.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 83.41322326660156,
+                "y": 16.782747268676758,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 113.61260223388672,
+                "y": -30.16873550415039,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 95.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -6.987431049346924,
+                "y": -0.5458726286888123,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -60.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -13.737432479858398,
+                "y": -30.785879135131836,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -95.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 16.862573623657227,
+                "y": 21.876989364624023,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "w_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 104.30303192138672,
+                "y": -6.731541633605957,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 70.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 18.997303009033203,
+                "y": 17.98660659790039,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -3.740274667739868,
+                "y": -4.196900367736816,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -65.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": -8.44180965423584,
+                "y": -35.717037200927734,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -100.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 107.03592681884766,
+                "y": -37.65701675415039,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 100.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/water.plist",
+                "frame": "Water_01"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_movebuilding",
+        "props": {
+          "position": {
+            "x": 49.67781066894531,
+            "y": -26.48101043701172,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 33.33333206176758,
+            "h": 30.4761905670166,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -2.1500000953674316
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_building",
+        "props": {
+          "position": {
+            "x": 2.0736005306243896,
+            "y": -2.4883205890655518,
+            "type": 0
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 840.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": -0.27000001072883606
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "sprite_borderWar",
+            "props": {
+              "position": {
+                "x": 16.0,
+                "y": 16.399999618530273,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/mainBorderWar.plist",
+                "frame": "borderWarIcon_5a"
+              }
+            },
+            "children": [
+              {
+                "class": "CCNode",
+                "name": "node_borderWar",
+                "props": {
+                  "position": {
+                    "x": 50.0,
+                    "y": 110.0,
+                    "type": 4
+                  },
+                  "contentSize": {
+                    "w": 300.0,
+                    "h": 220.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_treasure",
+            "props": {
+              "position": {
+                "x": 106.24215698242188,
+                "y": -4.376981258392334,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 69.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/building.plist",
+                "frame": "Building_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_ninja",
+            "props": {
+              "position": {
+                "x": 84.89187622070312,
+                "y": 18.212188720703125,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": 30.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/building.plist",
+                "frame": "Building_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_energy",
+            "props": {
+              "position": {
+                "x": 49.0,
+                "y": 26.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/building.plist",
+                "frame": "btn_treasure"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_tree",
+            "props": {
+              "position": {
+                "x": -12.800000190734863,
+                "y": -26.100000381469727,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -90.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/building.plist",
+                "frame": "Building_02"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_secretshop",
+            "props": {
+              "position": {
+                "x": -6.0,
+                "y": -1.399999976158142,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "rotation": -60.0,
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "home/building.plist",
+                "frame": "Building_06"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_borderWar_border",
+        "props": {
+          "position": {
+            "x": 12.300000190734863,
+            "y": 28.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_treasure_border",
+        "props": {
+          "position": {
+            "x": 121.48663330078125,
+            "y": 0.5122824907302856,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_ninja_border",
+        "props": {
+          "position": {
+            "x": 91.13862609863281,
+            "y": 27.65669822692871,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_radius",
+        "props": {
+          "position": {
+            "x": 49.82542419433594,
+            "y": -26.413719177246094,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 50.0,
+            "h": 580.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_container",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 5.338541507720947,
+            "y": 11.309523582458496,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 88.54166412353516,
+            "h": 55.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_touch_container",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": 5.338541507720947,
+            "y": 11.309523582458496,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 88.54166412353516,
+            "h": 55.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_tree_border",
+        "props": {
+          "position": {
+            "x": -23.299999237060547,
+            "y": -26.100000381469727,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_energy_border",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 38.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_secretshop_border",
+        "props": {
+          "position": {
+            "x": -15.0,
+            "y": 3.700000047683716,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 200.0,
+            "h": 200.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      }
+    ]
+  }
+}

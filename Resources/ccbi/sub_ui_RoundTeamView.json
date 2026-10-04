@@ -1,0 +1,1007 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    },
+    {
+      "name": "movefight",
+      "duration": 1.0,
+      "id": 4,
+      "chained_id": -1
+    },
+    {
+      "name": "showray",
+      "duration": 1.0,
+      "id": 5,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_bk_frame_32"
+          },
+          "preferedSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 53.41796875,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_normal_bk"
+          },
+          "preferedSize": {
+            "w": 100.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 55.95703125,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_normal_bk"
+          },
+          "preferedSize": {
+            "w": 100.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 38.0,
+            "y": 1.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "core_combat_01"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 215.09600830078125,
+            "y": -2.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_submenu_bk"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 557.0,
+            "y": -2.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_submenu_bk"
+          },
+          "flip": {
+            "x": true,
+            "y": false
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 334.0,
+            "y": 49.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "core_combat_03"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_enemyviplevel",
+        "props": {
+          "position": {
+            "x": 412.0,
+            "y": 24.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident_2.plist",
+            "frame": "vip_003"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_enemycountry",
+        "props": {
+          "position": {
+            "x": 102.0,
+            "y": 6.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "cb_country_01"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCLabelTTF",
+        "name": "label_enemyname",
+        "props": {
+          "position": {
+            "x": 160.0,
+            "y": 12.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "fontName": "Arial-BoldMT",
+          "fontSize": {
+            "val": 24.0,
+            "type": 0
+          },
+          "color": {
+            "r": 255,
+            "g": 38,
+            "b": 0
+          },
+          "dimensions": {
+            "w": 0.0,
+            "h": 0.0,
+            "type": 0
+          },
+          "horizontalAlignment": 0,
+          "verticalAlignment": 0,
+          "string": "Sample Text"
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 58.348541259765625,
+            "y": 99.21875,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "core_combat_02"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCLabelTTF",
+        "name": "label_enemyteamcount",
+        "props": {
+          "position": {
+            "x": 81.11978912353516,
+            "y": 99.21875,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "fontName": "Arial-BoldMT",
+          "fontSize": {
+            "val": 30.0,
+            "type": 0
+          },
+          "color": {
+            "r": 255,
+            "g": 38,
+            "b": 0
+          },
+          "dimensions": {
+            "w": 0.0,
+            "h": 0.0,
+            "type": 0
+          },
+          "horizontalAlignment": 0,
+          "verticalAlignment": 0,
+          "string": "15/15"
+        },
+        "children": []
+      },
+      {
+        "class": "CCLabelTTF",
+        "name": "label_myteamcount",
+        "props": {
+          "position": {
+            "x": 411.0,
+            "y": 46.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "fontName": "Arial-BoldMT",
+          "fontSize": {
+            "val": 30.0,
+            "type": 0
+          },
+          "color": {
+            "r": 0,
+            "g": 249,
+            "b": 0
+          },
+          "dimensions": {
+            "w": 0.0,
+            "h": 0.0,
+            "type": 0
+          },
+          "horizontalAlignment": 0,
+          "verticalAlignment": 0,
+          "string": "15/15"
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_mycardlist",
+        "props": {
+          "position": {
+            "x": 5.598958492279053,
+            "y": 53.41796875,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 89.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_mycardsize",
+        "props": {
+          "position": {
+            "x": 5.3385419845581055,
+            "y": 14.55078125,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 17.578125,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_enemycardlist",
+        "props": {
+          "position": {
+            "x": 5.46875,
+            "y": 55.76171875,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 89.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_enemycardsize",
+        "props": {
+          "position": {
+            "x": 5.078125476837158,
+            "y": 55.95703125,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 17.578125,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      },
+      {
+        "class": "CCControlButton",
+        "name": "ctrl_pass",
+        "props": {
+          "position": {
+            "x": 613.0,
+            "y": 16.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "BtnPass",
+            "target": 2,
+            "events": 32
+          },
+          "enabled": true,
+          "title|1": "",
+          "titleTTF|1": "Arial-BoldMT",
+          "titleTTFSize|1": {
+            "val": 30.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 118.0,
+            "h": 95.0,
+            "type": 0
+          },
+          "zoomOnTouchDown": true,
+          "backgroundSpriteFrame|1": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "combat_btn01"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "combat_btn02"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "combat_btn02"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_myviplevel",
+        "props": {
+          "position": {
+            "x": 28.25520896911621,
+            "y": 6.640625,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident_2.plist",
+            "frame": "vip_003"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_mycountry",
+        "props": {
+          "position": {
+            "x": 9.739583015441895,
+            "y": 4.5967206954956055,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/core_combat/core_combat.plist",
+            "frame": "cb_country_01"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_myPet",
+        "props": {
+          "position": {
+            "x": 5.598958492279053,
+            "y": 53.41796875,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 89.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.099998474121094,
+                "y": 30.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/pet1.plist",
+                "frame": "petOutFrame"
+              }
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sp_myPet",
+                "props": {
+                  "position": {
+                    "x": 51.17719268798828,
+                    "y": 48.44961166381836,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/pet1.plist",
+                    "frame": "petIconBg"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "node_animMypet",
+            "props": {
+              "position": {
+                "x": 50.400001525878906,
+                "y": 29.5,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/pet1.plist",
+                "frame": "petFrame"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_enemyPet",
+        "props": {
+          "position": {
+            "x": 5.46875,
+            "y": 55.76171875,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 89.0,
+            "h": 400.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 49.29999923706055,
+                "y": 30.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/pet1.plist",
+                "frame": "petOutFrame"
+              }
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "sp_enemyPet",
+                "props": {
+                  "position": {
+                    "x": 51.17719268798828,
+                    "y": 48.44961166381836,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/pet1.plist",
+                    "frame": "petIconBg"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "node_animEnemypet",
+            "props": {
+              "position": {
+                "x": 49.599998474121094,
+                "y": 29.5,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/pet1.plist",
+                "frame": "petFrame"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_animcontent",
+        "props": {
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true
+        },
+        "children": []
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_safe_bar"
+          },
+          "preferedSize": {
+            "w": 5.46875,
+            "h": 100.0,
+            "type": 1
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 100.0,
+            "y": 100.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 180.0,
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_safe_bar"
+          },
+          "preferedSize": {
+            "w": 5.46875,
+            "h": 100.0,
+            "type": 1
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      }
+    ]
+  }
+}

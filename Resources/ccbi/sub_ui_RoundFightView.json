@@ -1,0 +1,607 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "RunInitAnim",
+      "duration": 3.0,
+      "id": 0,
+      "chained_id": -1
+    },
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 1,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": -1,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": false,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCLayerColor",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "touchEnabled": true,
+          "mouseEnabled": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "opacity": 255,
+          "blendFunc": {
+            "src": 770,
+            "dst": 771
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 50.0,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/background/background_05.plist",
+            "frame": "background_05_01"
+          }
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 0.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/background/background_05.plist",
+                "frame": "background_05_03"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 100.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/background/background_05.plist",
+                "frame": "background_05_02"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": -17.1875,
+            "y": 47.0703125,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 0.0,
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/battle01.plist",
+            "frame": "battle_v"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 125.390625,
+            "y": 37.20703125,
+            "type": 4
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 0.0,
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/battle01.plist",
+            "frame": "battle_s"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_me",
+        "props": {
+          "position": {
+            "x": -33.59375,
+            "y": 66.2109375,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 34.11458206176758,
+            "h": 33.3984375,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 0.0,
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "sprite_myicon",
+            "props": {
+              "position": {
+                "x": 61.8162956237793,
+                "y": 51.81045150756836,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/middle_card_frame/middle_frame_02.plist",
+                "frame": "middle_frame_02"
+              }
+            },
+            "children": [
+              {
+                "class": "CCLayer",
+                "name": "node_cardme",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "type": 4
+                  },
+                  "contentSize": {
+                    "w": 100.0,
+                    "h": 100.0,
+                    "type": 1
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": true,
+                  "touchEnabled": true,
+                  "mouseEnabled": true
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 46.113990783691406,
+                    "y": -8.78661060333252,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/battle01.plist",
+                    "frame": "enemyname"
+                  }
+                },
+                "children": [
+                  {
+                    "class": "CCLabelTTF",
+                    "name": "label_myninja",
+                    "props": {
+                      "position": {
+                        "x": 53.898311614990234,
+                        "y": 53.142860412597656,
+                        "type": 4
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fontName": "Arial-BoldMT",
+                      "fontSize": {
+                        "val": 24.0,
+                        "type": 0
+                      },
+                      "dimensions": {
+                        "w": 0.0,
+                        "h": 0.0,
+                        "type": 0
+                      },
+                      "horizontalAlignment": 0,
+                      "verticalAlignment": 0,
+                      "string": "漩涡鸣人"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_me",
+        "props": {
+          "position": {
+            "x": -33.59375,
+            "y": 66.2109375,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 34.11458206176758,
+            "h": 33.3984375,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 0.0,
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "sprite_bosstype",
+            "props": {
+              "position": {
+                "x": 22.519071578979492,
+                "y": 44.057437896728516,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/battle01.plist",
+                "frame": "battle_01"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_enemyicon",
+            "props": {
+              "position": {
+                "x": 21.976415634155273,
+                "y": 43.75981140136719,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/middle_card_frame/middle_frame_01.plist",
+                "frame": "middle_frame_01"
+              }
+            },
+            "children": [
+              {
+                "class": "CCNode",
+                "name": "node_cardenemy",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "type": 4
+                  },
+                  "contentSize": {
+                    "w": 100.0,
+                    "h": 100.0,
+                    "type": 1
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 47.15026092529297,
+                    "y": -10.041840553283691,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/battle01.plist",
+                    "frame": "myname"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_enemyninja",
+                "props": {
+                  "position": {
+                    "x": 100.99601745605469,
+                    "y": -25.919984817504883,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "漩涡鸣人"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_safe_bar"
+          },
+          "preferedSize": {
+            "w": 5.46875,
+            "h": 100.0,
+            "type": 1
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCScale9Sprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 100.0,
+            "y": 100.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "rotation": 180.0,
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_safe_bar"
+          },
+          "preferedSize": {
+            "w": 5.46875,
+            "h": 100.0,
+            "type": 1
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      }
+    ]
+  }
+}

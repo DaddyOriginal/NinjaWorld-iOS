@@ -1,0 +1,4163 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "showselecttip",
+      "duration": 1.3333333730697632,
+      "id": 0,
+      "chained_id": 0
+    },
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 1,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 1,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCLayer",
+        "name": "node_content",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 40.0,
+            "type": 4
+          },
+          "contentSize": {
+            "w": 685.0,
+            "h": 660.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 2.0,
+                "y": 2.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_10"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 50.0,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCNode",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 88.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCNode",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": -171.36000061035156,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false
+                    },
+                    "children": [
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_29"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_stone_wheel",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_28"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_stone_fire_wheel",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_35"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_31"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "position": {
+                            "x": 144.0,
+                            "y": 1.440000057220459,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_36"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_37"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCControlButton",
+                        "name": "btnClick",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "ccControl": {
+                            "selector": "clickSelectStone",
+                            "target": 2,
+                            "events": 32
+                          },
+                          "enabled": true,
+                          "title|1": "",
+                          "titleTTF|1": "Helvetica",
+                          "titleTTFSize|1": {
+                            "val": 12.0,
+                            "type": 0
+                          },
+                          "labelAnchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "preferedSize": {
+                            "w": 60.0,
+                            "h": 61.0,
+                            "type": 0
+                          },
+                          "zoomOnTouchDown": true,
+                          "backgroundSpriteFrame|1": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|1": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          },
+                          "backgroundSpriteFrame|2": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|2": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          },
+                          "backgroundSpriteFrame|3": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|3": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_stone_icon",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "props/props_034.plist",
+                            "frame": "props_034"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCLabelBMFont",
+                        "name": "label_stone_count",
+                        "props": {
+                          "position": {
+                            "x": 0.0,
+                            "y": 70.0,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "fntFile": "characters/number_24.fnt",
+                          "string": "10000"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCNode",
+                        "name": "",
+                        "props": {
+                          "position": {
+                            "x": 0.0,
+                            "y": -85.0,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false
+                        },
+                        "children": [
+                          {
+                            "class": "CCNode",
+                            "name": "",
+                            "props": {
+                              "position": {
+                                "x": -80.0,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false
+                            },
+                            "children": [
+                              {
+                                "class": "CCControlButton",
+                                "name": "btn_num1",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "ccControl": {
+                                    "selector": "clickNumber",
+                                    "target": 2,
+                                    "events": 32
+                                  },
+                                  "enabled": true,
+                                  "title|1": "",
+                                  "titleTTF|1": "Helvetica",
+                                  "titleTTFSize|1": {
+                                    "val": 12.0,
+                                    "type": 0
+                                  },
+                                  "labelAnchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "preferedSize": {
+                                    "w": 50.0,
+                                    "h": 48.0,
+                                    "type": 0
+                                  },
+                                  "zoomOnTouchDown": true,
+                                  "backgroundSpriteFrame|1": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|1": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|2": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|2": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|3": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_46"
+                                  },
+                                  "titleColor|3": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  }
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "CCLabelBMFont",
+                                "name": "",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "fntFile": "characters/number_24.fnt",
+                                  "string": "1"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "class": "CCNode",
+                            "name": "",
+                            "props": {
+                              "position": {
+                                "x": -28.0,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false
+                            },
+                            "children": [
+                              {
+                                "class": "CCControlButton",
+                                "name": "btn_num2",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "ccControl": {
+                                    "selector": "clickNumber",
+                                    "target": 2,
+                                    "events": 32
+                                  },
+                                  "enabled": true,
+                                  "title|1": "",
+                                  "titleTTF|1": "Helvetica",
+                                  "titleTTFSize|1": {
+                                    "val": 12.0,
+                                    "type": 0
+                                  },
+                                  "labelAnchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "preferedSize": {
+                                    "w": 50.0,
+                                    "h": 48.0,
+                                    "type": 0
+                                  },
+                                  "zoomOnTouchDown": true,
+                                  "backgroundSpriteFrame|1": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|1": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|2": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|2": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|3": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_46"
+                                  },
+                                  "titleColor|3": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  }
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "CCLabelBMFont",
+                                "name": "",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "fntFile": "characters/number_24.fnt",
+                                  "string": "2"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "class": "CCNode",
+                            "name": "",
+                            "props": {
+                              "position": {
+                                "x": 28.0,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false
+                            },
+                            "children": [
+                              {
+                                "class": "CCControlButton",
+                                "name": "btn_num3",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "ccControl": {
+                                    "selector": "clickNumber",
+                                    "target": 2,
+                                    "events": 32
+                                  },
+                                  "enabled": true,
+                                  "title|1": "",
+                                  "titleTTF|1": "Helvetica",
+                                  "titleTTFSize|1": {
+                                    "val": 12.0,
+                                    "type": 0
+                                  },
+                                  "labelAnchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "preferedSize": {
+                                    "w": 50.0,
+                                    "h": 48.0,
+                                    "type": 0
+                                  },
+                                  "zoomOnTouchDown": true,
+                                  "backgroundSpriteFrame|1": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|1": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|2": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|2": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|3": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_46"
+                                  },
+                                  "titleColor|3": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  }
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "CCLabelBMFont",
+                                "name": "",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "fntFile": "characters/number_24.fnt",
+                                  "string": "3"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "class": "CCNode",
+                            "name": "",
+                            "props": {
+                              "position": {
+                                "x": 80.0,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.0,
+                                "y": 0.0
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false
+                            },
+                            "children": [
+                              {
+                                "class": "CCControlButton",
+                                "name": "btn_num4",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "ccControl": {
+                                    "selector": "clickNumber",
+                                    "target": 2,
+                                    "events": 32
+                                  },
+                                  "enabled": true,
+                                  "title|1": "",
+                                  "titleTTF|1": "Helvetica",
+                                  "titleTTFSize|1": {
+                                    "val": 12.0,
+                                    "type": 0
+                                  },
+                                  "labelAnchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "preferedSize": {
+                                    "w": 50.0,
+                                    "h": 48.0,
+                                    "type": 0
+                                  },
+                                  "zoomOnTouchDown": true,
+                                  "backgroundSpriteFrame|1": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|1": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|2": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_45"
+                                  },
+                                  "titleColor|2": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  },
+                                  "backgroundSpriteFrame|3": {
+                                    "sheet": "ccbResources/strength2.plist",
+                                    "frame": "strengthen_46"
+                                  },
+                                  "titleColor|3": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255
+                                  }
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "CCLabelBMFont",
+                                "name": "",
+                                "props": {
+                                  "anchorPoint": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                  },
+                                  "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "type": 0
+                                  },
+                                  "ignoreAnchorPointForPosition": false,
+                                  "fntFile": "characters/number_24.fnt",
+                                  "string": "4"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "class": "CCNode",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": 167.04000854492188,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false
+                    },
+                    "children": [
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_30"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_card_wheel",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_28"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_card_fire_wheel",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_44"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_32"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCControlButton",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "ccControl": {
+                            "selector": "clickCardSelect",
+                            "target": 2,
+                            "events": 32
+                          },
+                          "enabled": true,
+                          "title|1": "",
+                          "titleTTF|1": "Helvetica",
+                          "titleTTFSize|1": {
+                            "val": 12.0,
+                            "type": 0
+                          },
+                          "labelAnchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "preferedSize": {
+                            "w": 60.0,
+                            "h": 61.0,
+                            "type": 0
+                          },
+                          "zoomOnTouchDown": true,
+                          "backgroundSpriteFrame|1": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|1": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          },
+                          "backgroundSpriteFrame|2": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|2": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          },
+                          "backgroundSpriteFrame|3": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_47"
+                          },
+                          "titleColor|3": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_icon",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_32"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength1.plist",
+                            "frame": "strengthen_39"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCNode",
+                        "name": "",
+                        "props": {
+                          "position": {
+                            "x": 2.880000114440918,
+                            "y": -83.52000427246094,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false
+                        },
+                        "children": [
+                          {
+                            "class": "CCLabelTTF",
+                            "name": "label_StrengthView0",
+                            "props": {
+                              "position": {
+                                "x": -5.240001678466797,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 1.0,
+                                "y": 0.5
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false,
+                              "fontName": "Arial-BoldMT",
+                              "fontSize": {
+                                "val": 30.0,
+                                "type": 0
+                              },
+                              "color": {
+                                "r": 255,
+                                "g": 216,
+                                "b": 156
+                              },
+                              "dimensions": {
+                                "w": 0.0,
+                                "h": 0.0,
+                                "type": 0
+                              },
+                              "horizontalAlignment": 0,
+                              "verticalAlignment": 0,
+                              "string": "仙人"
+                            },
+                            "children": []
+                          },
+                          {
+                            "class": "CCLabelTTF",
+                            "name": "label_StrengthView1",
+                            "props": {
+                              "position": {
+                                "x": 35.31999969482422,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.0,
+                                "y": 0.5
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false,
+                              "fontName": "Arial-BoldMT",
+                              "fontSize": {
+                                "val": 30.0,
+                                "type": 0
+                              },
+                              "color": {
+                                "r": 255,
+                                "g": 216,
+                                "b": 156
+                              },
+                              "dimensions": {
+                                "w": 0.0,
+                                "h": 0.0,
+                                "type": 0
+                              },
+                              "horizontalAlignment": 0,
+                              "verticalAlignment": 0,
+                              "string": "阶"
+                            },
+                            "children": []
+                          },
+                          {
+                            "class": "CCLabelTTF",
+                            "name": "label_card_level",
+                            "props": {
+                              "position": {
+                                "x": 9.0,
+                                "y": 0.0,
+                                "type": 0
+                              },
+                              "anchorPoint": {
+                                "x": 0.5,
+                                "y": 0.5
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "type": 0
+                              },
+                              "ignoreAnchorPointForPosition": false,
+                              "fontName": "Arial-BoldMT",
+                              "fontSize": {
+                                "val": 30.0,
+                                "type": 0
+                              },
+                              "color": {
+                                "r": 0,
+                                "g": 249,
+                                "b": 0
+                              },
+                              "dimensions": {
+                                "w": 0.0,
+                                "h": 0.0,
+                                "type": 0
+                              },
+                              "horizontalAlignment": 0,
+                              "verticalAlignment": 0,
+                              "string": "12"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "class": "CCNode",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 100.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCNode",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": 4.320000171661377,
+                        "y": 50.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false
+                    },
+                    "children": [
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_desc_ratio",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_26"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCLabelBMFont",
+                        "name": "label_strength_ratio",
+                        "props": {
+                          "position": {
+                            "x": 0.8999999761581421,
+                            "y": -30.920000076293945,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 1.0,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "fntFile": "characters/number_34.fnt",
+                          "string": "20%"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCNode",
+                        "name": "node_strength_ratio_offset",
+                        "props": {
+                          "position": {
+                            "x": 0.8999999761581421,
+                            "y": -30.899999618530273,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCNode",
+                        "name": "node_strength_ratio_center",
+                        "props": {
+                          "position": {
+                            "x": 32.900001525878906,
+                            "y": -30.899999618530273,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCLabelBMFont",
+                        "name": "label_strength_ratio_extra",
+                        "props": {
+                          "position": {
+                            "x": 2.0,
+                            "y": -29.920000076293945,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 0.800000011920929,
+                            "y": 0.800000011920929,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "fntFile": "characters/number_34.fnt",
+                          "color": {
+                            "r": 0,
+                            "g": 249,
+                            "b": 0
+                          },
+                          "string": "+20%"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "CCNode",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": 0.0,
+                        "y": -50.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false
+                    },
+                    "children": [
+                      {
+                        "class": "CCLabelTTF",
+                        "name": "sprite_desc_silver_cost",
+                        "props": {
+                          "position": {
+                            "x": -36.0,
+                            "y": 0.0,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "fontName": "Arial-BoldMT",
+                          "fontSize": {
+                            "val": 20.0,
+                            "type": 0
+                          },
+                          "color": {
+                            "r": 255,
+                            "g": 216,
+                            "b": 156
+                          },
+                          "dimensions": {
+                            "w": 0.0,
+                            "h": 0.0,
+                            "type": 0
+                          },
+                          "horizontalAlignment": 0,
+                          "verticalAlignment": 0,
+                          "string": "消耗："
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCSprite",
+                        "name": "sprite_silver_icon",
+                        "props": {
+                          "anchorPoint": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "displayFrame": {
+                            "sheet": "ccbResources/strength2.plist",
+                            "frame": "strengthen_08"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "CCLabelTTF",
+                        "name": "label_cost_silver",
+                        "props": {
+                          "position": {
+                            "x": 16.0,
+                            "y": 0.0,
+                            "type": 0
+                          },
+                          "anchorPoint": {
+                            "x": 0.0,
+                            "y": 0.5
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "type": 0
+                          },
+                          "ignoreAnchorPointForPosition": false,
+                          "fontName": "Arial-BoldMT",
+                          "fontSize": {
+                            "val": 20.0,
+                            "type": 0
+                          },
+                          "color": {
+                            "r": 255,
+                            "g": 213,
+                            "b": 156
+                          },
+                          "dimensions": {
+                            "w": 0.0,
+                            "h": 0.0,
+                            "type": 0
+                          },
+                          "horizontalAlignment": 0,
+                          "verticalAlignment": 0,
+                          "string": "20000"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "bridge_anim_node",
+            "props": {
+              "position": {
+                "x": 47.445255279541016,
+                "y": 63.030303955078125,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 175.0,
+                "h": 25.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "result_anim_node",
+            "props": {
+              "position": {
+                "x": 44.671531677246094,
+                "y": 57.57575607299805,
+                "type": 4
+              },
+              "contentSize": {
+                "w": 768.0,
+                "h": 825.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCBFile",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 50.0,
+            "y": 100.0,
+            "type": 4
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ccbFile": "sub_ui/NormalTopBar.ccb"
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 0.0,
+            "y": 74.0,
+            "type": 0
+          },
+          "contentSize": {
+            "w": 768.0,
+            "h": 230.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 388.8000183105469,
+                "y": 42.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_downFrame"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 391.20001220703125,
+                "y": 49.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strenthen_down"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 202.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 67.0,
+                    "y": 0.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_frame"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "sprite_bar_content",
+                "props": {
+                  "position": {
+                    "x": -139.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_blue"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_StrengthView0",
+                "props": {
+                  "position": {
+                    "x": -210.0,
+                    "y": 0.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 22.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 239,
+                    "g": 231,
+                    "b": 178
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "额外成功率"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelBMFont",
+                "name": "label_percent",
+                "props": {
+                  "position": {
+                    "x": 63.20000076293945,
+                    "y": 1.2000000476837158,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 0.6000000238418579,
+                    "y": 0.6000000238418579,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fntFile": "characters/number_34.fnt",
+                  "string": "99%"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "node_auto_choose_container",
+            "props": {
+              "position": {
+                "x": 104.0,
+                "y": -16.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 600.0,
+                "h": 119.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 361.0,
+                    "y": 60.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_27"
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_StrengthView4",
+                "props": {
+                  "position": {
+                    "x": 247.01760864257812,
+                    "y": 59.07360076904297,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 1.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 255,
+                    "g": 216,
+                    "b": 156
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "淬炼到仙人模式"
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btnSub",
+                "props": {
+                  "position": {
+                    "x": 281.0,
+                    "y": 60.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "clickSubNumber",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 50.0,
+                    "h": 50.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_01"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_01"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_01"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCControlButton",
+                "name": "btnAdd",
+                "props": {
+                  "position": {
+                    "x": 442.0,
+                    "y": 60.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "clickAddNumber",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Helvetica",
+                  "titleTTFSize|1": {
+                    "val": 12.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 50.0,
+                    "h": 50.0,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": true,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_02"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_02"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_02"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_StrengthView5",
+                "props": {
+                  "position": {
+                    "x": 514.0,
+                    "y": 58.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 255,
+                    "g": 216,
+                    "b": 156
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "阶停止"
+                },
+                "children": []
+              },
+              {
+                "class": "CCLabelTTF",
+                "name": "label_to_level",
+                "props": {
+                  "position": {
+                    "x": 365.0,
+                    "y": 61.0,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 255,
+                    "g": 216,
+                    "b": 156
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "12"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "node_auto_desc_container",
+            "props": {
+              "visible": false,
+              "position": {
+                "x": 102.0,
+                "y": -16.0,
+                "type": 0
+              },
+              "contentSize": {
+                "w": 600.0,
+                "h": 119.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCLabelTTF",
+                "name": "label_StrengthView6",
+                "props": {
+                  "position": {
+                    "x": 0.4320032000541687,
+                    "y": 21.587902069091797,
+                    "type": 4
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "fontName": "Arial-BoldMT",
+                  "fontSize": {
+                    "val": 24.0,
+                    "type": 0
+                  },
+                  "color": {
+                    "r": 255,
+                    "g": 216,
+                    "b": 156
+                  },
+                  "dimensions": {
+                    "w": 0.0,
+                    "h": 0.0,
+                    "type": 0
+                  },
+                  "horizontalAlignment": 0,
+                  "verticalAlignment": 0,
+                  "string": "勾选自动淬炼可以帮助您自动淬炼。"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "CCNode",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 139.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCNode",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": -158.40000915527344,
+                    "y": 2.4000000953674316,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCSprite",
+                    "name": "",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strenthen_select"
+                      },
+                      "flip": {
+                        "x": true,
+                        "y": false
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCControlButton",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": -37.20000457763672,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "ccControl": {
+                        "selector": "clickSelectMin",
+                        "target": 2,
+                        "events": 32
+                      },
+                      "enabled": true,
+                      "title|1": "最少",
+                      "titleTTF|1": "Helvetica",
+                      "titleTTFSize|1": {
+                        "val": 22.0,
+                        "type": 0
+                      },
+                      "labelAnchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "preferedSize": {
+                        "w": 115.0,
+                        "h": 61.0,
+                        "type": 0
+                      },
+                      "zoomOnTouchDown": true,
+                      "backgroundSpriteFrame|1": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_green_min"
+                      },
+                      "titleColor|1": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|2": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_green_min"
+                      },
+                      "titleColor|2": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|3": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_green_min"
+                      },
+                      "titleColor|3": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCControlButton",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": 64.80000305175781,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "ccControl": {
+                        "selector": "clickSelectSub",
+                        "target": 2,
+                        "events": 245
+                      },
+                      "enabled": true,
+                      "title|1": "",
+                      "titleTTF|1": "Helvetica",
+                      "titleTTFSize|1": {
+                        "val": 12.0,
+                        "type": 0
+                      },
+                      "labelAnchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "preferedSize": {
+                        "w": 50.0,
+                        "h": 50.0,
+                        "type": 0
+                      },
+                      "zoomOnTouchDown": true,
+                      "backgroundSpriteFrame|1": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_01"
+                      },
+                      "titleColor|1": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|2": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_01"
+                      },
+                      "titleColor|2": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|3": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_01"
+                      },
+                      "titleColor|3": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      }
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCNode",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 4.367828296381049e-06,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 0.75,
+                    "y": 0.75,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCSprite",
+                    "name": "",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/strength1.plist",
+                        "frame": "strengthen_31"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/strength1.plist",
+                        "frame": "strengthen_37"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCControlButton",
+                    "name": "btnClick",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "ccControl": {
+                        "selector": "clickSelectStoneExtra",
+                        "target": 2,
+                        "events": 32
+                      },
+                      "enabled": true,
+                      "title|1": "",
+                      "titleTTF|1": "Helvetica",
+                      "titleTTFSize|1": {
+                        "val": 12.0,
+                        "type": 0
+                      },
+                      "labelAnchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "preferedSize": {
+                        "w": 60.0,
+                        "h": 61.0,
+                        "type": 0
+                      },
+                      "zoomOnTouchDown": true,
+                      "backgroundSpriteFrame|1": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_47"
+                      },
+                      "titleColor|1": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|2": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_47"
+                      },
+                      "titleColor|2": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|3": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_47"
+                      },
+                      "titleColor|3": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCSprite",
+                    "name": "sprite_stone_icon_select",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "props/props_034.plist",
+                        "frame": "props_034"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCLabelBMFont",
+                    "name": "label_stone_count_select",
+                    "props": {
+                      "position": {
+                        "x": 0.0,
+                        "y": 45.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "fntFile": "characters/number_24.fnt",
+                      "string": "10000"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "CCNode",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 166.8000030517578,
+                    "y": 3.6000001430511475,
+                    "type": 0
+                  },
+                  "anchorPoint": {
+                    "x": 0.0,
+                    "y": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false
+                },
+                "children": [
+                  {
+                    "class": "CCSprite",
+                    "name": "",
+                    "props": {
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "displayFrame": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strenthen_select"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCControlButton",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": 38.999996185302734,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "ccControl": {
+                        "selector": "clickSelectMax",
+                        "target": 2,
+                        "events": 32
+                      },
+                      "enabled": true,
+                      "title|1": "最多",
+                      "titleTTF|1": "Helvetica",
+                      "titleTTFSize|1": {
+                        "val": 22.0,
+                        "type": 0
+                      },
+                      "labelAnchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "preferedSize": {
+                        "w": 115.0,
+                        "h": 61.0,
+                        "type": 0
+                      },
+                      "zoomOnTouchDown": true,
+                      "backgroundSpriteFrame|1": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_red_max"
+                      },
+                      "titleColor|1": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|2": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_red_max"
+                      },
+                      "titleColor|2": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|3": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_red_max"
+                      },
+                      "titleColor|3": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "CCControlButton",
+                    "name": "",
+                    "props": {
+                      "position": {
+                        "x": -61.20000076293945,
+                        "y": 0.0,
+                        "type": 0
+                      },
+                      "anchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "type": 0
+                      },
+                      "ignoreAnchorPointForPosition": false,
+                      "ccControl": {
+                        "selector": "clickSelectAdd",
+                        "target": 2,
+                        "events": 245
+                      },
+                      "enabled": true,
+                      "title|1": "",
+                      "titleTTF|1": "Helvetica",
+                      "titleTTFSize|1": {
+                        "val": 12.0,
+                        "type": 0
+                      },
+                      "labelAnchorPoint": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "preferedSize": {
+                        "w": 50.0,
+                        "h": 50.0,
+                        "type": 0
+                      },
+                      "zoomOnTouchDown": true,
+                      "backgroundSpriteFrame|1": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_02"
+                      },
+                      "titleColor|1": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|2": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_02"
+                      },
+                      "titleColor|2": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      },
+                      "backgroundSpriteFrame|3": {
+                        "sheet": "ccbResources/strength2.plist",
+                        "frame": "strengthen_02"
+                      },
+                      "titleColor|3": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                      }
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 248.0,
+                "y": 74.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_19"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "button_strength",
+            "props": {
+              "position": {
+                "x": 397.0,
+                "y": -33.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "clickStrength",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 167.0,
+                "h": 66.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 110.0,
+                "y": 75.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "clickAuto",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 42.0,
+                "h": 42.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_16"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_16"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_16"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_auto_icon",
+            "props": {
+              "position": {
+                "x": 110.0,
+                "y": 75.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_12"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_strength_name",
+            "props": {
+              "position": {
+                "x": 400.2000427246094,
+                "y": -33.15999221801758,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_09"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCControlButton",
+            "name": "button_strength3",
+            "props": {
+              "position": {
+                "x": 397.0,
+                "y": -33.0,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "clickStrengthCancel",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "",
+              "titleTTF|1": "Helvetica",
+              "titleTTFSize|1": {
+                "val": 12.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 167.0,
+                "h": 66.0,
+                "type": 0
+              },
+              "zoomOnTouchDown": true,
+              "backgroundSpriteFrame|1": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_03"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "sprite_cancel_name2",
+            "props": {
+              "position": {
+                "x": 398.2000732421875,
+                "y": -32.15999221801758,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_18"
+              }
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCSprite",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 384.0,
+            "y": 92.67998504638672,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "com_res/Resident.plist",
+            "frame": "com_normal_btn_bk"
+          }
+        },
+        "children": [
+          {
+            "class": "CCControlButton",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 64.45439147949219,
+                "y": 38.54077911376953,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "ccControl": {
+                "selector": "clickBack",
+                "target": 2,
+                "events": 32
+              },
+              "enabled": true,
+              "title|1": "返回",
+              "titleTTF|1": "Arial-BoldMT",
+              "titleTTFSize|1": {
+                "val": 30.0,
+                "type": 0
+              },
+              "labelAnchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "preferedSize": {
+                "w": 106.0,
+                "h": 60.68965530395508,
+                "type": 0
+              },
+              "zoomOnTouchDown": false,
+              "backgroundSpriteFrame|1": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_01"
+              },
+              "titleColor|1": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|2": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_01"
+              },
+              "titleColor|2": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "backgroundSpriteFrame|3": {
+                "sheet": "com_res/Resident.plist",
+                "frame": "com_btn_green_01"
+              },
+              "titleColor|3": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 50.0,
+                "y": 45.946693420410156,
+                "type": 4
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_21"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCNode",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 621.7999877929688,
+                "y": 33.20000076293945,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false
+            },
+            "children": [
+              {
+                "class": "CCControlButton",
+                "name": "",
+                "props": {
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "type": 1
+                  },
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "ccControl": {
+                    "selector": "clickHelp",
+                    "target": 2,
+                    "events": 32
+                  },
+                  "enabled": true,
+                  "title|1": "",
+                  "titleTTF|1": "Arial-BoldMT",
+                  "titleTTFSize|1": {
+                    "val": 30.0,
+                    "type": 0
+                  },
+                  "labelAnchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "preferedSize": {
+                    "w": 106.5,
+                    "h": 60.68965530395508,
+                    "type": 0
+                  },
+                  "zoomOnTouchDown": false,
+                  "backgroundSpriteFrame|1": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_btn_green_01"
+                  },
+                  "titleColor|1": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|2": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_btn_green_01"
+                  },
+                  "titleColor|2": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "backgroundSpriteFrame|3": {
+                    "sheet": "com_res/Resident.plist",
+                    "frame": "com_btn_green_01"
+                  },
+                  "titleColor|3": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                },
+                "children": []
+              },
+              {
+                "class": "CCSprite",
+                "name": "",
+                "props": {
+                  "anchorPoint": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "type": 0
+                  },
+                  "ignoreAnchorPointForPosition": false,
+                  "displayFrame": {
+                    "sheet": "ccbResources/strength2.plist",
+                    "frame": "strengthen_help_text"
+                  }
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "CCControlButton",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 384.0,
+            "y": 246.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "",
+            "target": 0,
+            "events": 32
+          },
+          "enabled": false,
+          "title|1": "",
+          "titleTTF|1": "Helvetica",
+          "titleTTFSize|1": {
+            "val": 12.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 700.0,
+            "h": 167.0,
+            "type": 0
+          },
+          "zoomOnTouchDown": true,
+          "backgroundSpriteFrame|1": {
+            "sheet": "ccbResources/strength2.plist",
+            "frame": "strengthen_13"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "ccbResources/strength2.plist",
+            "frame": "strengthen_13"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "ccbResources/strength2.plist",
+            "frame": "strengthen_13"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_desc_container",
+        "props": {
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCLabelTTF",
+            "name": "label_StrengthView7",
+            "props": {
+              "position": {
+                "x": 79.0,
+                "y": 174.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 255,
+                "g": 216,
+                "b": 156
+              },
+              "dimensions": {
+                "w": 650.0,
+                "h": 90.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "1.忍者卡可以在这里通过用仙石淬炼，来大幅度提升能力， 仙阶越高，忍者卡能力提升越高。"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_StrengthView8",
+            "props": {
+              "position": {
+                "x": 79.0,
+                "y": 232.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 255,
+                "g": 216,
+                "b": 156
+              },
+              "dimensions": {
+                "w": 600.0,
+                "h": 90.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "2.使用越好、越多的仙石，成功概率就越高。"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelTTF",
+            "name": "label_StrengthView9",
+            "props": {
+              "position": {
+                "x": 79.0,
+                "y": 261.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fontName": "Arial-BoldMT",
+              "fontSize": {
+                "val": 24.0,
+                "type": 0
+              },
+              "color": {
+                "r": 255,
+                "g": 216,
+                "b": 156
+              },
+              "dimensions": {
+                "w": 650.0,
+                "h": 90.0,
+                "type": 0
+              },
+              "horizontalAlignment": 0,
+              "verticalAlignment": 0,
+              "string": "3.淬炼过程中，如果失败了，有概率降阶，但是一但到了3、 6、9之上就不会再降到3、6、9之下了。"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCNode",
+        "name": "node_upgrade_container",
+        "props": {
+          "visible": false,
+          "position": {
+            "x": -2.513599157333374,
+            "y": 0.0,
+            "type": 0
+          },
+          "contentSize": {
+            "w": 100.0,
+            "h": 100.0,
+            "type": 1
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": [
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 201.0,
+                "y": 190.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_20"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 384.0,
+                "y": 189.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_23"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 550.6560668945312,
+                "y": 188.83990478515625,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_22"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 105.68001556396484,
+                "y": 225.95989990234375,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_06"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 105.12001037597656,
+                "y": 260.51995849609375,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_05"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 105.56001281738281,
+                "y": 297.9599609375,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_04"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_attack",
+            "props": {
+              "position": {
+                "x": 128.0,
+                "y": 212.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_defense",
+            "props": {
+              "position": {
+                "x": 128.0,
+                "y": 250.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_chakra",
+            "props": {
+              "position": {
+                "x": 128.0,
+                "y": 285.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_attack_plus",
+            "props": {
+              "position": {
+                "x": 287.0,
+                "y": 211.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_defense_plus",
+            "props": {
+              "position": {
+                "x": 287.0,
+                "y": 247.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_chakra_plus",
+            "props": {
+              "position": {
+                "x": 289.0,
+                "y": 281.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_current_plus_per",
+            "props": {
+              "position": {
+                "x": 228.0,
+                "y": 175.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+50%"
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 396.6240539550781,
+                "y": 223.65594482421875,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_41"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 396.6240539550781,
+                "y": 256.65594482421875,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_41"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCSprite",
+            "name": "",
+            "props": {
+              "position": {
+                "x": 397.35205078125,
+                "y": 292.3199462890625,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "displayFrame": {
+                "sheet": "ccbResources/strength2.plist",
+                "frame": "strengthen_41"
+              }
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_attack",
+            "props": {
+              "position": {
+                "x": 422.0,
+                "y": 211.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_attack_plus",
+            "props": {
+              "position": {
+                "x": 582.0,
+                "y": 210.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_defense",
+            "props": {
+              "position": {
+                "x": 423.0,
+                "y": 248.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_defense_plus",
+            "props": {
+              "position": {
+                "x": 582.0,
+                "y": 245.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_chakra",
+            "props": {
+              "position": {
+                "x": 424.0,
+                "y": 284.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_18.fnt",
+              "string": "140000-20000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_chakra_plus",
+            "props": {
+              "position": {
+                "x": 583.0,
+                "y": 277.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+46000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_after_plus_per",
+            "props": {
+              "position": {
+                "x": 591.0,
+                "y": 174.0,
+                "type": 1
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_28.fnt",
+              "blendFunc": {
+                "src": 770,
+                "dst": 771
+              },
+              "string": "+50%"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

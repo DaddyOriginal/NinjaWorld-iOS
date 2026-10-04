@@ -1,0 +1,449 @@
+{
+  "version": 5,
+  "sequences": [
+    {
+      "name": "Default Timeline",
+      "duration": 10.0,
+      "id": 0,
+      "chained_id": -1
+    }
+  ],
+  "auto_play": 0,
+  "root": {
+    "class": "CCLayer",
+    "name": "",
+    "props": {
+      "contentSize": {
+        "w": 100.0,
+        "h": 100.0,
+        "type": 1
+      },
+      "anchorPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "type": 0
+      },
+      "ignoreAnchorPointForPosition": true,
+      "touchEnabled": true,
+      "mouseEnabled": true
+    },
+    "children": [
+      {
+        "class": "CCScale9Sprite",
+        "name": "sprite_bottom",
+        "props": {
+          "position": {
+            "x": 57.0,
+            "y": 320.0,
+            "type": 0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "spriteFrame": {
+            "sheet": "ccbResources/activity.plist",
+            "frame": "activity_12"
+          },
+          "preferedSize": {
+            "w": 600.0,
+            "h": 149.0,
+            "type": 0
+          },
+          "opacity": 255,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "insetLeft": 0.0,
+          "insetTop": 0.0,
+          "insetRight": 0.0,
+          "insetBottom": 0.0
+        },
+        "children": []
+      },
+      {
+        "class": "CCLayer",
+        "name": "layer_middle",
+        "props": {
+          "contentSize": {
+            "w": 684.0,
+            "h": 620.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": true,
+          "touchEnabled": true,
+          "mouseEnabled": true
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_top",
+        "props": {
+          "position": {
+            "x": 343.0,
+            "y": -3.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "ccbResources/activity_bk.plist",
+            "frame": "activity_bk_03"
+          }
+        },
+        "children": [
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_havegold",
+            "props": {
+              "position": {
+                "x": 91.72000122070312,
+                "y": 77.55999755859375,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "60000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_resttime",
+            "props": {
+              "position": {
+                "x": 524.2000122070312,
+                "y": 73.04000091552734,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "60000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_investgold",
+            "props": {
+              "position": {
+                "x": 148.0,
+                "y": 32.60000228881836,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "60000"
+            },
+            "children": []
+          },
+          {
+            "class": "CCLabelBMFont",
+            "name": "label_awardgold",
+            "props": {
+              "position": {
+                "x": 507.6400146484375,
+                "y": 31.15999984741211,
+                "type": 0
+              },
+              "anchorPoint": {
+                "x": 0.0,
+                "y": 0.5
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "type": 0
+              },
+              "ignoreAnchorPointForPosition": false,
+              "fntFile": "characters/number_24.fnt",
+              "string": "60000"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_digit5",
+        "props": {
+          "position": {
+            "x": 196.0,
+            "y": 395.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/activity_11.plist",
+            "frame": "counter_0"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_digit4",
+        "props": {
+          "position": {
+            "x": 265.0,
+            "y": 395.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/activity_11.plist",
+            "frame": "counter_0"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_digit3",
+        "props": {
+          "position": {
+            "x": 334.0,
+            "y": 395.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/activity_11.plist",
+            "frame": "counter_0"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_digit2",
+        "props": {
+          "position": {
+            "x": 403.0,
+            "y": 395.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/activity_11.plist",
+            "frame": "counter_0"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCSprite",
+        "name": "sprite_digit1",
+        "props": {
+          "position": {
+            "x": 472.0,
+            "y": 395.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "displayFrame": {
+            "sheet": "characters/activity_11.plist",
+            "frame": "counter_0"
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCControlButton",
+        "name": "",
+        "props": {
+          "position": {
+            "x": 342.0,
+            "y": 122.0,
+            "type": 0
+          },
+          "anchorPoint": {
+            "x": 0.5,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false,
+          "ccControl": {
+            "selector": "clickConfirm",
+            "target": 2,
+            "events": 32
+          },
+          "enabled": true,
+          "title|1": "",
+          "titleTTF|1": "Helvetica",
+          "titleTTFSize|1": {
+            "val": 12.0,
+            "type": 0
+          },
+          "labelAnchorPoint": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "preferedSize": {
+            "w": 210.0,
+            "h": 150.0,
+            "type": 0
+          },
+          "zoomOnTouchDown": true,
+          "backgroundSpriteFrame|1": {
+            "sheet": "ccbResources/activity.plist",
+            "frame": "activity_11"
+          },
+          "titleColor|1": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|2": {
+            "sheet": "ccbResources/activity.plist",
+            "frame": "activity_11"
+          },
+          "titleColor|2": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "backgroundSpriteFrame|3": {
+            "sheet": "ccbResources/activity.plist",
+            "frame": "activity_11"
+          },
+          "titleColor|3": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          }
+        },
+        "children": []
+      },
+      {
+        "class": "CCNode",
+        "name": "node_frame",
+        "props": {
+          "position": {
+            "x": 81.0,
+            "y": 319.0,
+            "type": 0
+          },
+          "contentSize": {
+            "w": 8.771929740905762,
+            "h": 140.0,
+            "type": 3
+          },
+          "anchorPoint": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "type": 0
+          },
+          "ignoreAnchorPointForPosition": false
+        },
+        "children": []
+      }
+    ]
+  }
+}
