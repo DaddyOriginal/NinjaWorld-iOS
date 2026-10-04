@@ -187,7 +187,7 @@ bool CGrowthFundView::init() {
     }
 
     if (m_pNodeTableContent) {
-        m_pTableView = CTableView::create(this, m_pNodeTableContent->getContentSize());
+        m_pTableView = CCTableView::create(this, m_pNodeTableContent->getContentSize());
         if (m_pTableView) {
             m_pTableView->setDirection(kCCScrollViewDirectionVertical);
             m_pTableView->setVerticalFillOrder(kCCTableViewFillTopDown);

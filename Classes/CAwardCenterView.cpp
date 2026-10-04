@@ -154,7 +154,7 @@ bool CAwardCenterView::init() {
     }
 
     if (m_pNodeContent) {
-        m_pTableView = CTableView::create(this, m_pNodeContent->getContentSize());
+        m_pTableView = CCTableView::create(this, m_pNodeContent->getContentSize());
         if (m_pTableView) {
             m_pTableView->setDirection(kCCScrollViewDirectionVertical);
             m_pTableView->setVerticalFillOrder(kCCTableViewFillTopDown);
